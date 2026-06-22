@@ -106,26 +106,6 @@
         <Nav route={route} setRoute={setRoute} phone={phone} />
         {Page}
         <Footer setRoute={setRoute} phone={phone} />
-
-        <TweaksPanel>
-          <TweakSection label="The night arc" />
-          <TweakRadio label="Intensity" value={t.arc}
-            options={["Full", "Subtle", "Still"]} onChange={(v) => setTweak("arc", v)} />
-          <TweakRadio label="Homepage" value={t.heroConcept}
-            options={["The Watch", "First Light"]} onChange={(v) => setTweak("heroConcept", v)} />
-          <TweakSection label="Interior pages" />
-          <TweakRadio label="Skin" value={t.skin}
-            options={["Night", "Day"]} onChange={(v) => setTweak("skin", v)} />
-          <TweakSection label="Type & colour" />
-          <TweakRadio label="Display face" value={t.displayFont}
-            options={["Big Shoulders", "Archivo Black"]} onChange={(v) => setTweak("displayFont", v)} />
-          <TweakColor label="Accent" value={ACCENTS[t.accent] || ACCENTS.Amber}
-            options={["var(--m-orange)", "var(--m-blue)", "var(--m-green)", "var(--m-purple)"].map((c) => c)}
-            onChange={(v) => {
-              const name = Object.keys(ACCENTS).find((k) => ACCENTS[k] === v) || "Amber";
-              setTweak("accent", name);
-            }} />
-        </TweaksPanel>
       </>
     );
   }
