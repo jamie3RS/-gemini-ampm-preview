@@ -349,17 +349,43 @@ html[data-atmos="still"] .cloud, html[data-atmos="still"] .star { animation-play
 /* accreditation wall (Compliance) */
 .acc-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--ink); border: 3px solid var(--ink); }
 @media (max-width: 800px) { .acc-wall { grid-template-columns: repeat(2, 1fr); } }
-.acc-wall .cell { background: var(--paper); padding: 26px 22px; min-height: 128px; display: flex; flex-direction: column;
-  justify-content: space-between; gap: 14px; text-decoration: none; color: inherit;
-  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease; }
-.acc-wall a.cell.linked:hover { background: #fff; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(28,24,18,0.10); }
-.acc-wall a.cell.linked:hover .t { color: var(--g-accent, var(--m-orange)); }
+/* Tile is the perspective container; .flipper is the 3D-rotating element.
+   The front face holds the title/description (always rendered). The back
+   face is a background-image of the cert thumbnail. Hovering the linked
+   tile flips the flipper 180° to reveal the cert preview; the whole tile
+   is still a click target that opens the PDF. */
+.acc-wall .cell { background: var(--paper); min-height: 168px; position: relative;
+  perspective: 1100px; text-decoration: none; color: inherit;
+  transition: box-shadow 0.18s ease; }
+.acc-wall a.cell.linked { cursor: pointer; }
+.acc-wall a.cell.linked:hover { box-shadow: 0 8px 24px rgba(28,24,18,0.16); }
+
+.acc-wall .flipper { position: relative; width: 100%; height: 100%; min-height: inherit;
+  transform-style: preserve-3d; transition: transform 0.55s cubic-bezier(.4,0,.2,1); }
+.acc-wall a.cell.linked:hover .flipper { transform: rotateY(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  .acc-wall .flipper { transition: none; }
+  .acc-wall a.cell.linked:hover .flipper { transform: none; }
+  .acc-wall a.cell.linked:hover .face.back { display: block; }
+}
+
+.acc-wall .face { position: absolute; inset: 0; backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
+.acc-wall .face.front { padding: 26px 22px; display: flex; flex-direction: column;
+  justify-content: space-between; gap: 14px; background: var(--paper); }
+.acc-wall .face.back { transform: rotateY(180deg); background-color: var(--paper);
+  background-size: cover; background-position: top center; background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(28,24,18,0.08); }
+
+/* Tiles without a flipper (no thumb) keep the original layout. */
+.acc-wall .cell > .face.front:only-child,
+.acc-wall .cell > .face.front:not(.flipper *) { position: relative; inset: auto; }
+
 .acc-wall .cell .t { font-family: var(--d-display); font-weight: 700; text-transform: uppercase; font-size: 22px; line-height: 0.95;
   transition: color 0.18s ease; }
 .acc-wall .cell .d { font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em; color: var(--ink-2); line-height: 1.4; }
 .acc-wall .acc-go { font-family: var(--d-display); font-weight: 700; font-size: 11px; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--ink-3); transition: color 0.18s ease; }
-.acc-wall a.cell.linked:hover .acc-go { color: var(--g-accent, var(--m-orange)); }
 
 /* ——— golden-thread steps (Compliance) ——— */
 .thread { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 3px solid var(--ink); }

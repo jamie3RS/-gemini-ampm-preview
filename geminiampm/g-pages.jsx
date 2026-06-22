@@ -43,13 +43,19 @@ const AccredWall = ({ head }) => (
     </div>
     <div className="acc-wall reveal">
       {ACCREDS.map((a, i) => {
-        const inner = (
-          <>
+        const front = (
+          <div className="face front">
             <div className="t">{a.t}</div>
             <div className="d" dangerouslySetInnerHTML={{ __html: a.d }} />
             {a.pdf ? <div className="acc-go" aria-hidden="true">View certificate ↗</div> : null}
-          </>
+          </div>
         );
+        const back = a.thumb ? (
+          <div className="face back" style={{ backgroundImage: "url(" + a.thumb + ")" }} aria-hidden="true" />
+        ) : null;
+        const inner = back
+          ? <div className="flipper">{front}{back}</div>
+          : front;
         return a.pdf
           ? <a className="cell linked" key={i} href={a.pdf} target="_blank" rel="noopener noreferrer">{inner}</a>
           : <div className="cell" key={i}>{inner}</div>;

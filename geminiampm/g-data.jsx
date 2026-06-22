@@ -251,22 +251,24 @@ const CONTACT = {
 };
 
 // ——— Accreditations (the real marks Gemini holds — from the 2026 footer strip) ———
-// `pdf` is a path to the current certificate PDF (under assets/certs/), set
-// once the file is committed. When null, the tile renders as a plain div.
-// Expiry tracking lives at 04-collateral/accreditations/REGISTER.md.
+// pdf/thumb point at the current certificate. On hover the tile flips to
+// reveal the cert preview; click opens the PDF. Tiles with no pdf render
+// as plain (non-flipping, non-link) cells — truthful when the cert isn't
+// currently held in PDF form. Expiry tracking lives at
+// 04-collateral/accreditations/REGISTER.md.
 const ACCREDS = [
-  { t: "BAFE",                 d: "Fire safety register &middot; ID 302260",   pdf: null },
-  { t: "NSI Gold",             d: "Security systems &middot; highest grade",   pdf: null },
-  { t: "FIRAS",                d: "Passive fire &middot; warringtonfire",      pdf: null },
-  { t: "CHAS",                 d: "Elite accreditation",                       pdf: null },
-  { t: "Constructionline",     d: "Gold member",                                pdf: null },
-  { t: "SafeContractor",       d: "Approved contractor",                        pdf: null },
-  { t: "Cyber Essentials",     d: "Certified",                                  pdf: null },
-  { t: "BESA",                 d: "Building Engineering Services Assoc.",       pdf: null },
-  { t: "FIA",                  d: "Fire Industry Association",                  pdf: null },
-  { t: "FPA",                  d: "Fire Protection Association",                pdf: null },
-  { t: "British Safety Council", d: "Member",                                   pdf: null },
-  { t: "Avetta",               d: "Member",                                     pdf: null },
+  { t: "BAFE",                   d: "Fire safety register &middot; ID 302260", pdf: "assets/certs/bafe.pdf",                   thumb: "assets/certs/thumbs/bafe.png" },
+  { t: "NSI Gold",               d: "Security systems &middot; highest grade", pdf: "assets/certs/nsi-gold.pdf",               thumb: "assets/certs/thumbs/nsi-gold.png" },
+  { t: "FIRAS",                  d: "Passive fire &middot; warringtonfire",    pdf: "assets/certs/firas.pdf",                  thumb: "assets/certs/thumbs/firas.png" },
+  { t: "CHAS",                   d: "Elite accreditation",                     pdf: "assets/certs/chas.pdf",                   thumb: "assets/certs/thumbs/chas.png" },
+  { t: "Constructionline",       d: "Gold member",                             pdf: "assets/certs/constructionline.pdf",       thumb: "assets/certs/thumbs/constructionline.png" },
+  { t: "SafeContractor",         d: "Approved contractor",                     pdf: "assets/certs/safecontractor.pdf",         thumb: "assets/certs/thumbs/safecontractor.png" },
+  { t: "Cyber Essentials",       d: "Certified",                               pdf: "assets/certs/cyber-essentials.pdf",       thumb: "assets/certs/thumbs/cyber-essentials.png" },
+  { t: "BESA",                   d: "Building Engineering Services Assoc.",    pdf: "assets/certs/besa.pdf",                   thumb: "assets/certs/thumbs/besa.png" },
+  { t: "FIA",                    d: "Fire Industry Association",               pdf: "assets/certs/fia.pdf",                    thumb: "assets/certs/thumbs/fia.png" },
+  { t: "FPA",                    d: "Fire Protection Association",             pdf: null,                                       thumb: null },
+  { t: "British Safety Council", d: "Member",                                  pdf: "assets/certs/british-safety-council.pdf", thumb: "assets/certs/thumbs/british-safety-council.png" },
+  { t: "Avetta",                 d: "Member",                                  pdf: "assets/certs/avetta.pdf",                 thumb: "assets/certs/thumbs/avetta.png" },
 ];
 
 Object.assign(window, {
