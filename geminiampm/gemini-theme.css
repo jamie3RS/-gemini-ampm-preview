@@ -267,13 +267,15 @@ html[data-arc="subtle"] .gdaybreak {
 .glogo .glogo-img { display: block; height: 26px; width: auto; max-width: none; }
 .glogo.lg .glogo-img { height: 64px; }
 
-/* Default surface = dark — show cream artwork, hide light artwork. */
-.glogo .glogo-img--light { display: none; }
-.glogo .glogo-img--dark  { display: block; }
-
-/* Day skin, nav not over a dark section: show charcoal artwork. */
-[data-skin="day"] .nav:not(.dark) .glogo .glogo-img--light { display: block; }
-[data-skin="day"] .nav:not(.dark) .glogo .glogo-img--dark  { display: none; }
+/* Default surface = light — show charcoal artwork. The nav already toggles
+   .dark when scrolled over a [data-nav-dark] section; we follow that, plus
+   any [data-nav-dark] ancestor (the footer is permanently dark). */
+.glogo .glogo-img--light { display: block; }
+.glogo .glogo-img--dark  { display: none; }
+.nav.dark .glogo .glogo-img--light,
+[data-nav-dark] .glogo .glogo-img--light { display: none; }
+.nav.dark .glogo .glogo-img--dark,
+[data-nav-dark] .glogo .glogo-img--dark  { display: block; }
 .nav .wm { text-decoration: none; font-family: var(--d-body); }
 .foot .fwm { line-height: 1; }
 

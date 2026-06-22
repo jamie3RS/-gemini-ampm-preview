@@ -52,12 +52,23 @@ const Kicker = ({ children, dark }) => (
   <div className={"kicker" + (dark ? " on-dark" : "")}>{children}</div>
 );
 
+// ——— Day-arc colour palette — the disc sweeps these in order as the
+// viewer scrolls the page. HSL-blended so mid-tones stay vivid:
+// orange (dawn) → green → purple → blue (night). Mirrors the AMPM
+// Building Services sunmark, but the destination is "night" not dusk. ———
+const SUN_COLOURS = [
+  "#E8742C","#E3892A","#DC9D27","#D2B125","#C5C223","#A7B925","#8AB027","#71A728","#5C9D29","#4A942A",
+  "#3D8E2E","#388C3E","#338A4F","#2E8961","#2E7E89","#2E6D8E","#2E5FAB","#3A4FA0","#46408F","#5C3A8F",
+  "#7A2E8F","#742E92","#6A2E95","#5F2E98","#532E9B","#472E9E","#3B2EA1","#2E32A3","#2E45A7","#2E5FAB"
+];
+
 // ——— Nav ———
 const Nav = ({ route, setRoute, phone }) => {
   const ref = React.useRef(null);
   React.useEffect(() => {
     const nav = ref.current;
     if (!nav) return;
+    const rootEl = document.documentElement;
     let ticking = false;
     const update = () => {
       ticking = false;
@@ -68,6 +79,10 @@ const Nav = ({ route, setRoute, phone }) => {
         if (r.top < 64 && r.bottom > 0) dark = true;
       });
       nav.classList.toggle("dark", dark);
+      const max = rootEl.scrollHeight - window.innerHeight;
+      const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      const idx = Math.min(SUN_COLOURS.length - 1, Math.floor(p * SUN_COLOURS.length));
+      rootEl.style.setProperty("--sun-color", SUN_COLOURS[idx]);
     };
     const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -82,6 +97,9 @@ const Nav = ({ route, setRoute, phone }) => {
   const tel = "tel:" + String(phone).replace(/\s+/g, "");
   return (
     <nav className="nav dark" id="nav" ref={ref} data-screen-label="Nav">
+      <svg className="sunmark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle className="sun-disc" cx="16" cy="16" r="10" />
+      </svg>
       <a className="wm" href="#home" onClick={go("home")}>
         <GeminiLogo />
       </a>
