@@ -251,19 +251,22 @@ const CONTACT = {
 };
 
 // ——— Accreditations (the real marks Gemini holds — from the 2026 footer strip) ———
+// `pdf` is a path to the current certificate PDF (under assets/certs/), set
+// once the file is committed. When null, the tile renders as a plain div.
+// Expiry tracking lives at 04-collateral/accreditations/REGISTER.md.
 const ACCREDS = [
-  { t: "BAFE", d: "Fire safety register &middot; ID 302260" },
-  { t: "NSI Gold", d: "Security systems &middot; highest grade" },
-  { t: "FIRAS", d: "Passive fire &middot; warringtonfire" },
-  { t: "CHAS", d: "Elite accreditation" },
-  { t: "Constructionline", d: "Gold member" },
-  { t: "SafeContractor", d: "Approved contractor" },
-  { t: "Cyber Essentials", d: "Certified" },
-  { t: "BESA", d: "Building Engineering Services Assoc." },
-  { t: "FIA", d: "Fire Industry Association" },
-  { t: "FPA", d: "Fire Protection Association" },
-  { t: "British Safety Council", d: "Member" },
-  { t: "Avetta", d: "Member" },
+  { t: "BAFE",                 d: "Fire safety register &middot; ID 302260",   pdf: null },
+  { t: "NSI Gold",             d: "Security systems &middot; highest grade",   pdf: null },
+  { t: "FIRAS",                d: "Passive fire &middot; warringtonfire",      pdf: null },
+  { t: "CHAS",                 d: "Elite accreditation",                       pdf: null },
+  { t: "Constructionline",     d: "Gold member",                                pdf: null },
+  { t: "SafeContractor",       d: "Approved contractor",                        pdf: null },
+  { t: "Cyber Essentials",     d: "Certified",                                  pdf: null },
+  { t: "BESA",                 d: "Building Engineering Services Assoc.",       pdf: null },
+  { t: "FIA",                  d: "Fire Industry Association",                  pdf: null },
+  { t: "FPA",                  d: "Fire Protection Association",                pdf: null },
+  { t: "British Safety Council", d: "Member",                                   pdf: null },
+  { t: "Avetta",               d: "Member",                                     pdf: null },
 ];
 
 Object.assign(window, {

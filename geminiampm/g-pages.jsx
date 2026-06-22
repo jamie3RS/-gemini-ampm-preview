@@ -42,12 +42,18 @@ const AccredWall = ({ head }) => (
       <h2 className="dhead sm" dangerouslySetInnerHTML={{ __html: head || "Certified to<br />the standard." }} />
     </div>
     <div className="acc-wall reveal">
-      {ACCREDS.map((a, i) => (
-        <div className="cell" key={i}>
-          <div className="t">{a.t}</div>
-          <div className="d" dangerouslySetInnerHTML={{ __html: a.d }} />
-        </div>
-      ))}
+      {ACCREDS.map((a, i) => {
+        const inner = (
+          <>
+            <div className="t">{a.t}</div>
+            <div className="d" dangerouslySetInnerHTML={{ __html: a.d }} />
+            {a.pdf ? <div className="acc-go" aria-hidden="true">View certificate ↗</div> : null}
+          </>
+        );
+        return a.pdf
+          ? <a className="cell linked" key={i} href={a.pdf} target="_blank" rel="noopener noreferrer">{inner}</a>
+          : <div className="cell" key={i}>{inner}</div>;
+      })}
     </div>
     <p className="case-note">Held and maintained live &mdash; references and certificates available on request for PQQ and tender submissions.</p>
   </section>
