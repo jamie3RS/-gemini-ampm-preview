@@ -70,10 +70,12 @@ const ServicePillarPage = ({ id, setRoute, skin }) => {
             </div>
             <div className="kids reveal">
               {p.children.map((c) => (
-                <div className="kid" key={c.slug}>
+                <a className="kid" key={c.slug}
+                   href={"https://geminiampm.co.uk/" + c.slug + "/"}
+                   target="_blank" rel="noopener noreferrer">
                   <span className="kn" dangerouslySetInnerHTML={{ __html: c.name }} />
                   <span className="ku">geminiampm.co.uk/{c.slug}/</span>
-                </div>
+                </a>
               ))}
             </div>
             <p className="case-note">Each service keeps its own page &mdash; and its existing web address &mdash; so the search ranking earned over the years carries straight into the renewed site.</p>

@@ -25,8 +25,8 @@ const PILLARS = [
     colour: COL.orange,
     time: "23:00",
     shift: "Systems live",
-    short: "Fire alarms and evacuation, AOV smoke extract, disabled refuge and PAVA &mdash; designed, installed and maintained to BS&nbsp;5839, with monitored response when the alarm actually sounds.",
-    intro: "Fire systems, end to end &mdash; <strong>fire detection and evacuation alarms, AOV smoke extract, disabled refuge and PAVA, designed, installed, commissioned and maintained to BS&nbsp;5839</strong>. From a single panel replacement to a campus-wide addressable system, with planned maintenance and 24/7 monitored response behind it. An answered alarm, not just a recording.",
+    short: "Fire alarms and evacuation, AOV smoke extract, disabled refuge and PAVA &mdash; designed, installed and maintained to current British standards, with monitored response when the alarm actually sounds.",
+    intro: "Fire systems, end to end &mdash; <strong>fire detection and evacuation alarms, AOV smoke extract, disabled refuge and PAVA, designed, installed, commissioned and maintained to the current British standards that apply to each system type</strong>. From a single panel replacement to a campus-wide addressable system, with planned maintenance and 24/7 monitored response behind it. An answered alarm, not just a recording.",
     children: [
       { name: "Fire Extinguishers", slug: "fire-alarm-evacuation-systems/fire-extinguishers" },
       { name: "Fire Alarm Installation", slug: "fire-alarm-evacuation-systems/fire-alarm-installation" },
