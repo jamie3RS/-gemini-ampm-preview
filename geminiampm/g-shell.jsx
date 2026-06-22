@@ -14,20 +14,21 @@ const NAV_LINKS = [
 // ——— Moon mark (the group sun-mark, lower half) ———
 const MoonMark = () => <span className="moonmark" aria-hidden="true" />;
 
-// ——— Gemini AMPM logo — the real brand lockup: the “gemini” wordmark + the
-// four AMPM roundels (Asset · Management · Planned · Maintenance) in the group's
-// four colours. Inherits text colour (cream on dark, ink on the day skin). ———
-const GeminiLogo = ({ className = "" }) => (
-  <span className={"glogo " + className} aria-label="Gemini AMPM — Asset Management Planned Maintenance">
-    <span className="glogo-word">gemini</span>
-    <span className="glogo-ampm" aria-hidden="true">
-      <i style={{ "--c": "var(--m-orange)" }}>A</i>
-      <i style={{ "--c": "var(--m-green)" }}>M</i>
-      <i style={{ "--c": "var(--m-blue)" }}>P</i>
-      <i style={{ "--c": "var(--m-purple)" }}>M</i>
+// ——— Gemini AMPM logo — production PNG artwork from the design handoff.
+// Nav uses the compact "notag" lockup; Footer uses the full lockup with
+// strapline (className="lg"). Two variants stack and CSS swaps which is
+// visible depending on the surface — cream on dark, charcoal on light. ———
+const GeminiLogo = ({ className = "" }) => {
+  const isLg = (" " + className + " ").indexOf(" lg ") >= 0;
+  const lightSrc = isLg ? "assets/gemini-logo.png" : "assets/gemini-logo-notag.png";
+  const darkSrc  = isLg ? "assets/gemini-logo-rev.png" : "assets/gemini-logo-notag-rev.png";
+  return (
+    <span className={"glogo " + className} aria-label="Gemini AMPM — Asset Management Planned Maintenance">
+      <img className="glogo-img glogo-img--light" src={lightSrc} alt="" aria-hidden="true" />
+      <img className="glogo-img glogo-img--dark"  src={darkSrc}  alt="Gemini AMPM" />
     </span>
-  </span>
-);
+  );
+};
 
 // ——— Four-colour meridian (shared with the group) ———
 const Meridian = ({ className = "fmer" }) => (

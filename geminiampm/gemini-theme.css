@@ -258,18 +258,22 @@ html[data-arc="subtle"] .gdaybreak {
   background: currentColor; border-radius: 0 0 14px 14px; }
 .moonmark::after { content: ""; position: absolute; left: 2px; right: 2px; bottom: 19px; height: 2.5px; background: currentColor; }
 
-/* ===== Gemini AMPM logo lockup (real brand: "gemini" wordmark + AMPM roundels) ===== */
-.glogo { display: inline-flex; align-items: center; gap: 0.42em; font-size: 26px; line-height: 1; color: inherit; }
-.glogo-word { font-family: "Quicksand", "Archivo", sans-serif; font-weight: 600; font-size: 1.04em;
-  letter-spacing: -0.01em; text-transform: lowercase; color: inherit; white-space: nowrap; }
-.glogo-ampm { display: inline-flex; gap: 0.06em; }
-.glogo-ampm i { font-style: normal; font-size: 0.74em; width: 1.36em; height: 1.36em; border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center; color: #fff;
-  font-family: "Fredoka", "Quicksand", sans-serif; font-weight: 600; line-height: 1; letter-spacing: 0;
-  background:
-    radial-gradient(circle at 32% 26%, color-mix(in srgb, var(--c) 58%, #fff) 0%,
-      var(--c) 46%, color-mix(in srgb, var(--c) 74%, #000) 100%); }
-.glogo.lg { font-size: 32px; }
+/* ===== Gemini AMPM logo lockup (production PNG artwork) =====
+   Two <img> tags stack; CSS picks the right one for the surface.
+   Default = cream "-rev" artwork (matches the night skin and any
+   [data-nav-dark] section). On a light surface (day skin nav before
+   it scrolls over a dark band), we flip to the charcoal version. */
+.glogo { display: inline-flex; align-items: center; line-height: 0; color: inherit; }
+.glogo .glogo-img { display: block; height: 26px; width: auto; max-width: none; }
+.glogo.lg .glogo-img { height: 64px; }
+
+/* Default surface = dark — show cream artwork, hide light artwork. */
+.glogo .glogo-img--light { display: none; }
+.glogo .glogo-img--dark  { display: block; }
+
+/* Day skin, nav not over a dark section: show charcoal artwork. */
+[data-skin="day"] .nav:not(.dark) .glogo .glogo-img--light { display: block; }
+[data-skin="day"] .nav:not(.dark) .glogo .glogo-img--dark  { display: none; }
 .nav .wm { text-decoration: none; font-family: var(--d-body); }
 .foot .fwm { line-height: 1; }
 

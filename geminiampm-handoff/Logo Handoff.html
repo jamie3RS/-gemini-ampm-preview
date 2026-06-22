@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>Gemini AMPM — Logo Handoff</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0b0e1c"/><g transform="translate(60 78)"><circle cx="9" cy="9" r="9" fill="#E8742C"/><circle cx="29" cy="9" r="9" fill="#3D8E2E"/><circle cx="49" cy="9" r="9" fill="#2E5FAB"/><circle cx="69" cy="9" r="9" fill="#7A2E8F"/></g><text x="100" y="140" text-anchor="middle" fill="#E8742C" font-family="monospace" font-size="11" letter-spacing="0.2em">LOGO</text></svg>
+</template>
+<style>
+  :root{ --night:#0b0e1c; --paper:#fdfaf2; --ink:#1c1812; --ink2:rgba(28,24,18,0.66); --ink3:rgba(28,24,18,0.45);
+    --cream:#f4ead8; --accent:#E8742C; --rule:rgba(28,24,18,0.14);
+    --d:"Big Shoulders Display",sans-serif; --b:"Archivo",sans-serif; --m:"JetBrains Mono",monospace; }
+  *{box-sizing:border-box;} body{margin:0;font-family:var(--b);color:var(--ink);background:#e7e2d6;line-height:1.6;}
+  .wrap{max-width:1080px;margin:0 auto;background:var(--paper);}
+  header{background:var(--night);color:var(--cream);padding:44px 48px;}
+  .kick{font-family:var(--m);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 16px;}
+  h1{font-family:var(--d);font-weight:800;text-transform:uppercase;font-size:clamp(34px,5vw,60px);line-height:0.94;margin:0 0 14px;color:#fff;letter-spacing:0.01em;}
+  header p{max-width:64ch;margin:0;color:rgba(244,234,216,0.82);font-size:16px;}
+  header p strong{color:#fff;}
+  main{padding:40px 48px 64px;}
+  h2{font-family:var(--d);font-weight:700;text-transform:uppercase;font-size:26px;margin:48px 0 6px;letter-spacing:0.01em;}
+  h2:first-child{margin-top:0;}
+  .sub{font-size:14px;color:var(--ink2);margin:0 0 22px;max-width:70ch;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:720px){.grid{grid-template-columns:1fr;}}
+  .card{border:1px solid var(--rule);background:#fff;}
+  .stage{display:flex;align-items:center;justify-content:center;padding:40px;min-height:160px;}
+  .stage.light{background:var(--paper);}
+  .stage.dark{background:var(--night);}
+  .stage img{height:54px;width:auto;display:block;}
+  .stage img.sm{height:38px;}
+  .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--rule);background:#fbfaf6;
+    font-family:var(--m);font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink3);}
+  .foot b{color:var(--ink);font-weight:600;}
+  .tag{display:inline-block;font-family:var(--m);font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border:1.5px solid;}
+  .tag.light{color:#9a7b2a;border-color:#cdb36a;}
+  .tag.dark{color:var(--accent);border-color:var(--accent);}
+  ul{margin:0;padding-left:20px;} li{margin:7px 0;font-size:14.5px;color:var(--ink2);} li strong{color:var(--ink);}
+  code{font-family:var(--m);font-size:12.5px;background:#efe7d4;padding:1px 6px;color:#7a3d12;}
+  .note{background:var(--night);color:var(--cream);padding:18px 22px;margin-top:22px;}
+  .note p{margin:0 0 6px;font-size:13.5px;color:rgba(244,234,216,0.85);} .note p:last-child{margin:0;} .note b{color:#fff;}
+  .files{font-family:var(--m);font-size:12px;color:var(--ink2);line-height:2;}
+  .meridian{display:flex;height:6px;width:280px;margin-top:26px;}.meridian span{flex:1;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kick">Gemini AMPM · Developer handoff · Logo update</p>
+    <h1>Use the real<br />logo artwork</h1>
+    <p>The mockups drew the lockup in CSS (the AMPM letters came out slightly off-centre). <strong>Switch to the supplied PNG artwork.</strong> Full written direction + the recolour recipe are in <code>LOGO-UPDATE.md</code>; the files are in <code>/assets/</code>.</p>
+    <div class="meridian"><span style="background:#E8742C"></span><span style="background:#3D8E2E"></span><span style="background:#2E5FAB"></span><span style="background:#7A2E8F"></span></div>
+  </header>
+  <main>
+    <h2>The four assets</h2>
+    <p class="sub">Light surface → grey-wordmark file · dark surface → <code>-rev</code> (cream) file. The roundels are the client's exact artwork in every file — never recolour or rebuild them. Size by <code>height</code>, <code>width:auto</code>.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="stage light"><img src="assets/gemini-logo.png" alt="Gemini AMPM full lockup, light" /></div>
+        <div class="foot"><span><b>gemini-logo.png</b> · full + strapline</span><span class="tag light">on light</span></div>
+      </div>
+      <div class="card">
+        <div class="stage dark"><img src="assets/gemini-logo-rev.png" alt="Gemini AMPM full lockup, reversed" /></div>
+        <div class="foot"><span><b>gemini-logo-rev.png</b> · full + strapline</span><span class="tag dark">on dark</span></div>
+      </div>
+      <div class="card">
+        <div class="stage light"><img class="sm" src="assets/gemini-logo-notag.png" alt="Gemini AMPM compact, light" /></div>
+        <div class="foot"><span><b>gemini-logo-notag.png</b> · compact (header/card)</span><span class="tag light">on light</span></div>
+      </div>
+      <div class="card">
+        <div class="stage dark"><img class="sm" src="assets/gemini-logo-notag-rev.png" alt="Gemini AMPM compact, reversed" /></div>
+        <div class="foot"><span><b>gemini-logo-notag-rev.png</b> · compact (header/card)</span><span class="tag dark">on dark</span></div>
+      </div>
+    </div>
+
+    <h2>Where each goes</h2>
+    <ul>
+      <li><strong>Header / nav:</strong> the <code>notag</code> pair. Over the dark hero/night sections use <code>-notag-rev</code> (cream); over a light/white header use <code>-notag</code> (grey).</li>
+      <li><strong>Footer:</strong> dark background → <code>gemini-logo-rev.png</code> (full, with strapline — there's room).</li>
+      <li><strong>Favicon / social / app icon:</strong> crop a roundel or the wordmark from <code>notag</code>, or request a square master.</li>
+    </ul>
+
+    <h2>Drop-in markup</h2>
+    <p class="sub">Ship both colourways and let CSS pick by header state (the site is night-led, so cream is the common case). Full snippet + the single-image fallback are in the markdown.</p>
+    <div class="note">
+      <p><b>Remove</b> any <code>.glogo / .glogo-word / .glogo-ampm</code> CSS-circle lockup.</p>
+      <p><b>Add</b> <code>&lt;img src="/assets/gemini-logo-notag-rev.png" alt="Gemini AMPM" height="30"&gt;</code> (or the light/dark swap pair).</p>
+      <p><b>Never</b> set both width and height, stretch it, recolour the roundels, or re-typeset the wordmark.</p>
+    </div>
+
+    <h2>In this folder</h2>
+    <div class="files">
+      LOGO-UPDATE.md &nbsp;— full written direction + recolour recipe<br />
+      assets/gemini-logo.png &nbsp;· &nbsp;assets/gemini-logo-rev.png<br />
+      assets/gemini-logo-notag.png &nbsp;· &nbsp;assets/gemini-logo-notag-rev.png<br />
+      assets/GEMINI_AMPM_RGB-master.png &nbsp;— original client master (regenerate from this)
+    </div>
+  </main>
+</div>
+</body>
+</html>
