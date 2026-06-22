@@ -148,8 +148,8 @@ const WhyPage = ({ setRoute, skin }) => {
 // ——— About ———
 const GROUP = [
   { tag: "This company", t: "Gemini AMPM", current: true, d: "Fire, security, ventilation, gas suppression and passive fire since 1997. Employee-owned. The life-safety specialist of the group." },
-  { tag: "Sister company", t: "AMPM Building Services", d: "MEPH, commercial fit-out, fabric and groundworks &mdash; the daytime building-services arm. AM &rarr; PM." },
-  { tag: "The wider group", t: "AMPM Group", d: "The mothership: shared standards, shared operating stack, one palette. Several companies, one accountable group." },
+  { tag: "Sister company", t: "AMPM Building Services", href: "https://ampm.co.uk", d: "MEPH, commercial fit-out, fabric and groundworks &mdash; the daytime building-services arm. AM &rarr; PM." },
+  { tag: "The wider group", t: "AMPM Group", href: "https://ampmgroup.co.uk", d: "The mothership: shared standards, shared operating stack, one palette. Several companies, one accountable group." },
 ];
 
 const AboutPage = ({ setRoute, skin }) => {
@@ -176,13 +176,20 @@ const AboutPage = ({ setRoute, skin }) => {
           <h2 className="dhead sm">One group,<br />around the clock.</h2>
         </div>
         <div className="grp-grid reveal">
-          {GROUP.map((g, i) => (
-            <div className={"cell" + (g.current ? " current" : "")} key={i}>
-              <span className="tag">{g.tag}</span>
-              <h3 dangerouslySetInnerHTML={{ __html: g.t }} />
-              <p dangerouslySetInnerHTML={{ __html: g.d }} />
-            </div>
-          ))}
+          {GROUP.map((g, i) => {
+            const cls = "cell" + (g.current ? " current" : "") + (g.href ? " linked" : "");
+            const inner = (
+              <>
+                <span className="tag">{g.tag}</span>
+                <h3 dangerouslySetInnerHTML={{ __html: g.t }} />
+                <p dangerouslySetInnerHTML={{ __html: g.d }} />
+                {g.href ? <span className="cell-go" aria-hidden="true">Visit ↗</span> : null}
+              </>
+            );
+            return g.href
+              ? <a className={cls} key={i} href={g.href} target="_blank" rel="noopener noreferrer">{inner}</a>
+              : <div className={cls} key={i}>{inner}</div>;
+          })}
         </div>
       </section>
       <AccredWall head="The accreditations<br />behind the work." />
