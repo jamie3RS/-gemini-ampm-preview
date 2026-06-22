@@ -24,7 +24,7 @@ const HeroFig = () => (
     <image-slot id="g-hero" shape="rect" style={{ width: "100%", height: "clamp(300px,38vw,460px)", display: "block" }}
       src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1400&q=72"
       placeholder="NIGHT — the building / city after dark"></image-slot>
-    <figcaption className="gcap">After hours &mdash; when the building empties, the systems stay on · [project, location]</figcaption>
+    <figcaption className="gcap">After hours &mdash; when the building empties, the systems stay on · Peterborough Court, Fleet Street &middot; London</figcaption>
   </figure>
 );
 
@@ -189,7 +189,7 @@ const DawnHandback = ({ setRoute, phone }) => (
           <strong>Daytime building works? That&rsquo;s our sister company.</strong>
           AMPM Building Services &mdash; MEPH, commercial fit-out, fabric and groundworks. Same group, same standard, the day shift: AM &rarr; PM.
         </span>
-        <span className="arrow">&nearr;</span>
+        <span className="arrow">{"↗"}</span>
       </a>
     </section>
   </div>

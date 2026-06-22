@@ -142,7 +142,7 @@ const Footer = ({ setRoute, phone }) => {
             <li><a href="#sectors" onClick={go("sectors")}>Sectors</a></li>
             <li><a href="#casestudies" onClick={go("casestudies")}>Case studies</a></li>
             <li><a href="#news" onClick={go("news")}>News &amp; insights</a></li>
-            <li><a href={CONTACT.portal} target="_blank" rel="noopener noreferrer">Client portal &nearr;</a></li>
+            <li><a href={CONTACT.portal} target="_blank" rel="noopener noreferrer">Client portal ↗</a></li>
           </ul>
         </div>
         <div>
@@ -154,8 +154,8 @@ const Footer = ({ setRoute, phone }) => {
           </ul>
           <h5 style={{ marginTop: 22 }}>AMPM Group</h5>
           <ul>
-            <li><a href="https://ampmgroup.co.uk" target="_blank" rel="noopener noreferrer">ampmgroup.co.uk &nearr;</a></li>
-            <li><a href="https://ampm.co.uk" target="_blank" rel="noopener noreferrer">AMPM Building Services &nearr;</a></li>
+            <li><a href="https://ampmgroup.co.uk" target="_blank" rel="noopener noreferrer">ampmgroup.co.uk ↗</a></li>
+            <li><a href="https://ampm.co.uk" target="_blank" rel="noopener noreferrer">AMPM Building Services ↗</a></li>
           </ul>
         </div>
       </div>

@@ -278,7 +278,7 @@ const ContactPage = ({ setRoute, skin, phone }) => {
               </div>
               <div className="route stack">
                 <p className="rl">Existing client</p>
-                <div className="rv" style={{ fontSize: "20px" }}><a href={CONTACT.portal} target="_blank" rel="noopener noreferrer">Client portal &nearr;</a></div>
+                <div className="rv" style={{ fontSize: "20px" }}><a href={CONTACT.portal} target="_blank" rel="noopener noreferrer">Client portal ↗</a></div>
                 <p className="rs">Log work, track jobs and view reports through the AMPM client portal.</p>
               </div>
             </div>
