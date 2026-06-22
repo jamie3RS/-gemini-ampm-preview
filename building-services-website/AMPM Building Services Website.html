@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>AMPM Building Services · M&E, fit-out, roofing and groundworks · A subsidiary of AMPM Group</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="bs-site.css" />
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="#1a1f2b"/>
+    <g transform="translate(28 92)">
+      <rect x="0" y="0" width="20" height="6" fill="#E8742C"/>
+      <rect x="20" y="0" width="60" height="6" fill="#3D8E2E"/>
+      <rect x="80" y="0" width="20" height="6" fill="#2E5FAB"/>
+      <rect x="100" y="0" width="20" height="6" fill="#7A2E8F"/>
+    </g>
+    <text x="100" y="80" text-anchor="middle" fill="#f6f3ec" font-family="Georgia, serif" font-size="28" font-weight="500" letter-spacing="-0.01em">AMPM</text>
+    <text x="100" y="135" text-anchor="middle" fill="#5BAA47" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.2em">BUILDING SERVICES</text>
+  </svg>
+</template>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="bs-components.jsx"></script>
+  <script type="text/babel" src="bs-pages.jsx"></script>
+  <script type="text/babel" src="bs-pages-2.jsx"></script>
+  <script type="text/babel" data-presets="env,react">
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "heroVariant": "depth",
+      "leadColour": "#3D8E2E",
+      "showCounters": true,
+      "groupBadgeProminent": true,
+      "typeScale": 1.0
+    }/*EDITMODE-END*/;
+
+    const LEAD_COLOUR_OPTIONS = [
+      "#3D8E2E", // Working green (default)
+      "#2A6A1F", // Deep moss
+      "#E8742C", // AMPM orange (Group flagship)
+      "#2E5FAB", // AMPM blue
+      "#1a1f2b", // Ink (mono)
+    ];
+
+    const HERO_OPTIONS = [
+      { value: "depth",  label: "Buildings done properly" },
+      { value: "me",     label: "One programme, one PM" },
+      { value: "backed", label: "Building services arm" },
+    ];
+
+    function App() {
+      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+      const [route, setRoute] = React.useState("home");
+      React.useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [route]);
+
+      // Apply lead-colour + type-scale as CSS variables. The lead colour
+      // derives a deeper hover shade by mixing 18% black.
+      React.useEffect(() => {
+        const r = document.documentElement.style;
+        const lead = t.leadColour || "#3D8E2E";
+        r.setProperty("--bs-lead", lead);
+        r.setProperty("--bs-lead-deep", shade(lead, -0.18));
+        r.setProperty("--bs-lead-soft", shade(lead, 0.22));
+        r.setProperty("--type-scale", t.typeScale || 1);
+      }, [t.leadColour, t.typeScale]);
+
+      const Page =
+        route === "services" ? ServicesPage :
+        route === "about"    ? AboutPage :
+        route === "work"     ? WorkPage :
+        route === "contact"  ? ContactPage :
+                               HomePage;
+
+      return (
+        <>
+          <SiteHeader route={route} setRoute={setRoute} dark={false} />
+          <main>
+            <Page setRoute={setRoute} tweaks={t} />
+          </main>
+          <SiteFooter setRoute={setRoute} />
+
+          <TweaksPanel title="Tweaks">
+            <TweakSection label="Home" />
+            <TweakSelect
+              label="Hero variant"
+              value={t.heroVariant}
+              options={HERO_OPTIONS}
+              onChange={(v) => setTweak("heroVariant", v)}
+            />
+            <TweakToggle
+              label="Show counters strip"
+              value={t.showCounters}
+              onChange={(v) => setTweak("showCounters", v)}
+            />
+
+            <TweakSection label="Brand" />
+            <TweakColor
+              label="Lead colour"
+              value={t.leadColour}
+              options={LEAD_COLOUR_OPTIONS}
+              onChange={(v) => setTweak("leadColour", v)}
+            />
+            <TweakToggle
+              label="'Part of AMPM Group' prominent"
+              value={t.groupBadgeProminent}
+              onChange={(v) => setTweak("groupBadgeProminent", v)}
+            />
+
+            <TweakSection label="Type" />
+            <TweakSlider
+              label="Type scale"
+              value={t.typeScale}
+              min={0.85}
+              max={1.15}
+              step={0.01}
+              onChange={(v) => setTweak("typeScale", v)}
+            />
+          </TweaksPanel>
+        </>
+      );
+    }
+
+    // Hex shade helper — mix the hex toward black (neg) or white (pos).
+    function shade(hex, amt) {
+      const h = hex.replace("#", "");
+      const n = h.length === 3
+        ? h.split("").map(c => c + c).join("")
+        : h;
+      const r = parseInt(n.slice(0, 2), 16);
+      const g = parseInt(n.slice(2, 4), 16);
+      const b = parseInt(n.slice(4, 6), 16);
+      const mix = (c) => Math.max(0, Math.min(255, Math.round(amt < 0 ? c * (1 + amt) : c + (255 - c) * amt)));
+      const to2 = (x) => x.toString(16).padStart(2, "0");
+      return `#${to2(mix(r))}${to2(mix(g))}${to2(mix(b))}`;
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>

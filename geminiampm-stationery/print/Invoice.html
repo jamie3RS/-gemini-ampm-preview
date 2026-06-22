@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>Gemini AMPM — Invoice (A4)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Archivo:wght@400;500;600;700&family=Quicksand:wght@500;600;700&family=Fredoka:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="sheets.css" />
+<link rel="stylesheet" href="stationery.css" />
+</head>
+<body class="has-bar">
+  <div class="print-bar">
+    <span class="pb-logo">Gemini AMPM · Invoice · A4</span>
+    <button onclick="window.print()">Print / Save as PDF ↓</button>
+  </div>
+
+  <div class="sheet adoc">
+    <div class="adoc-head">
+      <span class="glogo"><span class="glogo-word">gemini</span><span class="glogo-ampm"><i style="--c:#E8742C">A</i><i style="--c:#3D8E2E">M</i><i style="--c:#2E5FAB">P</i><i style="--c:#7A2E8F">M</i></span></span>
+      <div class="adoc-type">
+        <div class="big">Invoice</div>
+        <div class="no">No. <span class="ghost">INV-0000</span></div>
+      </div>
+    </div>
+    <div class="meridian adoc-rule"><span class="o"></span><span class="g"></span><span class="b"></span><span class="p"></span></div>
+
+    <div class="adoc-meta">
+      <div><div class="lbl">Bill to</div><div class="val"><strong class="ghost">[ Client name ]</strong><br /><span class="ghost">[ Billing address ]</span></div></div>
+      <div><div class="lbl">Invoice / PO ref</div><div class="val"><span class="ghost">INV-0000</span><br /><span class="ghost">PO: [ reference ]</span></div></div>
+      <div><div class="lbl">Issue date · Due date</div><div class="val"><span class="ghost">DD.MM.YYYY</span><br /><span class="ghost">DD.MM.YYYY (30 days)</span></div></div>
+    </div>
+
+    <div class="adoc-table-wrap">
+      <table class="adoc-table">
+        <thead><tr><th style="width:54%">Description</th><th class="r" style="width:10%">Qty</th><th class="r" style="width:18%">Unit</th><th class="r" style="width:18%">Amount</th></tr></thead>
+        <tbody>
+          <tr><td><span class="desc-main">[ Works / system ]</span><br /><span class="ghost">Per quotation QU-0000</span></td><td class="r">1</td><td class="r">£0.00</td><td class="r">£0.00</td></tr>
+          <tr><td><span class="ghost">[ Line item ]</span></td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td></tr>
+          <tr><td><span class="ghost">[ Line item ]</span></td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="adoc-totals">
+      <table>
+        <tr><td>Subtotal</td><td class="r">£0.00</td></tr>
+        <tr><td>VAT @ 20%</td><td class="r">£0.00</td></tr>
+        <tr class="grand"><td>Total due</td><td class="r accent">£0.00</td></tr>
+      </table>
+    </div>
+
+    <div class="adoc-foot">
+      <div><h6>Payment</h6><p>Payable within 30 days of issue by BACS.<br />Bank: <span class="ghost">[ bank name ]</span> · Sort: <span class="ghost">[ 00-00-00 ]</span> · Acc: <span class="ghost">[ 00000000 ]</span><br />Please quote the invoice number with your payment.</p></div>
+      <div><h6>Queries</h6><p>Any questions about this invoice? Contact accounts at info@geminiampm.co.uk or 0330 043 0080.</p></div>
+      <div class="adoc-legal">Gemini AMPM Ltd · An AMPM Group company · Employee-owned (EOT) · Unit 2, Regents Business Centre, Jubilee Road, Burgess Hill, West Sussex RH15 9TL · Company No. <span class="tbc">[to confirm]</span> · VAT Reg. <span class="tbc">[to confirm]</span></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.DS_Store
+.thumbnail
+.design-canvas.state.json
+.image-slots.state.json
+*.swp
+.idea/
+.vscode/
+node_modules/

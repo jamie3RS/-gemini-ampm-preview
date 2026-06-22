@@ -1,0 +1,130 @@
+/* Direction C — Modern Heritage. Warm paper, institutional, editorial.
+   The evolution of the board-pack system already in the family.
+   Scoped under .dirC */
+
+.dirC {
+  width: 100%; height: 100%; background: var(--paper); color: var(--ink);
+  font-family: var(--sans); box-sizing: border-box; overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.dirC * { box-sizing: border-box; }
+
+/* masthead — newspaper-like */
+.c-mast { text-align: center; padding: 30px 64px 0; }
+.c-mast .row1 { display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+.c-mast .wordmark { font-family: var(--serif); font-size: 44px; font-weight: 600; letter-spacing: -0.02em; margin: 18px 0 6px; white-space: nowrap; }
+.c-mast .wordmark .light { font-weight: 400; color: var(--ink-3); }
+.c-mast .est { font-family: var(--mono); font-size: 9px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ink-3); }
+.c-mast .meridian { width: 180px; height: 6px; margin: 20px auto 0; }
+.c-navrow { display: flex; justify-content: center; gap: 40px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+  margin: 22px 64px 0; padding: 14px 0; font-size: 13.5px; font-weight: 500; color: var(--ink-2); }
+.c-navrow .on { color: var(--ink); border-bottom: 2px solid var(--ink); padding-bottom: 2px; }
+.c-navrow span { white-space: nowrap; }
+
+/* hero — editorial broadsheet */
+.c-hero { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 56px; padding: 60px 64px 64px; }
+.c-hero h1 { font-family: var(--serif); font-weight: 400; font-size: 84px; line-height: 1.0; letter-spacing: -0.028em; margin: 0 0 28px; text-wrap: balance; }
+.c-hero h1 em { font-style: italic; color: var(--ink-3); }
+.c-hero .stand { font-family: var(--serif); font-size: 20px; line-height: 1.6; color: var(--ink-2); max-width: 52ch; margin: 0 0 36px; }
+.c-hero .stand strong { color: var(--ink); font-weight: 600; }
+.c-cta-row { display: flex; align-items: center; gap: 20px; }
+.c-btn { background: var(--ink); color: var(--paper); font-size: 14px; font-weight: 500; padding: 17px 30px; white-space: nowrap; }
+.c-btn-line { border: 1px solid var(--ink); color: var(--ink); font-size: 14px; font-weight: 500; padding: 16px 28px; white-space: nowrap; }
+.c-hero .note { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-top: 20px; }
+.c-hero-side { border-left: 1px solid var(--rule-strong); padding-left: 40px; display: flex; flex-direction: column; }
+.c-hero-side .lbl { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 18px; }
+.c-ledger-item { padding: 16px 0; border-top: 1px solid var(--rule); display: flex; align-items: center; gap: 14px; }
+.c-ledger-item:first-of-type { border-top: 0; }
+.c-ledger-item .chip { width: 5px; height: 38px; }
+.c-ledger-item .nm { font-family: var(--serif); font-size: 19px; white-space: nowrap; }
+.c-ledger-item .ix { margin-left: auto; font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
+.c-hero-side .fig { margin-top: 26px; }
+.c-hero-side image-slot { background: var(--paper-2); }
+.c-hero-side .cap { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-top: 10px; }
+
+/* provenance band — dark */
+.c-prov { background: var(--ink); color: var(--paper); margin: 0; padding: 52px 64px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+.c-prov .col h3 { font-family: var(--serif); font-weight: 400; font-size: 25px; letter-spacing: -0.012em; margin: 0 0 12px; }
+.c-prov .col h3 em { font-style: italic; color: rgba(246,243,236,0.55); }
+.c-prov .col p { font-size: 13.5px; line-height: 1.65; color: rgba(246,243,236,0.65); margin: 0; }
+.c-prov .col .lbl { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(246,243,236,0.4); margin-bottom: 16px; }
+
+/* services — exhibit plates */
+.c-svcs { padding: 80px 64px 0; }
+.c-sechead { display: flex; align-items: baseline; gap: 24px; margin-bottom: 40px; }
+.c-sechead .no { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--ink-3); white-space: nowrap; }
+.c-sechead h2 { font-family: var(--serif); font-weight: 400; font-size: 52px; letter-spacing: -0.024em; line-height: 1.04; margin: 0; white-space: nowrap; flex-shrink: 0; }
+.c-sechead h2 em { font-style: italic; color: var(--ink-3); }
+.c-sechead::after { content: ""; flex: 1; height: 1px; background: var(--ink); align-self: center; }
+.c-plates { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.c-plate { border: 1px solid var(--rule-strong); background: #fff; display: grid; grid-template-columns: 1fr 1.1fr; }
+.c-plate .img-side { border-right: 1px solid var(--rule); position: relative; }
+.c-plate image-slot { background: var(--paper-2); }
+.c-plate .plate-no { position: absolute; top: 12px; left: 12px; font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.12em; background: var(--paper); padding: 5px 9px; color: var(--ink-2); }
+.c-plate .body { padding: 26px 28px 24px; display: flex; flex-direction: column; }
+.c-plate .body .bar { width: 36px; height: 6px; margin-bottom: 18px; }
+.c-plate h3 { font-family: var(--serif); font-weight: 600; font-size: 23px; letter-spacing: -0.012em; margin: 0 0 10px; }
+.c-plate p { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 16px; }
+.c-plate .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);
+  border-top: 1px solid var(--rule); padding-top: 14px; }
+.c-plate .foot .go { color: var(--ink); }
+
+/* casework — table of record */
+.c-cases { padding: 84px 64px 0; }
+.c-casetable { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.c-caserow { display: grid; grid-template-columns: 110px 1.3fr 1fr 0.8fr 90px; gap: 24px; align-items: center;
+  padding: 22px 8px; border-top: 1px solid var(--rule); }
+.c-caserow:first-child { border-top: 0; }
+.c-caserow.head { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-3); padding: 12px 8px; border-bottom: 1px solid var(--ink); }
+.c-caserow .ref { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); }
+.c-caserow .prj { font-family: var(--serif); font-size: 20px; letter-spacing: -0.01em; }
+.c-caserow .cli { font-size: 13.5px; color: var(--ink-2); }
+.c-caserow .disc { display: flex; gap: 5px; }
+.c-caserow .disc i { width: 18px; height: 7px; }
+.c-caserow .yr { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); text-align: right; }
+.c-cases .more-note { font-family: var(--serif); font-style: italic; font-size: 14.5px; color: var(--ink-2); margin-top: 16px; }
+
+/* letter from the board */
+.c-letter { margin: 84px 64px 0; border: 1px solid var(--rule-strong); background: #fff; padding: 56px 64px; display: grid; grid-template-columns: 0.62fr 1.38fr; gap: 56px; }
+.c-letter .lbl { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+.c-letter .who { margin-top: 26px; }
+.c-letter .who .nm { font-family: var(--serif); font-size: 19px; font-weight: 600; }
+.c-letter .who .role { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; }
+.c-letter blockquote { font-family: var(--serif); font-size: 26px; line-height: 1.45; letter-spacing: -0.012em; color: var(--ink); margin: 0; }
+.c-letter blockquote em { font-style: italic; }
+.c-letter .sig { font-family: var(--serif); font-style: italic; font-size: 22px; margin-top: 26px; color: var(--ink-2); }
+
+/* accreditation — register style */
+.c-accr { padding: 84px 64px 0; }
+.c-accr-list { border-top: 1px solid var(--ink); display: grid; grid-template-columns: repeat(3, 1fr); }
+.c-accr-item { display: flex; align-items: baseline; gap: 12px; padding: 16px 20px 16px 4px; border-bottom: 1px solid var(--rule);
+  font-size: 14px; }
+.c-accr-item .tick { font-family: var(--mono); font-size: 10px; color: var(--m-green); }
+.c-accr-item .nm { font-weight: 600; }
+.c-accr-item .of { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-left: auto; }
+
+/* CTA — procurement-shaped */
+.c-cta { margin: 84px 64px 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.c-cta .card { border: 1px solid var(--ink); padding: 44px 46px; display: flex; flex-direction: column; min-height: 300px; }
+.c-cta .card.dark { background: var(--ink); color: var(--paper); }
+.c-cta .lbl { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 20px; }
+.c-cta .card.dark .lbl { color: rgba(246,243,236,0.5); }
+.c-cta h3 { font-family: var(--serif); font-weight: 400; font-size: 34px; letter-spacing: -0.018em; line-height: 1.1; margin: 0 0 14px; }
+.c-cta h3 em { font-style: italic; }
+.c-cta p { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 24px; max-width: 44ch; }
+.c-cta .card.dark p { color: rgba(246,243,236,0.65); }
+.c-cta .act { margin-top: auto; }
+.c-cta .card.dark .c-btn { background: var(--paper); color: var(--ink); }
+.c-cta .files { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-top: 16px; line-height: 1.9; }
+.c-cta .card.dark .files { color: rgba(246,243,236,0.5); }
+
+/* footer */
+.c-footer { border-top: 1px solid var(--ink); margin: 0 64px; padding: 28px 0 36px;
+  display: flex; justify-content: space-between; align-items: center; }
+.c-footer .wm { font-family: var(--serif); font-size: 17px; font-weight: 600; }
+.c-footer .meridian { width: 90px; height: 5px; }
+.c-footer .legal { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }

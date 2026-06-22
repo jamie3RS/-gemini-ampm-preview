@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>AMPM Building Services Limited · Launch Business Plan · May 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="business-plan.css" />
+<style>
+  /* Local-only — the meridian palette as four CSS variables, matching the website */
+  :root {
+    --ampm-c1: #E8742C;
+    --ampm-c2: #5BAA47;
+    --ampm-c3: #2E5FAB;
+    --ampm-c4: #7A2E8F;
+    /* Building Services accent — moss-green leans into the "build / construction" tone */
+    --bs-accent: #5BAA47;
+  }
+  .cover-meridian span:nth-child(1) { background: var(--ampm-c1); }
+  .cover-meridian span:nth-child(2) { background: var(--ampm-c2); }
+  .cover-meridian span:nth-child(3) { background: var(--ampm-c3); }
+  .cover-meridian span:nth-child(4) { background: var(--ampm-c4); }
+  .meridian-mini span:nth-child(1) { background: var(--ampm-c1); }
+  .meridian-mini span:nth-child(2) { background: var(--ampm-c2); }
+  .meridian-mini span:nth-child(3) { background: var(--ampm-c3); }
+  .meridian-mini span:nth-child(4) { background: var(--ampm-c4); }
+
+  /* Entity badge on the cover */
+  .cover-entity-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(246, 243, 236, 0.7);
+    padding: 6px 10px 6px 14px;
+    border: 1px solid rgba(246, 243, 236, 0.25);
+    border-radius: 999px;
+    margin-bottom: 36px;
+  }
+  .cover-entity-badge::before {
+    content: "";
+    width: 8px; height: 8px;
+    background: var(--bs-accent);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* Phase columns — Phase 1 / Phase 2 parallel-track block */
+  .phase-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin: 36px 0;
+  }
+  @media (max-width: 720px) {
+    .phase-block { grid-template-columns: 1fr; }
+  }
+  .phase-card {
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .phase-card.is-secondary {
+    background: var(--paper-2);
+    border-color: var(--rule-strong);
+  }
+  .phase-card .phase-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .phase-card .phase-tag::before {
+    content: "";
+    width: 24px; height: 1px; background: var(--ink-3);
+  }
+  .phase-card h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+  }
+  .phase-card .phase-window {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--ink-2);
+  }
+  .phase-card p {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0;
+  }
+  .phase-card .phase-list {
+    margin: 0; padding: 0; list-style: none;
+  }
+  .phase-card .phase-list li {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative;
+    color: var(--ink-2);
+  }
+  .phase-card .phase-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0; top: 0;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--bs-accent);
+  }
+
+  /* 90-day timeline lanes */
+  .timeline {
+    margin: 32px 0;
+    border-top: 1px solid var(--ink);
+  }
+  .timeline-row {
+    display: grid;
+    grid-template-columns: 110px 1fr 200px 100px;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  @media (max-width: 720px) {
+    .timeline-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
+  }
+  .timeline-row .tl-when {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .timeline-row .tl-action {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .timeline-row .tl-owner {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--ink-2);
+  }
+  .timeline-row .tl-flag {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: right;
+  }
+  .timeline-row .tl-flag.is-priority { color: var(--oxblood); }
+  .timeline-row .tl-flag.is-gate { color: var(--bs-accent); }
+  .timeline-row .tl-flag.is-target { color: var(--mustard); }
+
+  /* Risk-table colouring — likelihood / impact dots */
+  .risk-dot {
+    display: inline-block;
+    width: 8px; height: 8px; border-radius: 50%;
+    margin-right: 6px; vertical-align: middle;
+  }
+  .risk-dot.high { background: var(--oxblood); }
+  .risk-dot.med  { background: var(--mustard); }
+  .risk-dot.low  { background: var(--moss); }
+
+  /* Sub-brand bar on cover (sits under the brand line) */
+  .cover-subbrand {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(246, 243, 236, 0.55);
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- COVER -->
+<!-- ─────────────────────────────────────────────────────────── -->
+<section class="cover">
+  <div class="cover-head">
+    <div>
+      <div class="cover-brand-line">
+        <span class="cover-brand">AMPM</span>
+        <div class="cover-meridian"><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="cover-subbrand">Building Services</div>
+    </div>
+    <div>Launch Business Plan · v1.0 · May 2026</div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-entity-badge">AMPM Group · Year-1 trading subsidiary</div>
+    <h1 class="cover-title">A clean entity,<br/>a captive pipeline,<br/><em>a £4m year one.</em></h1>
+    <p class="cover-deck">
+      AMPM Building Services Limited is the Group's fastest organic growth lever — incorporated, ready to trade, and built to capture M&amp;E, fit-out, roofing and groundworks scope currently sub-contracted out of Gemini AMPM. This is the operational launch plan behind the Group business plan.
+    </p>
+  </div>
+
+  <div class="cover-foot">
+    <div class="cover-foot-cell">
+      <div class="lbl">Issued by</div>
+      <div class="val">AMPM Building Services Limited<br/>A subsidiary of AMPM Group Limited<br/>Burgess Hill, West Sussex</div>
+    </div>
+    <div class="cover-foot-cell">
+      <div class="lbl">Prepared for</div>
+      <div class="val">Board of directors, AMPM Group Limited<br/>For launch approval &amp; execution</div>
+    </div>
+    <div class="cover-foot-cell">
+      <div class="lbl">Sponsor</div>
+      <div class="val">Dan Small · MD, AMPM Group<br/>Interim director, Building Services</div>
+    </div>
+  </div>
+
+  <div class="cover-confidential">Strictly confidential · Not for distribution</div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- RUNNING HEAD -->
+<!-- ─────────────────────────────────────────────────────────── -->
+<div class="doc-running-head">
+  <div class="brand-mini">
+    <span>AMPM Building Services</span>
+    <div class="meridian-mini"><span></span><span></span><span></span><span></span></div>
+  </div>
+  <span>Launch Plan · v1.0 · May 2026 · Strictly Confidential</span>
+</div>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- CONFIDENTIALITY + CONTENTS -->
+<!-- ─────────────────────────────────────────────────────────── -->
+<main class="doc">
+
+<section class="contents">
+  <div class="section-no">Confidentiality</div>
+  <h2 class="h2" style="margin-top: 8px;">A note on this document.</h2>
+  <p>
+    This document is prepared by the directors of AMPM Group Limited as the operational launch plan for AMPM Building Services Limited, a wholly-owned subsidiary. It is provided to the recipient on a strictly confidential basis for the purpose of internal review, launch approval, and execution oversight. Financial figures are based on the Group's current pipeline, Gemini AMPM management accounts and known external opportunities; they are forward-looking and subject to revision as the entity trades.
+  </p>
+</section>
+
+<section class="contents">
+  <div class="section-no">Contents</div>
+  <h2 class="h2" style="margin-top: 8px;">In order, end-to-end.</h2>
+
+  <ol class="contents-list">
+    <li><a href="#s01"><span class="contents-no">01</span><span class="contents-name">Executive summary</span><span class="contents-page">p. 04</span></a></li>
+    <li><a href="#s02"><span class="contents-no">02</span><span class="contents-name">Strategic rationale</span><span class="contents-page">p. 06</span></a></li>
+    <li><a href="#s03"><span class="contents-no">03</span><span class="contents-name">Services and scope</span><span class="contents-page">p. 09</span></a></li>
+    <li><a href="#s04"><span class="contents-no">04</span><span class="contents-name">Go-to-market — two-phase model</span><span class="contents-page">p. 11</span></a></li>
+    <li><a href="#s05"><span class="contents-no">05</span><span class="contents-name">Accreditations and insurance roadmap</span><span class="contents-page">p. 14</span></a></li>
+    <li><a href="#s06"><span class="contents-no">06</span><span class="contents-name">Year-one financial plan</span><span class="contents-page">p. 17</span></a></li>
+    <li><a href="#s07"><span class="contents-no">07</span><span class="contents-name">Operations and team</span><span class="contents-page">p. 20</span></a></li>
+    <li><a href="#s08"><span class="contents-no">08</span><span class="contents-name">90-day launch plan</span><span class="contents-page">p. 22</span></a></li>
+    <li><a href="#s09"><span class="contents-no">09</span><span class="contents-name">Principal risks and mitigants</span><span class="contents-page">p. 25</span></a></li>
+    <li><a href="#s10"><span class="contents-no">10</span><span class="contents-name">Contribution to the Group business plan</span><span class="contents-page">p. 27</span></a></li>
+    <li><a href="#s11"><span class="contents-no">11</span><span class="contents-name">Decision and next steps</span><span class="contents-page">p. 29</span></a></li>
+  </ol>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 01 EXECUTIVE SUMMARY -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s01">
+  <div class="section-no">Section 01 · Executive summary</div>
+  <h2 class="section-title">Incorporated. Ready to trade. <em>Pipeline on day one.</em></h2>
+  <p class="section-deck">
+    AMPM Building Services Limited is an incorporated subsidiary of AMPM Group Limited, launching as a full building services contractor across M&amp;E, fit-out, roofing and groundworks. The strategy is phased: sub-contract into Gemini AMPM from month one; approach friendly clients directly from month two. Year-one revenue target: £4 million.
+  </p>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-n">Jun<span class="unit">'26</span></div>
+      <div class="stat-l">Operational target</div>
+      <div class="stat-s">First trading instruction</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">£4<span class="unit">m</span></div>
+      <div class="stat-l">Year-one revenue target</div>
+      <div class="stat-s">Phase 1 + Phase 2</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">25<span class="unit">%</span></div>
+      <div class="stat-l">Target gross margin</div>
+      <div class="stat-s">Year-one base case</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">£400<span class="unit">k</span></div>
+      <div class="stat-l">Year-one operating profit</div>
+      <div class="stat-s">10% operating margin</div>
+    </div>
+  </div>
+
+  <p>
+    The entity is designed to capture a large volume of building-services work currently sub-contracted out of Gemini AMPM to third parties — bringing it in-house, on a separate P&amp;L, with a clean risk profile. <strong>In Phase 1</strong>, Building Services sub-contracts into Gemini on existing projects, generating immediate revenue with minimal new-business risk. <strong>In Phase 2</strong>, the entity approaches friendly clients directly, establishing its own client relationships and order book. Both phases run in parallel; Phase 2 begins as soon as insurance and accreditations allow.
+  </p>
+
+  <p>
+    The structure deliberately de-risks Gemini AMPM. New supply-chain relationships, new client contracts, and the operational risks inherent in a growing business entity are held within the new company rather than consolidated onto Gemini's P&amp;L and accreditation register. Gemini retains its 27-year track record clean.
+  </p>
+
+  <div class="highlight-panel">
+    <h3>Why this is the right next move</h3>
+    <ul>
+      <li>Captive pipeline from day one via Gemini's existing project order book — no new-business development required to start trading</li>
+      <li>Operationally ready: the Group's back-office, finance, IT and HR functions already exist, keeping fixed cost low</li>
+      <li>Tier-1 and institutional clients already known to the management team are actively procuring building-services work</li>
+      <li>Sector tailwinds: HVAC retrofits, heat-pump installations, EV charging, Building Safety Act remediation</li>
+      <li>Clean entity start — no legacy bad contracts; margin discipline from day one</li>
+      <li>Fastest organic growth lever the Group has; reduces the number of acquisitions required to hit the £25–30m Group target</li>
+    </ul>
+  </div>
+
+  <div class="highlight-panel warn">
+    <h3>Decision required</h3>
+    <p style="font-size: 16px; line-height: 1.55; margin: 0;">
+      The decision before the Board is not <em>whether</em> to launch. AMPM Building Services Limited is already incorporated and the commercial case is clear. The decision is <strong>how quickly to execute the launch checklist</strong> — placing insurance, completing the priority accreditation applications, hiring the Operations Manager, and issuing the first Gemini sub-contract instruction. Section 11 sets out the actions in priority order with named owners and deadlines.
+    </p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 02 STRATEGIC RATIONALE -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s02">
+  <div class="section-no">Section 02 · Strategic rationale</div>
+  <h2 class="section-title">A clean entity, by design.</h2>
+  <p class="section-deck">
+    The case for a standalone subsidiary rests on three intertwined arguments: protecting Gemini, maximising P&amp;L clarity, and giving the new business the right operating envelope to grow.
+  </p>
+
+  <h3 class="h2">2.1 · Why a separate entity</h3>
+  <p>Running building services work inside Gemini AMPM creates four structural problems:</p>
+  <ul>
+    <li><strong>Risk contamination.</strong> New supply-chain relationships, new accreditation requirements and new client credit exposures would be consolidated onto Gemini's balance sheet and accreditation register — placing the 27-year-old flagship entity at unnecessary risk.</li>
+    <li><strong>P&amp;L clarity.</strong> Building-services work mixed into Gemini's accounts would obscure the true performance of both businesses, complicating investor reporting and division-level decision-making.</li>
+    <li><strong>Accreditation separation.</strong> Building Services requires different accreditations — NICEIC or NAPIT for electrical, Gas Safe for gas, FMB for general building — that are distinct from Gemini's fire and life-safety stack and should be developed independently.</li>
+    <li><strong>Incentive alignment.</strong> A standalone entity supports a separate management incentive structure — critical for recruiting and retaining the operational leadership needed to grow the business.</li>
+  </ul>
+
+  <h3 class="h2">2.2 · Why now</h3>
+  <ul>
+    <li>Gemini's existing project pipeline already contains M&amp;E, fit-out, roofing and groundworks scope currently being sub-contracted — captive revenue available on day one</li>
+    <li>Several Tier-1 and institutional clients already known to the management team are actively looking for a reliable direct building-services contractor, reducing new-business development time and cost</li>
+    <li>The building-services market is strong: post-pandemic construction activity, energy-efficiency upgrades (heat pump, EV charging, HVAC retrofits) and Building Safety Act remediation all drive sustained demand</li>
+    <li>Group overheads are already in place — shared back-office, finance, HR and IT functions mean Building Services can launch with minimal additional fixed cost</li>
+  </ul>
+
+  <h3 class="h2">2.3 · De-risking Gemini — an explicit design principle</h3>
+  <div class="highlight-panel">
+    <h3>The principle</h3>
+    <ul>
+      <li>Every new supply-chain relationship, new client contract and new accreditation added to AMPM Building Services is one that does <strong>not</strong> appear on Gemini's risk register.</li>
+      <li>Gemini retains its clean 27-year track record and its mature accreditation stack.</li>
+      <li>Building Services starts fresh — appropriate for an entity that will spend its first 12–18 months establishing itself.</li>
+      <li>If a contract or supplier later proves to be a problem, it is isolated within Building Services and does not threaten the flagship.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 03 SERVICES AND SCOPE -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s03">
+  <div class="section-no">Section 03 · Services and scope</div>
+  <h2 class="section-title">Five service lines. <em>M&amp;E first.</em></h2>
+  <p class="section-deck">
+    AMPM Building Services operates across five service lines. Initial focus is Mechanical and Electrical — the services most heavily sub-contracted by Gemini today and therefore the quickest route to captive revenue. Fit-out, roofing and groundworks scale as the supply chain and accreditation position develops.
+  </p>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th>Service line</th>
+        <th>Scope</th>
+        <th>Market demand driver</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">Mechanical (M&amp;E)</span></td>
+        <td><span class="sub">Heating &amp; cooling, HVAC, pipework, plant installation, ventilation, plumbing</span></td>
+        <td><span class="sub">HVAC retrofits, heat-pump installations, energy-efficiency programmes, new-build M&amp;E packages</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Electrical (M&amp;E)</span></td>
+        <td><span class="sub">First &amp; second fix electrical, distribution boards, EV charging, lighting, power</span></td>
+        <td><span class="sub">EV charging infrastructure rollout, lighting upgrades, new-build and fit-out electrical packages</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Fit-out</span></td>
+        <td><span class="sub">Internal fit-out, dry-lining, partitioning, joinery, associated finishes</span></td>
+        <td><span class="sub">Office refurbishment, residential conversions, Tier-1 main contractor supply chain</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Roofing</span></td>
+        <td><span class="sub">Flat &amp; pitched roofing, roof replacement, maintenance, waterproofing systems</span></td>
+        <td><span class="sub">Building-envelope programmes, landlord compliance, insurance reinstatement works</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Groundworks</span></td>
+        <td><span class="sub">Foundations, drainage, concrete, civils associated with building works</span></td>
+        <td><span class="sub">New-build enabling works, drainage compliance, car park &amp; external works packages</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 15px; color: var(--ink-2);">
+    <em>Sequencing: Months 1–6 prioritises M&amp;E (electrical and mechanical) where Gemini's captive sub-contract pipeline is largest. Fit-out is added in Q2 as Tier-1 supply-chain relationships convert. Roofing and groundworks scale through Q3–Q4 as the supply-chain and accreditation position permits.</em>
+  </p>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 04 GO-TO-MARKET -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s04">
+  <div class="section-no">Section 04 · Go-to-market strategy</div>
+  <h2 class="section-title">Two phases, <em>running in parallel.</em></h2>
+  <p class="section-deck">
+    Phase 1 is internal — sub-contract into Gemini AMPM. Phase 2 is external — direct relationships with friendly clients. Both phases are underway simultaneously: Phase 2 begins as soon as insurance and accreditations allow.
+  </p>
+
+  <div class="phase-block">
+    <div class="phase-card">
+      <div class="phase-tag">Phase 1 · Internal</div>
+      <h4>Sub-contracting into Gemini AMPM</h4>
+      <div class="phase-window">Month 1–3 · ~£1.5–2m year-one contribution</div>
+      <p>
+        AMPM Building Services is appointed as a sub-contractor on Gemini AMPM projects where M&amp;E, fit-out, roofing or groundworks scope exists. This is a launch mechanism, not a permanent arrangement — Gemini's existing project order book provides sufficient pipeline to generate an initial run-rate while Phase 2 development runs in parallel.
+      </p>
+      <ul class="phase-list">
+        <li>Immediate revenue · day-one pipeline without new client development time</li>
+        <li>Operational track record · real project delivery experience before external-facing activity begins</li>
+        <li>Supply-chain development · opportunity to qualify, assess and embed preferred sub-contractors under controlled conditions</li>
+        <li>Cash-flow foundation · Gemini pays Building Services on normal commercial sub-contractor terms</li>
+      </ul>
+    </div>
+
+    <div class="phase-card is-secondary">
+      <div class="phase-tag">Phase 2 · External</div>
+      <h4>Direct client relationships</h4>
+      <div class="phase-window">Month 2–6 · ~£1.5–2m year-one contribution</div>
+      <p>
+        Parallel to Phase 1, AMPM Building Services approaches known, friendly clients directly. These are clients already in the Group's or management team's network who are actively procuring building-services work. The management team has specific client conversations already in progress.
+      </p>
+      <ul class="phase-list">
+        <li>Existing Gemini clients with separate M&amp;E or fit-out requirements procured elsewhere</li>
+        <li>Tier-1 contractors (Mace, Arc Group) where building-services packages are let separately from fire safety</li>
+        <li>Housing associations and residential property managers with planned maintenance and improvement programmes</li>
+        <li>Commercial landlords with energy-efficiency and fit-out requirements</li>
+      </ul>
+      <p style="font-size: 14px; color: var(--ink-2); margin-top: 4px;">
+        <strong>Target:</strong> first direct-client instruction within 60 days of launch.
+      </p>
+    </div>
+  </div>
+
+  <h3 class="h2">4.1 · Route-to-market summary</h3>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th>Timeline</th>
+        <th style="text-align: right;">Year-one revenue</th>
+        <th>Key actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">Gemini sub-contractor</span></td>
+        <td><span class="sub">Month 1 onwards</span></td>
+        <td class="num">~£1.5–2m</td>
+        <td><span class="sub">Agree internal pricing; set up sub-contract framework</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Direct — existing network</span></td>
+        <td><span class="sub">Month 2–4</span></td>
+        <td class="num">~£1–1.5m</td>
+        <td><span class="sub">Identify and approach 10 priority clients</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Direct — new acquisition</span></td>
+        <td><span class="sub">Month 4 onwards</span></td>
+        <td class="num">~£0.5m</td>
+        <td><span class="sub">Tender activity, framework applications</span></td>
+      </tr>
+      <tr class="total">
+        <td>TOTAL TARGET</td>
+        <td><span class="sub">Year 1</span></td>
+        <td class="num">~£4.0m</td>
+        <td><span class="sub">—</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 05 ACCREDITATIONS AND INSURANCE -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s05">
+  <div class="section-no">Section 05 · Accreditations and insurance roadmap</div>
+  <h2 class="section-title">A fresh stack, <em>built fast.</em></h2>
+  <p class="section-deck">
+    AMPM Building Services must build its own accreditation and insurance position independently of Gemini. The following are required for the entity to trade credibly across all five service lines.
+  </p>
+
+  <h3 class="h2">5.1 · Priority accreditations</h3>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th>Accreditation</th>
+        <th>Required for</th>
+        <th>Priority</th>
+        <th>Typical timeline</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">NICEIC or NAPIT</span></td>
+        <td><span class="sub">Electrical contracting</span></td>
+        <td><span class="sub" style="color: var(--oxblood); font-weight: 600;">Critical</span></td>
+        <td><span class="sub">4–8 weeks</span></td>
+        <td><span class="sub">Apply immediately · qualified electricians must be on staff or engaged</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Gas Safe Registration</span></td>
+        <td><span class="sub">Gas installation and servicing</span></td>
+        <td><span class="sub" style="color: var(--oxblood); font-weight: 600;">Critical</span></td>
+        <td><span class="sub">2–4 weeks</span></td>
+        <td><span class="sub">Register qualified Gas Safe engineers on company card</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">CHAS or Constructionline</span></td>
+        <td><span class="sub">General contractor pre-qualification</span></td>
+        <td><span class="sub" style="color: var(--mustard); font-weight: 600;">High</span></td>
+        <td><span class="sub">4–6 weeks</span></td>
+        <td><span class="sub">Apply · leverages Group's existing Constructionline Gold where possible</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">FMB</span></td>
+        <td><span class="sub">General building credibility</span></td>
+        <td><span class="sub">Medium</span></td>
+        <td><span class="sub">4–8 weeks</span></td>
+        <td><span class="sub">Apply during setup phase</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">F-Gas certification</span></td>
+        <td><span class="sub">Refrigeration / air conditioning</span></td>
+        <td><span class="sub">Medium</span></td>
+        <td><span class="sub">Via operative cert.</span></td>
+        <td><span class="sub">Ensure relevant operatives hold F-Gas qualification</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">ISO 9001 / 45001</span></td>
+        <td><span class="sub">Quality and H&amp;S management</span></td>
+        <td><span class="sub">Medium-term</span></td>
+        <td><span class="sub">3–6 months</span></td>
+        <td><span class="sub">Implement management system; target certification in Year 1</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">5.2 · Insurance requirements</h3>
+  <p>
+    Before the first instruction is raised, the following must be in place:
+  </p>
+  <ul>
+    <li><strong>Employers Liability Insurance</strong> — statutory minimum £5m; recommend £10m given scale ambition</li>
+    <li><strong>Public Liability Insurance</strong> — £5m minimum; £10m recommended for Tier-1 contractor supply-chain requirements</li>
+    <li><strong>Professional Indemnity Insurance</strong> — required for design-and-build and specification work; £1–2m cover</li>
+    <li><strong>Contract Works / All-Risks Insurance</strong> — covers works in progress; required for most main-contractor supply-chain appointments</li>
+    <li><strong>Plant and Equipment Insurance</strong> — if plant is owned rather than hired</li>
+  </ul>
+
+  <div class="highlight-panel">
+    <h3>Bridging arrangement for Phase 1</h3>
+    <ul>
+      <li>Insurance must be placed before Phase 2 (direct client) activity begins.</li>
+      <li>Phase 1 (sub into Gemini) can begin under Gemini's umbrella insurance while AMPM Building Services' own policies are arranged.</li>
+      <li>This is to be confirmed with the Group's insurance broker as a priority action in Week 1.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 06 YEAR-ONE FINANCIAL PLAN -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s06">
+  <div class="section-no">Section 06 · Year-one financial plan</div>
+  <h2 class="section-title">£4m revenue. 25% GP. <em>10% OP.</em></h2>
+  <p class="section-deck">
+    The year-one financial plan is anchored in known channels and conservative assumptions. The £4 million revenue target is built bottom-up from three identifiable channels, with margin discipline from day one and overhead held in check by Group-shared back-office support.
+  </p>
+
+  <h3 class="h2">6.1 · Revenue model</h3>
+  <ul>
+    <li><strong>Gemini sub-contracting channel — £1.5–2m.</strong> Conservative estimate based on the M&amp;E and fit-out scope visible in Gemini's current order book and pipeline.</li>
+    <li><strong>Direct client channel · existing network — £1–1.5m.</strong> Based on confirmed client conversations and known procurement pipelines where the management team has existing relationships.</li>
+    <li><strong>Direct client channel · new business — £0.5m.</strong> Conservative allowance for new tender and framework activity beginning in Q2.</li>
+  </ul>
+
+  <h3 class="h2">6.2 · Illustrative year-one P&amp;L</h3>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th>Line</th>
+        <th style="text-align: right;">Year 1 (£)</th>
+        <th style="text-align: right;">% of revenue</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">Revenue</span></td>
+        <td class="num">£4,000,000</td>
+        <td class="num">100.0%</td>
+        <td><span class="sub">Phase 1 + Phase 2 combined</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Direct labour</span></td>
+        <td class="num neg">(£1,600,000)</td>
+        <td class="num">40.0%</td>
+        <td><span class="sub">Mix of employed and sub-contracted</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Materials</span></td>
+        <td class="num neg">(£800,000)</td>
+        <td class="num">20.0%</td>
+        <td><span class="sub">Standard sector ratio</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Sub-contract labour</span></td>
+        <td class="num neg">(£600,000)</td>
+        <td class="num">15.0%</td>
+        <td><span class="sub">Specialist trades — electrical, gas, roofing</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Direct costs total</span></td>
+        <td class="num neg">(£3,000,000)</td>
+        <td class="num">75.0%</td>
+        <td><span class="sub">Cost of sales</span></td>
+      </tr>
+      <tr class="total">
+        <td>Gross profit</td>
+        <td class="num pos">£1,000,000</td>
+        <td class="num pos">25.0%</td>
+        <td><span class="sub">Target GP margin · base case</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Overheads</span></td>
+        <td class="num neg">(£600,000)</td>
+        <td class="num">15.0%</td>
+        <td><span class="sub">Management + back-office (shared with Group) + vehicles + tools</span></td>
+      </tr>
+      <tr class="total">
+        <td>Operating profit</td>
+        <td class="num pos">£400,000</td>
+        <td class="num pos">10.0%</td>
+        <td><span class="sub">Year-one operating margin</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The 25% GP target is achievable on the channel mix: Gemini sub-contracting is set internally at a defensible margin, and direct work is priced at prevailing market rates. The operating profit is sensitive to overhead management — shared Group back-office support is essential to keep overhead below 15% of revenue in Year 1.
+  </p>
+
+  <h3 class="h2">6.3 · Key financial assumptions</h3>
+  <ul>
+    <li><strong>Direct labour</strong> — mix of 2–3 employed trade supervisors / project managers plus sub-contracted operative labour, scaling with revenue</li>
+    <li><strong>Premises</strong> — no dedicated AMPM Building Services premises required in Year 1; works from Group base with site-based operations</li>
+    <li><strong>Fleet</strong> — initial fleet of 2–3 transit vans; additional vehicles hired as revenue ramps</li>
+    <li><strong>Payment terms</strong> — 30-day net standard; Gemini channel settled monthly</li>
+    <li><strong>Working capital</strong> — modest requirement: sub-contracting channel provides predictable monthly income</li>
+  </ul>
+
+  <h3 class="h2">6.4 · Year 2–3 outlook</h3>
+  <p>Assuming successful Year-1 execution:</p>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th style="text-align: right;">Revenue target</th>
+        <th>Key drivers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">Year 1 · FY26</span></td>
+        <td class="num">~£4m</td>
+        <td><span class="sub">Phase 1 + Phase 2; initial accreditation stack complete</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Year 2 · FY27</span></td>
+        <td class="num">~£6–8m</td>
+        <td><span class="sub">Direct client base matures; accreditation stack complete; standalone framework appointments begin</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Year 3 · FY28</span></td>
+        <td class="num">~£10m+</td>
+        <td><span class="sub">Significant contributor to the Group's £25–30m revenue ambition alongside acquisitions</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 07 OPERATIONS AND TEAM -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s07">
+  <div class="section-no">Section 07 · Operations and team</div>
+  <h2 class="section-title">Lean leadership. <em>Shared back-office.</em></h2>
+
+  <h3 class="h2">7.1 · Leadership</h3>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th>Role</th>
+        <th>Person</th>
+        <th>Arrangement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">Director / interim MD</span></td>
+        <td><span class="sub">Dan Small</span></td>
+        <td><span class="sub">Group MD holds director role initially. Hands-on operational oversight through the launch phase.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Operations Manager</span></td>
+        <td><span class="sub">TBC · hire in Month 1–2</span></td>
+        <td><span class="sub">Day-to-day site and project oversight. Critical hire. Target: experienced M&amp;E project manager with small contractor background.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Estimator / commercial</span></td>
+        <td><span class="sub">Shared from Group / Gemini</span></td>
+        <td><span class="sub">Estimating resource shared initially. Dedicated hire in Month 3–4 as pipeline grows.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Finance / admin</span></td>
+        <td><span class="sub">Shared from Group</span></td>
+        <td><span class="sub">Group finance function supports AMPM Building Services from day one.</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">7.2 · Supply chain</h3>
+  <p>An early priority is building a qualified, reliable supply chain across all five service lines:</p>
+  <ul>
+    <li><strong>Electrical</strong> — NICEIC-approved electrical sub-contractors and qualified electricians: 2–3 preferred suppliers to be identified and approved in Month 1</li>
+    <li><strong>Mechanical</strong> — plumbing and heating sub-contractors and Gas Safe engineers: existing Gemini supply chain referenced, but formal Building Services agreements must be executed</li>
+    <li><strong>Fit-out</strong> — dry-lining and partitioning, joinery and finishing trades: 3–4 preferred sub-contractors</li>
+    <li><strong>Roofing</strong> — GRP / EPDM flat roofing and pitched roofing specialists: 2 preferred suppliers minimum</li>
+    <li><strong>Groundworks</strong> — drainage and concrete sub-contractors: 2 preferred suppliers</li>
+  </ul>
+  <p>
+    All supply-chain appointments must go through the Group's standard qualification process: PL and EL insurance verification, references, and method statement / RAMS capability check.
+  </p>
+
+  <h3 class="h2">7.3 · Systems and reporting</h3>
+  <ul>
+    <li><strong>Procore</strong> (project management) — already in use at Gemini; extend licence to Building Services immediately</li>
+    <li><strong>Xero</strong> (financial) — separate entity on Group Xero account; set up before first invoice</li>
+    <li><strong>Uptick</strong> (asset management) — relevant for planned maintenance contracts as these develop; not priority Day 1</li>
+    <li><strong>AMPM Live</strong> — Building Services clients will be onboarded to the Group's client portal when it launches</li>
+  </ul>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 08 90-DAY LAUNCH PLAN -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s08">
+  <div class="section-no">Section 08 · 90-day launch plan</div>
+  <h2 class="section-title">Three months. <em>Twelve gates.</em></h2>
+  <p class="section-deck">
+    Twelve sequenced milestones across three months. Priority items in Week 1–2 unlock everything that follows; the Operations Manager hire is the single most important commitment.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-row">
+      <div class="tl-when">Week 1–2</div>
+      <div class="tl-action">Confirm Xero entity fully set up; open business bank account if not done</div>
+      <div class="tl-owner">Dan Small / Group Finance</div>
+      <div class="tl-flag is-priority">Priority</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Week 1–2</div>
+      <div class="tl-action">Place Employers Liability and Public Liability insurance policies</div>
+      <div class="tl-owner">Dan Small / insurance broker</div>
+      <div class="tl-flag is-priority">Priority</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Week 1–2</div>
+      <div class="tl-action">Apply for NICEIC or NAPIT registration; identify registered electricians</div>
+      <div class="tl-owner">Dan Small / Ops hire</div>
+      <div class="tl-flag is-priority">Priority</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Week 1–2</div>
+      <div class="tl-action">Register Gas Safe qualified engineers on Building Services company card</div>
+      <div class="tl-owner">Dan Small</div>
+      <div class="tl-flag is-priority">Priority</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Week 1–4</div>
+      <div class="tl-action">Identify and appoint Operations Manager</div>
+      <div class="tl-owner">Dan Small / Jamie Dawson</div>
+      <div class="tl-flag is-priority">Critical hire</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Week 2–4</div>
+      <div class="tl-action">Agree internal sub-contract framework with Gemini AMPM (pricing, payment terms)</div>
+      <div class="tl-owner">Dan Small / Luke Finney</div>
+      <div class="tl-flag is-gate">Phase 1 gate</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Week 2–4</div>
+      <div class="tl-action">Issue first sub-contract instruction from Gemini — Phase 1 commences</div>
+      <div class="tl-owner">Dan Small</div>
+      <div class="tl-flag is-gate">Revenue start</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Week 3–6</div>
+      <div class="tl-action">Identify 10 priority direct clients for Phase 2 approach; begin conversations</div>
+      <div class="tl-owner">Jamie / Dan / Luke</div>
+      <div class="tl-flag is-gate">Phase 2 prep</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Week 4–6</div>
+      <div class="tl-action">Apply for CHAS or Constructionline accreditation</div>
+      <div class="tl-owner">Ops Manager / admin</div>
+      <div class="tl-flag">Ongoing</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Month 2</div>
+      <div class="tl-action">First direct client instruction received</div>
+      <div class="tl-owner">Dan Small</div>
+      <div class="tl-flag is-target">Target</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Month 2–3</div>
+      <div class="tl-action">Qualify and approve preferred supply chain across all five service lines</div>
+      <div class="tl-owner">Ops Manager</div>
+      <div class="tl-flag">Operational</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Month 3</div>
+      <div class="tl-action">First monthly management accounts filed and reviewed</div>
+      <div class="tl-owner">Group Finance</div>
+      <div class="tl-flag">Ongoing</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Month 3</div>
+      <div class="tl-action">Review Phase 1 margin performance; adjust internal sub-contract rates if needed</div>
+      <div class="tl-owner">Dan Small / Luke Finney</div>
+      <div class="tl-flag">Review</div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-when">Month 3</div>
+      <div class="tl-action">Begin ISO 9001 implementation programme</div>
+      <div class="tl-owner">Ops Manager</div>
+      <div class="tl-flag">12-mth target</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 09 RISKS -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s09">
+  <div class="section-no">Section 09 · Principal risks and mitigants</div>
+  <h2 class="section-title">Identified. <em>Bounded. Owned.</em></h2>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th style="width: 30%;">Risk</th>
+        <th>Likelihood</th>
+        <th>Impact</th>
+        <th>Mitigant</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">Operations Manager hire delayed</span></td>
+        <td><span class="sub"><span class="risk-dot med"></span>Medium</span></td>
+        <td><span class="sub"><span class="risk-dot high"></span>High</span></td>
+        <td><span class="sub">Dan Small holds role short-term. Begin recruitment immediately — shortlist within 2 weeks of launch decision.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Insurance not placed before first instruction</span></td>
+        <td><span class="sub"><span class="risk-dot low"></span>Low</span></td>
+        <td><span class="sub"><span class="risk-dot high"></span>High</span></td>
+        <td><span class="sub">Day-one priority. Phase 1 can operate under Gemini umbrella policy while Building Services policies are placed — confirm with broker.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Gemini internal sub-contract pricing disputed</span></td>
+        <td><span class="sub"><span class="risk-dot low"></span>Low</span></td>
+        <td><span class="sub"><span class="risk-dot med"></span>Medium</span></td>
+        <td><span class="sub">Written framework agreed before first instruction. Arm's-length pricing to be auditable.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Phase 2 client conversion slower than 60 days</span></td>
+        <td><span class="sub"><span class="risk-dot med"></span>Medium</span></td>
+        <td><span class="sub"><span class="risk-dot med"></span>Medium</span></td>
+        <td><span class="sub">Phase 1 revenue continues during delay. £4m target adjusted if Phase 2 slips — downside case ~£2.5m.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Supply-chain quality / reliability issues</span></td>
+        <td><span class="sub"><span class="risk-dot med"></span>Medium</span></td>
+        <td><span class="sub"><span class="risk-dot high"></span>High</span></td>
+        <td><span class="sub">Minimum 2 approved suppliers per trade. Performance reviews monthly in Year 1.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Margin slippage (cf. Gemini H1 FY26 division)</span></td>
+        <td><span class="sub"><span class="risk-dot med"></span>Medium</span></td>
+        <td><span class="sub"><span class="risk-dot med"></span>Medium</span></td>
+        <td><span class="sub">Clean entity start. No legacy bad contracts. Margin discipline from Day 1 — no work taken below 20% GP.</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">Accreditation delays block tender categories</span></td>
+        <td><span class="sub"><span class="risk-dot low"></span>Low</span></td>
+        <td><span class="sub"><span class="risk-dot med"></span>Medium</span></td>
+        <td><span class="sub">Phase 2 focused on work types accessible without pending accreditations. Electrical and Gas Safe are 4–8 week processes.</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 10 CONTRIBUTION TO GROUP PLAN -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s10">
+  <div class="section-no">Section 10 · Contribution to the Group business plan</div>
+  <h2 class="section-title">The fastest organic <em>growth lever.</em></h2>
+  <p class="section-deck">
+    AMPM Building Services was referenced in the AMPM Group Business Plan (May 2026) as a Year-1 subsidiary. This document provides the operational detail behind that reference and updates the Group plan with a firm year-one revenue contribution.
+  </p>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th>Entity</th>
+        <th style="text-align: right;">Year 1 revenue</th>
+        <th style="text-align: right;">Year 2</th>
+        <th style="text-align: right;">Year 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">Gemini AMPM</span></td>
+        <td class="num">~£8–9m</td>
+        <td class="num">~£10m</td>
+        <td class="num">~£12m</td>
+      </tr>
+      <tr>
+        <td><span class="lead">AMPM Building Services</span></td>
+        <td class="num pos">~£4m</td>
+        <td class="num pos">~£6–8m</td>
+        <td class="num pos">~£10m+</td>
+      </tr>
+      <tr>
+        <td><span class="lead">AMPM Facilities</span></td>
+        <td class="num">—</td>
+        <td class="num">~£2–3m</td>
+        <td class="num">~£5m</td>
+      </tr>
+      <tr>
+        <td><span class="lead">Acquisitions</span></td>
+        <td class="num">~£1–2m</td>
+        <td class="num">~£5–8m</td>
+        <td class="num">~£10m+</td>
+      </tr>
+      <tr class="total">
+        <td>GROUP TOTAL</td>
+        <td class="num">~£13–15m</td>
+        <td class="num">~£23–29m</td>
+        <td class="num">~£35m+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-panel">
+    <h3>What this means for the Group plan</h3>
+    <ul>
+      <li>With Building Services contributing <strong>£4m in Year 1</strong>, the Group's consolidated revenue target of <strong>£25–30m within five years</strong> becomes achievable with fewer acquisitions than previously modelled.</li>
+      <li>Building Services is the <strong>fastest organic growth lever available to the Group</strong> — no acquisition diligence, no integration risk, captive pipeline from day one.</li>
+      <li>Successful execution materially de-risks the Group plan: the £25–30m target moves from acquisition-dependent to organic-supported.</li>
+      <li>The case for additional acquisitions is sharpened — they extend reach and accreditation scope rather than carrying the revenue plan alone.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────── -->
+<!-- 11 DECISION AND NEXT STEPS -->
+<!-- ─────────────────────────────────────────────────────────── -->
+
+<section class="section-block page-break" id="s11">
+  <div class="section-no">Section 11 · Decision and next steps</div>
+  <h2 class="section-title">Not <em>whether.</em> How fast.</h2>
+  <p class="section-deck">
+    AMPM Building Services Limited is incorporated and ready to trade. The decision required is not whether to launch — it is how quickly to execute the launch checklist. The commercial case is clear.
+  </p>
+
+  <h3 class="h2">11.1 · Immediate actions — in priority order</h3>
+
+  <table class="fin">
+    <thead>
+      <tr>
+        <th style="width: 6%;">#</th>
+        <th>Action</th>
+        <th>Owner</th>
+        <th>Deadline</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="lead">01</span></td>
+        <td><span class="lead">Place EL and PL insurance policies</span></td>
+        <td><span class="sub">Jamie / Dan</span></td>
+        <td><span class="sub">This week</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">02</span></td>
+        <td><span class="lead">Confirm Xero entity live; open trading bank account</span></td>
+        <td><span class="sub">Group Finance</span></td>
+        <td><span class="sub">This week</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">03</span></td>
+        <td><span class="lead">Apply for NICEIC registration; identify qualifying electricians</span></td>
+        <td><span class="sub">Dan Small</span></td>
+        <td><span class="sub">Week 2</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">04</span></td>
+        <td><span class="lead">Register Gas Safe engineers on AMPM Building Services card</span></td>
+        <td><span class="sub">Dan Small</span></td>
+        <td><span class="sub">Week 2</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">05</span></td>
+        <td><span class="lead">Begin Operations Manager recruitment</span></td>
+        <td><span class="sub">Dan / Jamie</span></td>
+        <td><span class="sub">Week 1–2</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">06</span></td>
+        <td><span class="lead">Draft and agree Gemini sub-contract framework agreement</span></td>
+        <td><span class="sub">Dan / Luke</span></td>
+        <td><span class="sub">Week 3</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">07</span></td>
+        <td><span class="lead">Issue first Gemini sub-contract instruction</span></td>
+        <td><span class="sub">Dan Small</span></td>
+        <td><span class="sub">Week 4</span></td>
+      </tr>
+      <tr>
+        <td><span class="lead">08</span></td>
+        <td><span class="lead">Identify 10 priority direct clients; begin approach</span></td>
+        <td><span class="sub">Jamie / Dan / Luke</span></td>
+        <td><span class="sub">Week 6</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="meta-strip">
+    <div class="meta-cell">
+      <div class="lbl">Sponsor</div>
+      <div class="val">Dan Small<br/>MD · AMPM Group<br/>Interim director · Building Services</div>
+    </div>
+    <div class="meta-cell">
+      <div class="lbl">Approver</div>
+      <div class="val">Board of directors<br/>AMPM Group Limited</div>
+    </div>
+    <div class="meta-cell">
+      <div class="lbl">Review cadence</div>
+      <div class="val">Monthly · Group Board<br/>Until Year-1 trading established</div>
+    </div>
+  </div>
+
+  <div class="doc-foot">
+    <span>AMPM Building Services Limited · Launch Plan · v1.0 May 2026</span>
+    <span>Strictly confidential</span>
+  </div>
+</section>
+
+</main>
+
+</body>
+</html>

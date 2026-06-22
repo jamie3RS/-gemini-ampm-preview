@@ -1,0 +1,100 @@
+{{!< default}}
+{{!-- Home page. Static-ish hero + counters + featured work/insights. --}}
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="reveal" style="display:flex;flex-direction:column;gap:10px;">
+      <div class="eyebrow on-dark">{{@custom.site_tagline}}{{^@custom.site_tagline}}Holding company · Established 2026{{/}}</div>
+      {{> "meridian-bar" max_width=520}}
+    </div>
+    <div class="reveal">
+      <h1 class="display">Holding the companies<br>that hold the <em>buildings</em>.</h1>
+      <p class="deck" style="margin-top: 32px;">
+        AMPM is the group above Gemini AMPM and the businesses that will sit beside it. Compliance-led asset management, life-safety, and building services — assembled under one ownership for buyers who cannot afford to pick wrong.
+      </p>
+    </div>
+  </div>
+  <div class="hero-footer">
+    <span>AMPM Group Limited · Burgess Hill</span>
+    <span>Scroll ↓</span>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="counters reveal">
+    <div class="cell">
+      <div class="num" data-counter="6">6</div>
+      <div class="lbl">Companies in the group plan</div>
+    </div>
+    <div class="cell">
+      <div class="num">£<span data-counter="10">10</span>m</div>
+      <div class="lbl">Group turnover · year-one consolidated</div>
+    </div>
+    <div class="cell">
+      <div class="num">£<span data-counter="20">20</span>m</div>
+      <div class="lbl">Three-year group plan · across the businesses</div>
+    </div>
+    <div class="cell">
+      <div class="num">100<span style="font-size: 32px; margin-left: 4px;">%</span></div>
+      <div class="lbl">Employee-owned trading flagship</div>
+    </div>
+  </div>
+</section>
+
+{{!-- Latest case studies --}}
+{{#get "posts" filter="tag:case-study" limit="3" as |featured_work|}}
+{{#if featured_work}}
+<section class="section">
+  <div class="reveal" style="margin-bottom: 40px; display: flex; justify-content: space-between; align-items: baseline;">
+    <div>
+      <div class="eyebrow">Latest work</div>
+      <h2 class="display" style="font-size: clamp(32px, 3.5vw, 44px);">Selected case studies.</h2>
+    </div>
+    <a href="/work/" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; border-bottom: 1px solid var(--ink); padding-bottom: 4px;">See all →</a>
+  </div>
+  <div class="work-grid reveal">
+    {{#foreach featured_work}}
+      {{> "work-card"}}
+    {{/foreach}}
+  </div>
+</section>
+{{/if}}
+{{/get}}
+
+{{!-- Approach teaser --}}
+<section class="section dark">
+  <div class="section-inner">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="eyebrow on-dark">Approach</div>
+        <h2 class="display" style="font-size: clamp(36px, 4vw, 56px);">The mid-market's<br>only enterprise<br><em>stack.</em></h2>
+      </div>
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 24px;">
+        <p class="deck" style="color: rgba(246,243,236,0.85);">
+          The group runs an operational platform that is rare at our scale — Uptick, Procore, Microsoft 365 — deployed end-to-end. Procurement teams under PPN 06/20 weight it heavily. We don't sell tools; we sell the consequence of operating them well.
+        </p>
+        <a href="/approach/" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; border-bottom: 1px solid rgba(246,243,236,0.5); padding-bottom: 4px; color: var(--paper); align-self: flex-start;">Read the approach →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- Latest insights --}}
+{{#get "posts" filter="tag:insight" limit="3" as |featured_insights|}}
+{{#if featured_insights}}
+<section class="section">
+  <div class="reveal" style="margin-bottom: 40px; display: flex; justify-content: space-between; align-items: baseline;">
+    <div>
+      <div class="eyebrow">Latest insights</div>
+      <h2 class="display" style="font-size: clamp(32px, 3.5vw, 44px);">Thinking from the mothership.</h2>
+    </div>
+    <a href="/insights/" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; border-bottom: 1px solid var(--ink); padding-bottom: 4px;">See all →</a>
+  </div>
+  <div class="insights-list reveal">
+    {{#foreach featured_insights}}
+      {{> "insight-card"}}
+    {{/foreach}}
+  </div>
+</section>
+{{/if}}
+{{/get}}

@@ -1,0 +1,184 @@
+/* Gemini AMPM — site mockups. Scoped under .gmx
+   The inverted arc: PM → AM. The page is one night on watch —
+   dusk → deep night → first light. Same group DNA: Big Shoulders + Archivo + meridian. */
+
+.gmx {
+  width: 100%; height: 100%; box-sizing: border-box; overflow: hidden;
+  font-family: "Archivo", "Helvetica Neue", sans-serif; color: #f4ead8;
+  display: flex; flex-direction: column; position: relative;
+  --g-display: "Big Shoulders Display", "Archivo", sans-serif;
+  --g-ink: #1c1812;
+  --g-cream: #f4ead8;
+}
+.gmx * { box-sizing: border-box; }
+
+/* the night sky: dusk → deep night for most of the page, dawn at the foot */
+.gmx.home {
+  background: linear-gradient(180deg,
+    #2b3558 0%, #1b2440 7%,
+    #0b0e1c 16%, #0b0e1c 100%);
+}
+/* daybreak — pixel-anchored so first light always arrives before the dawn copy,
+   regardless of total page height (same approach as the launch site's .nightfall) */
+.gmx .g-daybreak {
+  position: relative; z-index: 2;
+  background: linear-gradient(180deg,
+    #0b0e1c 0px, #1b2440 110px, #41507c 210px,
+    #c97f5e 310px, #ecc9a0 390px, #f3dfc4 490px);
+}
+.gmx.inner {
+  background: linear-gradient(180deg,
+    #1b2440 0%, #0b0e1c 14%, #0b0e1c 88%, #1b2440 100%);
+}
+
+/* stars live in the deep-night half */
+.gmx .g-stars { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+.gmx .g-star { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff; opacity: 0.7; }
+.gmx .g-star.s2 { width: 2px; height: 2px; opacity: 0.45; }
+.gmx .g-moonglow { position: absolute; width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(186,203,255,0.2) 0%, rgba(186,203,255,0) 65%); }
+
+/* spine */
+.gmx .g-spine { position: absolute; left: 84px; top: 0; bottom: 0; width: 2px; background: rgba(244,234,216,0.16); z-index: 1; }
+.gmx .g-stamp { font-family: var(--g-display); font-weight: 700; font-size: 30px; letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+.gmx .g-stamp .tick { width: 46px; height: 2px; background: currentColor; margin-left: -130px; }
+.gmx .g-stamp .shift { font-family: "Archivo"; font-size: 12px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.6; }
+
+.gmx .g-wrap { padding-left: 130px; padding-right: 64px; position: relative; z-index: 2; }
+
+/* nav — moon mark: the sun mark flipped (lower half) */
+.gmx .g-nav { position: relative; z-index: 2; display: flex; align-items: center; gap: 32px; padding: 26px 64px 22px 130px; }
+.gmx .moonmark { width: 30px; height: 30px; position: relative; overflow: hidden; flex: none; }
+.gmx .moonmark::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 15px;
+  background: var(--g-cream); border-radius: 0 0 15px 15px; }
+.gmx .moonmark::after { content: ""; position: absolute; left: 0; right: 0; bottom: 16px; height: 3px; background: var(--g-cream); }
+.gmx .g-nav .wm { font-family: var(--g-display); font-weight: 800; font-size: 27px; letter-spacing: 0.02em; white-space: nowrap; }
+.gmx .g-nav .wm small { font-weight: 600; opacity: 0.55; letter-spacing: 0.06em; }
+.gmx .g-nav .est { font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.5; white-space: nowrap; }
+.gmx .g-nav .links { display: flex; gap: 28px; margin-left: auto; font-size: 14px; font-weight: 600; opacity: 0.9; }
+.gmx .g-nav .links span { white-space: nowrap; }
+.gmx .g-nav .phone { font-family: var(--g-display); font-weight: 700; font-size: 18px; letter-spacing: 0.05em;
+  white-space: nowrap; border: 2px solid var(--g-cream); padding: 7px 15px; }
+
+/* hero */
+.gmx .g-hero { padding-top: 64px; padding-bottom: 80px; }
+.gmx .g-hero h1 { font-family: var(--g-display); font-weight: 800; font-size: 160px; line-height: 0.88;
+  letter-spacing: 0.005em; text-transform: uppercase; margin: 16px 0 0; color: #fff; }
+.gmx .g-hero .sub-row { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; margin-top: 44px; align-items: start; }
+.gmx .g-hero .standfirst { font-size: 21px; line-height: 1.55; font-weight: 500; max-width: 32ch; color: rgba(244,234,216,0.85); }
+.gmx .g-hero .standfirst strong { color: #fff; font-weight: 700; }
+.gmx .g-cta-row { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+.gmx .g-btn { display: inline-block; background: var(--g-cream); color: #0b0e1c; font-family: var(--g-display);
+  font-weight: 700; font-size: 19px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 16px 28px; white-space: nowrap; }
+.gmx .g-btn.line { background: transparent; color: var(--g-cream); border: 2px solid var(--g-cream); }
+.gmx .g-fig { position: relative; }
+.gmx .g-fig image-slot { background: rgba(244,234,216,0.07); }
+.gmx .g-cap { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.55; margin-top: 10px; }
+
+/* ribbon */
+.gmx .g-ribbon { position: relative; z-index: 2; margin: 0 64px 0 130px; }
+.gmx .g-ribbon .bar { display: flex; height: 64px; }
+.gmx .g-ribbon .seg { flex: 1; display: flex; align-items: center; justify-content: space-between; padding: 0 18px;
+  font-family: var(--g-display); font-weight: 700; font-size: 17px; letter-spacing: 0.05em; text-transform: uppercase; color: #fff; }
+.gmx .g-ribbon .seg small { font-family: "Archivo"; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; opacity: 0.8; }
+.gmx .g-ribbon .legend { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; padding: 12px 2px 0; }
+
+/* big section heads */
+.gmx .g-h2 { font-family: var(--g-display); font-weight: 800; font-size: 92px; line-height: 0.92;
+  text-transform: uppercase; letter-spacing: 0.005em; margin: 0 0 44px; color: #fff; }
+
+/* services ledger */
+.gmx .g-services { padding-top: 110px; }
+.gmx .g-svc { display: grid; grid-template-columns: 150px 1fr 1.05fr 70px; gap: 36px; align-items: center;
+  border-top: 3px solid rgba(244,234,216,0.85); padding: 30px 0; }
+.gmx .g-svc:last-of-type { border-bottom: 3px solid rgba(244,234,216,0.85); }
+.gmx .g-svc .num { font-family: var(--g-display); font-weight: 800; font-size: 80px; line-height: 1; color: #fff; }
+.gmx .g-svc .nm { font-family: var(--g-display); font-weight: 700; font-size: 38px; line-height: 0.95;
+  text-transform: uppercase; letter-spacing: 0.01em; color: #fff; }
+.gmx .g-svc .nm .swatch { display: inline-block; width: 38px; height: 14px; margin-left: 14px; }
+.gmx .g-svc p { font-size: 15.5px; line-height: 1.55; font-weight: 500; margin: 0; color: rgba(244,234,216,0.8); max-width: 44ch; }
+.gmx .g-svc .go { font-family: var(--g-display); font-weight: 800; font-size: 44px; text-align: right; }
+
+/* proof — glass over night sky */
+.gmx .g-proof { margin-top: 60px; display: flex; border: 3px solid rgba(244,234,216,0.85);
+  background: rgba(16,22,44,0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.gmx .g-proof .cell { flex: 1; padding: 26px 26px 24px; border-right: 3px solid rgba(244,234,216,0.85); }
+.gmx .g-proof .cell:last-child { border-right: 0; }
+.gmx .g-proof .big { font-family: var(--g-display); font-weight: 800; font-size: 58px; line-height: 0.95; color: #fff; }
+.gmx .g-proof .lbl { font-size: 13px; font-weight: 600; line-height: 1.4; margin-top: 8px; color: rgba(244,234,216,0.8); }
+
+/* the watch — monitoring story */
+.gmx .g-watch { padding-top: 130px; }
+.gmx .g-watch .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.gmx .g-watch .story p { font-size: 18px; line-height: 1.65; font-weight: 500; color: rgba(244,234,216,0.85); margin: 0 0 18px; max-width: 50ch; }
+.gmx .g-watch .story p strong { color: #fff; font-weight: 700; }
+.gmx .g-log { border: 3px solid rgba(244,234,216,0.85); background: rgba(16,22,44,0.45);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 30px 34px; }
+.gmx .g-log .hd { font-family: var(--g-display); font-weight: 800; font-size: 24px; letter-spacing: 0.04em;
+  text-transform: uppercase; color: #fff; margin-bottom: 18px; }
+.gmx .g-log .row { display: grid; grid-template-columns: 84px 1fr; gap: 18px; padding: 12px 0;
+  border-top: 1px solid rgba(244,234,216,0.3); font-size: 14px; font-weight: 500; color: rgba(244,234,216,0.85); }
+.gmx .g-log .row .t { font-family: var(--g-display); font-weight: 700; font-size: 17px; letter-spacing: 0.06em; color: #fff; }
+.gmx .g-log .row strong { color: #fff; }
+
+/* clients */
+.gmx .g-clients { padding-top: 120px; }
+.gmx .g-client-row { display: flex; gap: 0; border: 3px solid rgba(244,234,216,0.85); flex-wrap: wrap; }
+.gmx .g-client { flex: 1 1 25%; padding: 30px 26px; border-right: 3px solid rgba(244,234,216,0.85);
+  display: flex; flex-direction: column; gap: 8px; }
+.gmx .g-client:last-child { border-right: 0; }
+.gmx .g-client .nm { font-family: var(--g-display); font-weight: 800; font-size: 26px; text-transform: uppercase; color: #fff; }
+.gmx .g-client .what { font-size: 13px; font-weight: 600; line-height: 1.45; color: rgba(244,234,216,0.75); }
+
+/* dawn handback — lives inside .g-daybreak; padding-top clears the 490px
+   transition band so all text sits on full light */
+.gmx .g-dawn { padding-top: 520px; padding-bottom: 70px; color: var(--g-ink); }
+.gmx .g-dawn .g-h2 { color: var(--g-ink); }
+.gmx .g-dawn .g-stamp { color: var(--g-ink); }
+.gmx .g-dawn p.lead { font-size: 19px; line-height: 1.6; font-weight: 500; max-width: 54ch; margin: 0 0 36px; color: rgba(28,24,18,0.85); }
+.gmx .g-dawn p.lead strong { color: var(--g-ink); font-weight: 700; }
+.gmx .g-dawn .g-btn { background: var(--g-ink); color: #f9efdd; }
+.gmx .g-dawn .g-btn.line { background: transparent; color: var(--g-ink); border-color: var(--g-ink); }
+.gmx .g-sister { margin-top: 56px; border: 3px solid var(--g-ink); padding: 26px 30px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.gmx .g-sister .txt { font-size: 15px; font-weight: 600; line-height: 1.5; max-width: 52ch; }
+.gmx .g-sister .txt strong { font-family: var(--g-display); font-weight: 800; font-size: 21px;
+  text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 4px; }
+.gmx .g-sister .arrow { font-family: var(--g-display); font-weight: 800; font-size: 44px; }
+
+/* footer (light, on dawn) */
+.gmx .g-foot { margin: 60px 64px 0 130px; border-top: 2px solid rgba(28,24,18,0.5);
+  padding: 24px 0 40px; display: flex; justify-content: space-between; align-items: center;
+  color: rgba(28,24,18,0.8); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.gmx .g-foot .wm { font-family: var(--g-display); font-weight: 800; font-size: 20px; letter-spacing: 0.04em; color: var(--g-ink); }
+
+/* ===== interior page (service detail) ===== */
+.gmx .g-crumb { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; margin-bottom: 20px; }
+.gmx .g-inner-hero { padding-top: 56px; padding-bottom: 64px; }
+.gmx .g-inner-hero h1 { font-family: var(--g-display); font-weight: 800; font-size: 110px; line-height: 0.9;
+  text-transform: uppercase; margin: 12px 0 26px; color: #fff; }
+.gmx .g-inner-hero .standfirst { font-size: 19px; line-height: 1.6; font-weight: 500; color: rgba(244,234,216,0.85); max-width: 56ch; }
+.gmx .g-scope { padding-top: 70px; }
+.gmx .g-scope-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 3px solid rgba(244,234,216,0.85); }
+.gmx .g-scope-item { padding: 28px 32px 30px 0; border-bottom: 1px solid rgba(244,234,216,0.3); display: flex; gap: 20px; }
+.gmx .g-scope-item:nth-child(odd) { border-right: 1px solid rgba(244,234,216,0.3); }
+.gmx .g-scope-item:nth-child(even) { padding-left: 32px; }
+.gmx .g-scope-item .tk { width: 4px; min-width: 4px; height: 44px; margin-top: 4px; background: var(--m-orange, #E8742C); }
+.gmx .g-scope-item h3 { font-family: var(--g-display); font-weight: 700; font-size: 26px; text-transform: uppercase; margin: 0 0 8px; color: #fff; }
+.gmx .g-scope-item p { font-size: 14px; line-height: 1.55; font-weight: 500; color: rgba(244,234,216,0.78); margin: 0; }
+.gmx .g-accr-strip { margin-top: 70px; display: flex; flex-wrap: wrap; border: 3px solid rgba(244,234,216,0.85); }
+.gmx .g-accr-cell { flex: 1 1 16%; padding: 20px 16px; border-right: 1px solid rgba(244,234,216,0.3); text-align: center; }
+.gmx .g-accr-cell:last-child { border-right: 0; }
+.gmx .g-accr-cell .a { font-family: var(--g-display); font-weight: 800; font-size: 20px; text-transform: uppercase; color: #fff; }
+.gmx .g-accr-cell .b { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,234,216,0.6); margin-top: 4px; }
+.gmx .g-inner-cta { margin-top: 80px; border: 3px solid rgba(244,234,216,0.85);
+  background: rgba(16,22,44,0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  padding: 44px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.gmx .g-inner-cta .t { font-family: var(--g-display); font-weight: 800; font-size: 44px; text-transform: uppercase; line-height: 0.95; color: #fff; }
+.gmx .g-foot-dark { margin: 70px 64px 0 130px; border-top: 2px solid rgba(244,234,216,0.4);
+  padding: 24px 0 40px; display: flex; justify-content: space-between; align-items: center;
+  color: rgba(244,234,216,0.75); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.gmx .g-foot-dark .wm { font-family: var(--g-display); font-weight: 800; font-size: 20px; letter-spacing: 0.04em; color: var(--g-cream); }

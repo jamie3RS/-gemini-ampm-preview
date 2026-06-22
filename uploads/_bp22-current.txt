@@ -1,0 +1,847 @@
+
+[P]
+[P]
+[P]
+[P]
+[P]AMPM GROUP LIMITED
+[P]
+[P]Business Plan
+[P]
+[P]Compliance-led building services and facilities management group,
+seeking a private equity partner for acquisition-led growth.
+[P]
+[P]
+[P]
+[P]
+[P]
+[P]
+[P]
+[P]
+[P]
+[P]
+[P]Version 1.0  |  May 2026  |  Strictly Confidential
+[P]This document is provided on a confidential basis for discussion purposes only. It does not constitute an offer to sell or a solicitation of an offer to purchase any security.
+[P]
+[P]
+[P]
+[P]
+[P]Contents
+[P]TOC \h \o "1-2"
+[P]
+[P]
+[P]1.  Executive Summary
+[P]AMPM Group Limited is a compliance-led building services and facilities management group, headquartered in the south of England. The Group is being built to consolidate fire safety, passive fire protection, mechanical and electrical (M&E) services, and facilities management into a single, tech-enabled offering for the UK mid-market.
+[P]The foundation asset — Gemini AMPM Limited — has been operating since 1997, carries 13 accreditations including NSI Gold, BAFE, FIRAS and Constructionline Gold, and delivered £8.4 million net revenue and approximately £989k EBITDA in its financial year ended 30 September 2025. Gemini transitioned to Employee Ownership Trust (EOT) in October 2024, providing a genuine differentiator for public sector tendering under PPN 06/20.
+[P]The Group is seeking a private equity partner to accelerate an acquisition-led growth strategy targeting £25–30 million consolidated revenue within five years. The investment ask is a total committed facility of £20 million, structured in two components: Component A (£4–5 million on completion) acquires a 49% stake in Gemini AMPM from the EOT, clearing the £4.1 million outstanding seller loan note and strengthening Gemini’s balance sheet on day one; Component B (up to £15–16 million, drawn deal-by-deal) funds acquisitions, acqui-hire, and subsidiary launches at Group level. Full structure is set out in Section 11.
+[P]
+[P]£8.4m
+[P]FY25 NET REVENUE
+[P]Gemini AMPM
+[P]~£989k
+[P]FY25 EBITDA
+[P]13.6% GP margin
+[P]27+
+[P]YEARS TRADING
+[P]Founded 1997
+[P]13+
+[P]ACCREDITATIONS
+[P]incl. NSI Gold, BAFE, FIRAS
+[P]
+[P]
+[P]Investment Highlights
+[P]
+[P]Proven, profitable foundation with audited financials — not a start-up story
+[P]
+[P]EOT ownership structure: genuine competitive advantage on public sector frameworks
+[P]
+[P]Building Safety Act 2022 drives mandatory compliance spend — structural tailwind
+[P]
+[P]Sector roll-up thesis already validated by Marlowe Group and Mitie acquisitions
+[P]
+[P]Technology differentiation via AMPM Live client portal — positions Group above trades-only competitors
+[P]
+[P]Management team: combined 60+ years in sector with direct client relationships
+[P]
+[P]Clear 5-year hold with trade sale exit to strategic acquirer at compelling multiple
+[P]
+[P]H1 FY26 note: Trading losses in the first half of FY26 (operating loss: £355k) are concentrated in two specific contracts — Peterborough Court (PBC) and London Projects — and are attributable to over-application timing on a large Mace project, not structural underperformance. Six of eight divisions traded profitably in H1 at a blended 11.5% margin. A recovery plan is in place. This document addresses this directly in Section 6.
+[P]
+[P]
+[P]
+[P]2.  About AMPM Group
+[P]AMPM Group Limited was incorporated as a holding company to create a full-service compliance, building services and facilities management group. The Group is structured as a hub-and-spoke model: Gemini AMPM provides the established revenue base and accreditation stack; new subsidiaries are designed to extend the service offering, geographic reach, and technology capability.
+[P]
+[P]Vision
+[P]To become the UK's leading compliance-first, technology-enabled building services group — the natural consolidation platform for a fragmented market undergoing mandatory regulatory uplift.
+[P]
+[P]Group Structure
+[P]
+[P]Entity
+[P]Status
+[P]Focus
+[P]Gemini AMPM Limited
+[P]Live — EOT-owned
+[P]Fire safety, passive fire, security, life-safety, compliance services
+[P]AMPM Building Services
+[P]Year-one (2026)
+[P]M&E, fit-out, building services; absorbs scope previously sub-contracted
+[P]AMPM Facilities
+[P]Planned — Q3 2027
+[P]Aggregated FM: one delivery partner for hard and soft services
+[P]AMPM Live
+[P]Development — 2026+
+[P]Client portal: live asset register, compliance dashboard, job instruction
+[P]AMPM Ventures
+[P]Planned
+[P]Acquisition and acqui-hire vehicle — governed separately from trading entities
+[P]AMPM Academy
+[P]Planned — Q3 2027
+[P]Apprenticeship training, accreditation pathways, IP licensing
+[P]
+[P]
+[P]How the Group Fits Together
+[P]Each entity plays a defined role in the Group's value proposition:
+[P]
+[P]Gemini AMPM provides the revenue base, accreditation credibility, and client relationships
+[P]
+[P]Building Services captures M&E and fit-out work currently procured elsewhere, improving margin through vertical integration
+[P]
+[P]Facilities wraps the full Group offering into a single-contact FM service for clients managing complex portfolios
+[P]
+[P]AMPM Live is the technology layer — giving clients real-time visibility of their assets and compliance status
+[P]
+[P]Ventures executes inorganic growth, deploying acquisition capital against mutually agreed targets
+[P]
+[P]Academy builds the talent pipeline, addresses sector-wide skills shortage, and generates external IP licensing revenue
+[P]
+[P]
+[P]
+[P]3.  Market Opportunity
+[P]The UK compliance services sector is experiencing a period of regulatory-driven, structural growth. Three converging forces make this an attractive moment to build a scaled platform.
+[P]
+[P]3.1  Building Safety Act 2022 — Mandatory Compliance Uplift
+[P]The Building Safety Act 2022 introduced the most significant change to UK fire and structural safety regulation in decades. Key obligations now enforceable include:
+[P]
+[P]Duty holder accountability across design, construction, and occupation phases
+[P]
+[P]Golden thread requirement: digital documentation of all safety-critical information maintained throughout the building lifecycle
+[P]
+[P]Higher-Risk Building inspection and certification regime managed by the Building Safety Regulator
+[P]
+[P]Enhanced Remediation Orders for residential buildings — driving significant passive fire and fire door remediation programmes
+[P]
+[P]Compliance is not optional and not discretionary. Building owners face criminal liability for non-compliance. This drives sustained, non-cyclical demand for accredited contractors with documented golden thread capability — precisely the offering AMPM Group is built around.
+[P]
+[P]
+[P]3.2  Market Consolidation — Validation of the Thesis
+[P]The consolidation trend validates both the market opportunity and the exit thesis:
+[P]
+[P]Marlowe Group has been systematically acquiring fire safety and compliance businesses across the UK, building a £400m+ revenue platform
+[P]
+[P]Mitie has made multiple acquisitions in compliance and technical FM, integrating life safety within a broader FM offering
+[P]
+[P]Both have acquired direct competitors to Gemini AMPM, demonstrating that assets of this type trade at meaningful multiples to strategic acquirers
+[P]
+[P]andwis Group — backed by H.I.G. Capital (€8bn+ AUM European PE firm) — has built a £300m+ technical building services platform comprising 18 companies across five disciplines since incorporation in August 2022. This is the most direct comparable to the AMPM Group model and demonstrates that institutional PE capital can scale a compliant acquisition platform in this sector at significant speed
+[P]
+[P]The participation of H.I.G. Capital, Marlowe Group, and Mitie in this sector represents institutional-level validation that the compliance services roll-up model generates strong returns. The acquirer universe for an exit event in five years is well-established and well-capitalised. AMPM Group at £25–30 million revenue, with a proprietary technology platform and a management team carrying deep operational track record, is a differentiated entry point into that same return thesis.
+[P]
+[P]
+[P]3.3  Public Sector Framework Access — EOT Competitive Advantage
+[P]PPN 06/20 (Procurement Policy Note: Taking Account of a Supplier's Approach to Carbon Reduction and Social Value) scores social value as a mandatory element of public sector procurement. Employee-owned businesses score materially higher than privately-owned competitors. Gemini AMPM's EOT structure provides a genuine, structural advantage in competitive tendering for:
+[P]
+[P]Local authority property portfolios
+[P]
+[P]NHS and healthcare estates
+[P]
+[P]Education frameworks (universities, academies, maintained schools)
+[P]
+[P]Social housing providers and registered social landlords
+[P]
+[P]
+[P]3.4  Sector Fragmentation — Acquisition Pipeline
+[P]The compliance services market remains highly fragmented below the Marlowe and Mitie tier. There are hundreds of sub-£5 million regional operators with:
+[P]
+[P]Loyal client books but no succession plan
+[P]
+[P]Complementary accreditations (e.g., gas, water hygiene, lifts)
+[P]
+[P]Geographic coverage the Group does not yet hold
+[P]
+[P]Key operators whose relationships and contracts represent the real value
+[P]
+[P]This fragmentation creates a favourable acquisition environment. Vendors in the £1–5 million revenue range typically trade at 3–5x EBITDA, creating meaningful value creation opportunity when integrated into a platform business that should command 6–8x on exit.
+[P]
+[P]
+[P]3.5  Competitive Landscape — AMPM’s Differentiated Position
+[P]The compliance and technical building services market has three tiers of competitor. Understanding where AMPM Group sits relative to each tier is essential context for evaluating the investment proposition.
+[P]
+[P]Tier 1 — Large-Cap Roll-Ups: Marlowe Group and Mitie
+[P]Marlowe Group (£400m+ revenue) and Mitie operate at scale beyond AMPM’s near-term target range. Both are listed or institutional-backed acquirers operating national frameworks. They validate the exit thesis — they are the natural buyers of a scaled AMPM Group at the end of the hold period — but they are not direct competitors at the contract level. Their minimum acquisition interest begins at revenue levels AMPM is targeting as a 5-year destination, not a starting point.
+[P]
+[P]Tier 2 — Mid-Market Roll-Up: andwis Group
+[P]andwis Group is the most directly comparable platform to AMPM. Incorporated in August 2022 and backed by H.I.G. Capital (€8bn+ AUM), andwis has assembled 18 operating companies across five service divisions — fire and security, environmental services, lifts and entrance, maintenance and response, and mechanical and electrical — generating £300m+ revenue from 25,000 customers with 2,200+ employees. Credit data (Experian, May 2026) confirms H.I.G. as the ultimate holding entity, with Ares Management and Barclays providing the debt stack. Long-term liabilities at HoldCo level reached £112.7m at December 2024, with £17.8m of annual interest cost — a heavily leveraged structure typical of aggressive PE-backed acquisition programmes.
+[P]andwis serves as the strongest possible proof of concept for the AMPM Group model: an institutional PE firm deployed significant capital into a technical building services consolidation play in the same market, with the same acquisition-led approach, in the same period. That it reached £300m+ in under three years demonstrates both the availability of acquisition targets and the appetite of strategic buyers at scale.
+[P]AMPM Group and andwis are differentiated on four dimensions:
+[P]
+[P]Sector focus. andwis targets technical building services broadly — lifts, doors, asbestos, M&E. AMPM Group is focused on the compliance-first, fire safety and life-safety segment with an explicit Building Safety Act positioning and residential/housing FM adjacency. These are related but distinct market positions.
+[P]
+[P]Technology layer. andwis has no visible client-facing technology platform. AMPM Live — a proprietary client portal providing live asset registers, compliance dashboards, and golden thread documentation — creates structural client stickiness and positions AMPM Group as a software-enabled services business, not a pure trade contractor. This distinction supports a premium valuation multiple on exit.
+[P]
+[P]Capital structure. andwis carries £112.7m of long-term liabilities at HoldCo level and a debt gearing ratio of 877% (Experian, December 2024). AMPM Group's £20 million facility is structured fundamentally differently: Component A delivers immediate equity ownership of an audited, cash-generating asset rather than piling debt at HoldCo. Component B is drawn deal-by-deal against individually approved transactions, not committed as a single leveraged load at inception. AMPM Group is designed to generate strong returns without the balance sheet fragility that exposes highly geared platforms to any sustained market disruption.
+[P]
+[P]Operator-led management. andwis was assembled by a PE firm and run by an installed management team. AMPM Group is led by the founders who built, ran, and sold the core asset over 27 years. Client relationships, accreditation credibility, and sector knowledge are intrinsic to the management team — not acquired alongside a business. This is a structural difference in execution risk.
+[P]
+[P]andwis is also a credible addition to the exit acquirer pool. At their current acquisition pace, they will require more London and South of England fire and life-safety capacity. A scaled AMPM Group — with accreditation depth, a proprietary portal, and an established client base — is precisely the type of platform they acquire.
+[P]
+[P]Tier 3 — Local Independents
+[P]Below the mid-market roll-ups sit hundreds of sub-£5m regional operators. These are not strategic threats — Gemini AMPM has consistently won against them on quality, accreditation depth, and client trust. They are, however, the primary acquisition targets for AMPM Ventures. Their value is in their client books, their geographic coverage, and in some cases their operators — not in their balance sheets or systems.
+[P]
+[P]
+[P]
+[P]4.  Gemini AMPM — The Foundation Asset
+[P]Gemini AMPM has been operating since 1997 — 27 years of continuous trading in fire safety, life-safety and compliance services. It is the most credentialled, independently accredited business of its type in its operating geography, and the cornerstone of the Group's investment story.
+[P]
+[P]4.1  Accreditations and Capability
+[P]Gemini holds 13 or more active accreditations, including:
+[P]
+[P]NSI Gold (National Security Inspectorate) — fire and security systems
+[P]
+[P]BAFE SP203 — fire detection and alarm systems
+[P]
+[P]FIRAS — fire stopping and passive fire protection
+[P]
+[P]BSC — British Safety Council
+[P]
+[P]CHAS Elite — contractors health and safety assessment
+[P]
+[P]Constructionline Gold — verified contractor status
+[P]
+[P]FIA (Fire Industry Association) membership
+[P]
+[P]These accreditations are not easily or quickly obtained. They represent a meaningful barrier to entry and are required by most Tier 1 contractors and framework operators as a condition of appointment.
+[P]
+[P]
+[P]4.2  Technology and Operational Stack
+[P]Gemini operates an integrated technology stack across its service delivery functions:
+[P]
+[P]Uptick — asset register, planned preventative maintenance (PPM), job scheduling and compliance documentation
+[P]
+[P]Procore — project delivery management for Special Projects and larger contract work
+[P]
+[P]Microsoft 365 SharePoint — golden thread documentation in accordance with Building Safety Act requirements
+[P]
+[P]Xero — financial management and reporting
+[P]
+[P]This is above-market for a business of this size and demonstrates operational maturity that will support the Group's scale ambitions.
+[P]
+[P]
+[P]4.3  Service Divisions
+[P]Gemini operates eight service divisions:
+[P]
+[P]Division
+[P]FY25 Revenue
+[P]FY25 GP
+[P]FY25 GP%
+[P]Nature
+[P]Special Projects
+[P]£2,382k
+[P]£901k
+[P]37.8%
+[P]Large-scale fire safety installations and remediation
+[P]London Projects
+[P]£1,751k
+[P]£80k
+[P]4.6%
+[P]Tier 1 contractor supply chain — Mace, Arc Group
+[P]Passive Fire
+[P]£1,266k
+[P]£122k
+[P]9.7%
+[P]Fire stopping, fire doors, compartmentation surveys
+[P]Ventilation
+[P]£1,019k
+[P](£67k)
+[P]-6.6%
+[P]Kitchen extract, commercial ventilation cleaning
+[P]Small Works
+[P]£840k
+[P]£167k
+[P]19.9%
+[P]Reactive and minor project works
+[P]Service
+[P]£785k
+[P](£75k)
+[P]-9.6%
+[P]PPM, servicing, maintenance contracts
+[P]Gas & Water
+[P]£356k
+[P]£65k
+[P]18.3%
+[P]Gas safety, water hygiene, legionella
+[P]TOTAL
+[P]£8,399k
+[P]£1,193k
+[P]14.2%
+[P]
+[P]
+[P]Note: Service and Ventilation were loss-making in FY25. Both divisions have improved significantly in H1 FY26 (Service: +13.4% GP; Ventilation: +10.8% GP), indicating that FY25 performance reflected specific contract issues now resolved rather than structural division problems.
+[P]
+[P]
+[P]4.4  Key Clients
+[P]
+[P]Mace (Bloomberg HQ, 40 Argyll Street, Peterborough Court, London Projects)
+[P]
+[P]Arc Group London (Ansul servicing, Project Powergate)
+[P]
+[P]FirstPort / Solitaire (residential FM portfolio)
+[P]
+[P]Moat Homes (passive fire portfolio, £132k YTD FY26)
+[P]
+[P]Equans (PPM, Southern Water, Canterbury, Hastings, Falmer)
+[P]
+[P]Select Plant Hire (HMP Garth, Margam, Oxford, Beckton)
+[P]
+[P]Sanders Senior Living / Runwood Homes (ventilation, care sector)
+[P]
+[P]Canterbury City Council
+[P]
+[P]Morgan Lovell, Oktra (fit-out and compliance)
+[P]
+[P]Client relationships are long-standing and, in most cases, direct. This is a key competitive differentiator — Gemini wins work through established trust and track record, not framework pricing races.
+[P]
+[P]
+[P]
+[P]5.  Financial Performance
+[P]
+[P]5.1  FY2024/25 — Year Ended 30 September 2025
+[P]FY25 was an exceptional year, driven by delivery of several large Special Projects wins. The following figures are taken from audited management accounts.
+[P]
+[P]Metric
+[P]FY25 (Actual)
+[P]FY24 (Prior Year)
+[P]Change
+[P]Gross Revenue
+[P]£8,599k
+[P]£7,330k
+[P]+17.3%
+[P]Net Revenue (post-retention)
+[P]£8,423k
+[P]—
+[P]—
+[P]Cost of Sales
+[P]£7,276k
+[P]—
+[P]—
+[P]Gross Profit
+[P]£1,147k
+[P]—
+[P]13.6% margin
+[P]Operating Profit
+[P]£920k
+[P]—
+[P]10.9% margin
+[P]Pre-Tax Profit
+[P]£1,064k
+[P]—
+[P]12.6% margin
+[P]Net Profit After Tax
+[P]£799k
+[P]—
+[P]9.5% margin
+[P]EBITDA (approx.)
+[P]~£989k
+[P]—
+[P]11.7% margin
+[P]Cash (30 Sep 2025)
+[P]£254k
+[P]£96k
+[P]+£158k
+[P]Net Assets
+[P]£1,628k
+[P]—
+[P]—
+[P]
+[P]
+[P]5.2  FY25 Quarterly Cadence
+[P]Revenue is not evenly distributed across quarters. Q4 is consistently strongest, reflecting the delivery profile of Special Projects work:
+[P]
+[P]Q1: £1.9m — weakest quarter
+[P]
+[P]Q2: c.£2.1m
+[P]
+[P]Q3: c.£2.1m
+[P]
+[P]Q4: £2.4m — strongest quarter
+[P]
+[P]This is typical of the sector. PE investors should model accordingly and avoid reading seasonal weakness in Q1 as structural.
+[P]
+[P]
+[P]5.3  FY25 Balance Sheet (30 September 2025)
+[P]
+[P]Item
+[P]Value
+[P]Cash
+[P]£254k
+[P]Trade Debtors
+[P]£1,387k
+[P]Retentions Due
+[P]£160k
+[P]Trade Creditors
+[P](£662k)
+[P]Corporation Tax Payable
+[P](£264k)
+[P]HP / Vehicle Finance
+[P](£104k)
+[P]Retained Earnings
+[P]£1,296k
+[P]Net Assets
+[P]£1,628k
+[P]
+[P]
+[P]
+[P]6.  H1 FY26 Trading Update and Recovery Plan
+[P]This section is included in full transparency. AMPM Group does not seek to obscure trading difficulties. The root causes are identified, the financial impact is bounded, and a recovery plan is in place.
+[P]
+[P]
+[P]6.1  H1 FY26 Summary (October 2025 — March 2026)
+[P]
+[P]Metric
+[P]H1 FY26 (Actual)
+[P]H1 Budget
+[P]Variance
+[P]Revenue
+[P]£3,651k
+[P]£4,802k
+[P]-24%
+[P]Direct Costs
+[P]£3,863k
+[P]—
+[P]—
+[P]Gross Profit
+[P](£139k)
+[P]—
+[P]-3.8% margin
+[P]Operating Loss
+[P](£355k)
+[P]—
+[P]—
+[P]Cash (10 Apr 26)
+[P]£16,920
+[P]—
+[P]CRITICAL
+[P]
+[P]
+[P]6.2  Root Cause Analysis
+[P]The H1 FY26 loss is concentrated in two contracts, not systemic across the business:
+[P]
+[P]
+[P]Peterborough Court (PBC) — Mace contract
+[P]
+[P]Cumulative GP loss H1 FY26: (£170,839). Costs running significantly ahead of invoiced applications on a long-duration Mace contract. February 2026 alone: (£124,713) GP in a single month.
+[P]
+[P]This is an over-application timing issue. Significant costs were incurred and materials procured ahead of the billing cycle. Applications for payment are in progress via the Mace application process.
+[P]
+[P]Debtor position: Mace (PBC) £94k — active application cycle. Bancroft £87k — due April 2026.
+[P]
+[P]
+[P]London Projects — revenue shortfall
+[P]
+[P]Revenue at only 32% of budget (£601k vs £1.86m annualised target). Labour-heavy cost base (62.5% of costs) creates negative leverage when revenue falls short.
+[P]
+[P]Root cause: delayed contract starts on several Tier 1 projects and lower activity volumes from key supply chain clients.
+[P]
+[P]GP loss in H1: (£187k).
+[P]
+[P]
+[P]6.3  Six Profitable Divisions
+[P]The core of the business is performing. Six of eight divisions were profitable in H1 FY26:
+[P]
+[P]Division
+[P]H1 Revenue
+[P]H1 GP
+[P]H1 GP%
+[P]Small Works
+[P]£292k
+[P]+£98k
+[P]+25.1%
+[P]Service
+[P]£410k
+[P]+£55k
+[P]+13.4%
+[P]Ventilation
+[P]£506k
+[P]+£55k
+[P]+10.8%
+[P]Gas & Water
+[P]£145k
+[P]+£15k
+[P]+10.1%
+[P]Passive Fire
+[P]£378k
+[P]+£10k
+[P]+2.7%
+[P]Special Projects
+[P]£1,311k
+[P](£161k)
+[P]-12.3%
+[P]London Projects
+[P]£601k
+[P](£187k)
+[P]-31.1%
+[P]Building Services
+[P]£26k
+[P](£22k)
+[P]-86.7%
+[P]TOTAL
+[P]£3,668k
+[P](£139k)
+[P]-3.8%
+[P]
+[P]The six profitable divisions generated £1.83m revenue at a blended 11.5% margin in H1 — consistent with, or better than, FY25 performance. The business model works. The H1 loss is a function of two specific contract issues.
+[P]
+[P]
+[P]6.4  Cash Position and Management
+[P]Cash is at a critical level (£16,920 as at 10 April 2026) with a forecast trough of (£390k) in July 2026. The Board has agreed a 10-point recovery plan. Key near-term priorities include:
+[P]
+[P]Accelerating PBC applications and collection — £94k Mace application in cycle
+[P]
+[P]Bancroft debt recovery — £87k due April 2026
+[P]
+[P]Aviva/Pomona Street debt — £27k outstanding >12 months, legal track in progress
+[P]
+[P]Overhead review — reducing divisional cost base to reflect H1 revenue levels
+[P]
+[P]Building Services division: Board decision on continuation pending review
+[P]
+[P]London Projects: repricing strategy and client mix rationalisation in progress
+[P]
+[P]
+[P]
+[P]7.  Growth Strategy
+[P]The Group's growth strategy operates across three horizons: optimise the existing business, build the subsidiary stack, and acquire complementary platforms.
+[P]
+[P]7.1  Horizon 1 — Optimise Gemini AMPM
+[P]Short-term priority is returning Gemini to its FY25 run-rate:
+[P]
+[P]Resolve PBC contract billing and accelerate collections
+[P]
+[P]Reprice London Projects — move to better-margin Tier 1 supply chain work only
+[P]
+[P]Scale the profitable divisions: Small Works (25% GP), Service (improving), Gas & Water (18%)
+[P]
+[P]Reduce exposure to loss-making Special Projects activity that does not carry adequate margin at contract stage
+[P]
+[P]Stabilise Building Services — either find sustainable margin profile or rationalise
+[P]
+[P]
+[P]7.2  Horizon 2 — Build the Subsidiary Stack
+[P]Four subsidiaries are in development or planning:
+[P]
+[P]AMPM Building Services (FY26): Absorb M&E scope currently procured from third parties. Immediate margin improvement through vertical integration of labour and materials.
+[P]
+[P]AMPM Facilities (FY27): Full FM aggregation offering. Single-contact service delivery covering hard services (Gemini and Building Services) and soft services (via subcontractor partnerships). Target: housing associations, NHS trusts, local authorities, commercial portfolios.
+[P]
+[P]AMPM Live (FY26 development, FY27 client release): Client portal — see Section 8.
+[P]
+[P]AMPM Academy (FY27): Training and apprenticeship entity — see Section 9.
+[P]
+[P]
+[P]7.3  Horizon 3 — Inorganic Growth via AMPM Ventures
+[P]Acquisition is the primary driver of the step-change to £25–30 million. AMPM Ventures is the designated vehicle, governed separately from the trading entities to maintain clean financial reporting lines.
+[P]
+[P]
+[P]Acquisition Criteria
+[P]
+[P]Revenue: £1–5 million (digestible integration risk)
+[P]
+[P]Sector: fire safety, passive fire, M&E, FM, gas and water hygiene, or adjacent compliance
+[P]
+[P]Geography: south of England initially, then national
+[P]
+[P]Margin: gross margins of 15%+ or with identifiable route to that level post-integration
+[P]
+[P]Accreditations: preference for businesses bringing new accreditation scope
+[P]
+[P]
+[P]Acqui-Hire Strategy
+[P]Acqui-hire is the Group’s highest-returning capital deployment strategy. Rather than acquiring a business and all its associated risk, the Group recruits proven senior operators — individuals with established client books, sector credibility, and active order pipelines — and brings them directly into the AMPM Group structure. The operator arrives with their relationships; the Group provides the infrastructure, accreditation stack, back-office, and platform to let them grow.
+[P]The mechanics
+[P]
+[P]Salary at or slightly above market rate. The operator joins on competitive terms. This is not a distressed hire; it is a deliberate recruitment of market-proven talent who choose AMPM Group because of the platform and growth opportunity on offer.
+[P]
+[P]Deferred signing bonus. A meaningful joining bonus is agreed at the point of hire but held back until the operator is established and generating revenue within the Group — typically 12 to 18 months. The deferred structure serves two purposes: it confirms the operator’s commitment beyond the initial transition period, and it ensures the bonus is funded by the revenue the operator has themselves created. The Group is not paying capital until value has been evidenced.
+[P]
+[P]Client book transition. The operator brings their existing client relationships into the Group. These are personal relationships built over years — they follow the operator, not the employer. The Group immediately gains access to an active order pipeline and client base that would take years to win organically, or would cost 3–5x EBITDA to acquire through a business purchase.
+[P]
+[P]Internal P&L accountability. Each acqui-hire operator runs their business within the Group as a defined revenue and profit centre. They have the autonomy of an entrepreneur, the credibility of a Group accreditation stack, and the commercial backing of AMPM’s infrastructure. This model attracts senior individuals who want to grow but no longer want the full weight of running their own business independently.
+[P]Why this is the most capital-efficient route to revenue growth
+[P]A full business acquisition in this sector typically costs 3–5x EBITDA, carries due diligence and legal costs, and requires integration resource to preserve client relationships post-deal. An acqui-hire achieves the same outcome — a client book, active revenue, and a proven operator — at a fraction of the cost. The total outlay is salary, infrastructure support, and a deferred bonus paid only after the operator has generated the revenue to justify it. The return on capital deployed is substantially higher, and the execution risk substantially lower.
+[P]The Group has identified a pipeline of senior candidates — individuals already known to management, with existing client relationships in target sectors and geographies — for whom this model is the right next step. Initial conversations have taken place. Candidate profiles and indicative revenue potential are available under enhanced NDA. The Group is targeting 2–4 acqui-hire completions in Years 1–2, representing an estimated additional £1.5–3m of annualised revenue at Group-standard margins.
+[P]
+[P]
+[P]Target Pipeline
+[P]The management team has an active pipeline of acquisition targets and acqui-hire candidates in its existing networks. Detailed profiling of specific targets is available on request under enhanced NDA.
+[P]
+[P]
+[P]
+[P]8.  Technology — AMPM Live
+[P]AMPM Live is a client-facing digital platform that provides building owners and facilities managers with real-time visibility of their assets, compliance status, and service delivery. It is designed to move AMPM Group from a service provider to a strategic infrastructure partner — central to how clients manage their compliance obligations.
+[P]
+[P]8.1  Platform Overview
+[P]AMPM Live is a multi-user portal with role-based access. Each client's view is configured to their specific asset base and reporting requirements:
+[P]
+[P]Live asset register — every asset on site, with status, last service date, and next due date
+[P]
+[P]Compliance dashboard — real-time visibility of outstanding actions, overdue items, and certification status
+[P]
+[P]KPI reporting — customisable metrics relevant to the client's obligations (fire door inspections, detection system tests, suppression certifications, etc.)
+[P]
+[P]Job instruction — clients can raise reactive jobs, request quotations, or approve variations directly through the portal
+[P]
+[P]Document repository — all certificates, inspection reports, and remediation records stored and accessible on demand, meeting golden thread obligations under the Building Safety Act
+[P]
+[P]
+[P]8.2  Why This Matters Commercially
+[P]The portal creates structural switching cost and deepens the client relationship:
+[P]
+[P]Once a client's asset base is onboarded to AMPM Live, the data relationship makes switching to a competitor operationally disruptive
+[P]
+[P]It positions AMPM as a technology-enabled partner, not a commodity trades contractor — supporting premium pricing
+[P]
+[P]It enables proactive compliance management rather than reactive break-fix, driving higher annual contract values
+[P]
+[P]Golden thread documentation within the platform directly addresses the Building Safety Act's digital record-keeping requirement, making AMPM Live a compliance tool as well as a client service tool
+[P]
+[P]
+[P]8.3  Technology Investment
+[P]AMPM Live is in active development. A portion of the Group working capital fund is earmarked for platform build. The target is soft launch to existing Gemini clients in 2026, with full commercial release as a value-added service layer in 2027.
+[P]
+[P]
+[P]
+[P]9.  People, Culture and AMPM Academy
+[P]
+[P]9.1  Leadership Team
+[P]
+[P]Name
+[P]Role
+[P]Background
+[P]Jamie Dawson
+[P]Chair, AMPM Group
+[P]Co-founder and former equity owner, Gemini AMPM. 20+ years building and operating the business from start-up through growth and EOT transition. Drives Group strategy and investor relationships.
+[P]Dan Small
+[P]Managing Director, AMPM Group
+[P]Former MD of Gemini AMPM. Operational lead across all trading divisions. Longest-serving member of the management team with deep client and supply chain relationships.
+[P]Luke Finney
+[P]Commercial Director, AMPM Group
+[P]Co-founder and former equity owner, Gemini AMPM. Leads commercial strategy, estimating, bid management and new business development across the Group.
+[P]
+[P]Full leadership biographies are provided as a separate document. All three founders came from trades apprenticeships — a background that directly informs the Academy initiative described below.
+[P]
+[P]
+[P]9.2  AMPM Academy
+[P]AMPM Academy is a planned Group entity targeted for launch in Q3 2027. It addresses a problem that is both personal and commercial: the UK compliance and building services sector has a chronic skills pipeline problem, and not enough opportunity is being created for young people entering the trades.
+[P]
+[P]The Academy has three commercial purposes:
+[P]
+[P]Internal pipeline: apprentices trained to Group standards and absorbed into Gemini and the subsidiary businesses, reducing reliance on the external labour market and stabilising wage costs at scale
+[P]
+[P]Workforce differentiation: a trained, culturally-aligned workforce creates a service quality advantage over competitors relying on labour agencies and subcontract labour
+[P]
+[P]External IP licensing: accreditation pathways, training content, and regulatory compliance curricula licensed to other operators in the sector — a recurring, high-margin revenue stream that does not require headcount growth
+[P]
+[P]Apprenticeship programmes are already running within Gemini AMPM at small scale. The Academy formalises and expands this, with a dedicated entity structure and commercial development plan.
+[P]
+[P]This is also a material asset in PE exit positioning. An owned training and accreditation platform adds demonstrable scarcity value to an acquirer seeking to inherit a sustainable talent pipeline, not just a client book.
+[P]
+[P]
+[P]9.3  Employee Ownership Trust Heritage
+[P]The EOT transition at Gemini AMPM (October 2024) reflected the founders' commitment to the workforce that built the business. The EOT structure is preserved within the Group architecture. Beyond its governance implications, it creates:
+[P]
+[P]A cultural alignment between the Group's values and its people — reduced turnover, higher discretionary effort
+[P]
+[P]A public sector procurement advantage under PPN 06/20 social value scoring
+[P]
+[P]A narrative that differentiates the Group from corporate roll-up acquirers in client conversations
+[P]
+[P]
+[P]
+[P]10.  Financial Summary and Projections
+[P]
+[P]10.1  FY25 Actuals — Basis for Investment Thesis
+[P]The investment thesis is anchored in FY25 audited management accounts — not projections:
+[P]
+[P]~£989k
+[P]FY25 EBITDA
+[P]Gemini AMPM standalone
+[P]11.7%
+[P]EBITDA MARGIN
+[P]FY25 net revenue basis
+[P]£1.06m
+[P]FY25 PBT
+[P]After interest
+[P]14.8%
+[P]GROWTH YoY
+[P]vs FY24 turnover
+[P]
+[P]
+[P]10.2  Valuation Basis
+[P]On a standalone Gemini AMPM basis, using FY25 EBITDA of ~£989k:
+[P]
+[P]At 5x EBITDA: implied enterprise value of approximately £4.9 million
+[P]
+[P]At 6x EBITDA: approximately £5.9 million
+[P]
+[P]At 7x EBITDA: approximately £6.9 million
+[P]
+[P]Comparable transactions in the sector (Marlowe, Mitie roll-up acquisitions) have been executed at 5–8x EBITDA, with premium multiples paid for businesses with accreditation stacks, recurring revenue, and proprietary technology. AMPM Group, at scale and with AMPM Live deployed, should command the upper end of this range.
+[P]
+[P]
+[P]10.3  Three-Year Financial Targets
+[P]
+[P]Year
+[P]Revenue Target
+[P]EBITDA Target
+[P]Key Driver
+[P]FY27 (Year 1 post-investment)
+[P]~£12–14m
+[P]~£1.5m
+[P]Gemini recovery + Building Services + 1–2 acquisitions
+[P]FY28 (Year 2)
+[P]~£18–22m
+[P]~£2.2m
+[P]Acquisitions integrating; Facilities launch; AMPM Live live
+[P]FY29 (Year 3 / exit review)
+[P]~£25–30m
+[P]~£3.0m+
+[P]Full platform at scale; Academy contributing; exit positioning
+[P]
+[P]A detailed three-year financial model is available separately (AMPM Group Financial Model). The model is built bottom-up by division with organic and acquisition scenarios. It will be updated with FY26 actuals on conclusion of the financial year.
+[P]
+[P]
+[P]10.4  Exit Thesis
+[P]The Group is structured for a 5-year trade sale to a strategic acquirer:
+[P]
+[P]Natural acquirers: Marlowe Group, Mitie, Integral (JLL), or an international FM group seeking a UK compliance platform
+[P]
+[P]At £25–30m revenue and £3m+ EBITDA, the Group is a material, defensible asset — not a bolt-on
+[P]
+[P]AMPM Live provides technology premium over comparable pure-service businesses
+[P]
+[P]The EOT heritage and Academy differentiate the Group in an acquirer's stakeholder narrative
+[P]
+[P]At 7–8x exit EBITDA on £3m: enterprise value of £21–24 million
+[P]
+[P]
+[P]
+[P]11.  Investment Proposition
+[P]AMPM Group is seeking a total committed facility of £20 million from a single investment partner. The investment is structured in two components, sequenced to deliver immediate value on completion and sustained return over the five-year hold period.
+[P]
+[P]
+[P]11.1  Deal Structure — Overview
+[P]
+[P]Component
+[P]Amount
+[P]Purpose
+[P]A — Gemini AMPM equity stake
+[P]~£4–5m on completion
+[P]PE acquires 49% of Gemini AMPM from the EOT. Cash proceeds plus loan facility settle the £4.1m outstanding seller loan note in full. EOT retains 51%. PE gains immediate equity in an audited, cash-flowing business.
+[P]B — Group acquisition facility
+[P]Up to £15–16m drawn deal-by-deal
+[P]Committed facility at AMPM Group level. Deployed against acquisitions, acqui-hire, subsidiary launches, and AMPM Live. PE and management team co-invested at group level. Not drawn on day one.
+[P]
+[P]
+[P]11.2  Component A — Gemini AMPM Stake Acquisition
+[P]The investment partner acquires 49% of Gemini AMPM Limited directly from the Employee Ownership Trust. The consideration comprises an equity cash payment plus a loan facility, structured to settle in full the £4.1 million seller loan note currently outstanding to the founding shareholders (Jamie Dawson, Luke Finney, and fellow note holders).
+[P]On completion of Component A:
+[P]
+[P]The investment partner holds 49% of Gemini AMPM — immediate equity exposure to £8.4m revenue and audited FY25 EBITDA of ~£989k
+[P]
+[P]The EOT retains 51% of Gemini AMPM — EOT status is preserved, and with it the PPN 06/20 public sector procurement advantage
+[P]
+[P]The £4.1m seller loan note is settled in full — founding shareholders are made whole, and Gemini’s balance sheet is cleared of the note overhang
+[P]
+[P]Gemini’s free cash flow improves materially on day one — debt service on the seller note is eliminated, strengthening the trading business that underpins the whole Group
+[P]The implied valuation of Gemini at 49% is subject to negotiation and will be anchored to a mutually agreed EBITDA multiple applied to audited FY25 performance. Comparable transactions in the sector (Marlowe Group, andwis) have been executed at 5–8x EBITDA. Detailed financial modelling and supporting schedules are available under enhanced NDA.
+[P]
+[P]
+[P]11.3  Component B — Group Acquisition and Growth Facility
+[P]A committed facility of up to £15–16 million sits at AMPM Group level, available for drawdown against individual approved transactions. The investment partner takes an equity position at AMPM Group level alongside the management team — all parties are co-invested in the Group’s long-term value creation.
+[P]The facility is deployed across four uses, in approximate priority order:
+[P]
+[P]Business acquisitions. £1–5m revenue compliance and FM businesses in the south of England, targeted by accreditation gap, geography, and margin profile. Each acquisition individually approved against agreed criteria.
+[P]
+[P]Acqui-hire. Senior operators hired with their client books, funded via competitive salaries and performance-linked deferred bonuses. Typically the most capital-efficient route to new revenue. Target: 2–4 completions in Years 1–2.
+[P]
+[P]Subsidiary launches. Working capital for AMPM Building Services ramp-up, AMPM Live platform development, and AMPM Facilities launch in FY27.
+[P]
+[P]Integration resource. A small dedicated team to ensure acquired businesses retain client relationships and margin profile through the integration period.
+[P]
+[P]
+[P]11.4  Governance and Investor Rights
+[P]AMPM Group is seeking a genuine working partner, not a passive capital provider. The investment partner will have full visibility and joint control over the deployment of the facility:
+[P]
+[P]Board representation at AMPM Group level and, if required, at Gemini AMPM level
+[P]
+[P]Monthly management accounts and quarterly board reporting across all group entities
+[P]
+[P]Joint approval of all acquisitions and acqui-hire transactions above an agreed threshold
+[P]
+[P]Defined exit triggers and timeline alignment — 5-year hold with agreed review points
+[P]
+[P]
+[P]11.5  Return Profile
+[P]The investment partner has two distinct return pathways, both crystallising at exit:
+[P]
+[P]Gemini AMPM equity (49%). Direct equity in a 27-year-old, accredited, cash-generating business. Value compounds as Gemini grows organically and benefits from Group infrastructure. Realised on group exit or standalone Gemini transaction.
+[P]
+[P]AMPM Group equity. Platform value created by acquisitions, acqui-hire, and subsidiary launches. At £25–30m revenue and £3m+ EBITDA, a 7–8x exit multiple implies enterprise value of £21–24m. AMPM Live adds technology premium. Exit route: trade sale to Marlowe Group, Mitie, andwis, or equivalent strategic acquirer.
+[P]Target return on total facility: 3–4x money-on-money over the 5-year hold period, based on the financial projections set out in Section 10.
+[P]
+[P]The management team has deployed its own capital and professional reputation into this Group. We are not seeking passive funding — we are seeking a partner who shares the conviction that this is the right time to build a compliance services platform, and who brings financial firepower to match our operational capability.
+[P]
+[P]
+[P]
+[P]12.  Principal Risks and Mitigants
+[P]
+[P]Risk
+[P]Mitigant
+[P]PBC contract losses continue into H2 FY26
+[P]Applications in active Mace billing cycle. Board monitoring weekly. £94k debtor expected Q2 FY26.
+[P]London Projects fails to recover to budget
+[P]Repricing strategy in place. Division will not pursue sub-margin work. Client mix rationalisation underway.
+[P]Cash trough (July 2026 forecast: £390k deficit)
+[P]Debtor recovery programme active. Overhead reduction. Potential use of invoice finance facility.
+[P]Acquisition integration risk
+[P]Acquisitions to be staged. Integration playbook developed pre-deployment. Acqui-hire approach for lower-risk entries.
+[P]Key person dependency
+[P]Management team of three at Group level. Succession planning and incentive structures built into PE deal terms.
+[P]Regulatory change
+[P]Building Safety Act is directionally positive for the Group — increased compliance demand. No adverse regulatory horizon identified.
+[P]Labour and skills shortage
+[P]AMPM Academy directly addresses this. Short-term, existing supplier relationships manage capacity.
+[P]
+[P]
+[P]
+[P]13.  Next Steps
+[P]AMPM Group invites interested parties to engage on the following basis:
+[P]
+[P]Review of this document and the supporting financial model
+[P]
+[P]Initial meeting with Jamie Dawson (Chair) and Dan Small (MD) — approximately 90 minutes — to walk through the business plan and answer questions
+[P]
+[P]Execution of NDA to enable disclosure of acquisition pipeline, client data, and detailed divisional P&L
+[P]
+[P]Indicative terms discussion — facility size, structure, equity economics, governance
+[P]
+[P]Full due diligence process — financial, legal, operational
+[P]
+[P]Contact:
+[P]Jamie Dawson — Chair, AMPM Group Limited
+[P]jamie@ampm.co.uk
+[P]
+[P]
+[P]
+[P]AMPM Group Limited  |  Business Plan  |  May 2026  |  Strictly Confidential
+[P]
+[P]

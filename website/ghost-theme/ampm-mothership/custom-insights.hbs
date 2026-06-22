@@ -1,0 +1,38 @@
+{{!< default}}
+{{!-- Insights index. Routed to /insights/ via routes.yaml as a Collection. --}}
+
+<section class="section">
+  <div class="reveal" style="margin-bottom: 24px;">
+    <div class="eyebrow">Insights · From the group</div>
+    <h1 class="display">Thinking from <em>the mothership.</em></h1>
+    <p class="deck" style="margin-top: 16px; max-width: 60ch;">
+      Long-form pieces on compliance, procurement, employee ownership, and the operating posture that lets a mid-market group act like an enterprise.
+    </p>
+  </div>
+</section>
+
+{{#if posts}}
+<section class="section" style="padding-top: 0;">
+  <div class="insights-list reveal">
+    {{#foreach posts}}
+      {{> "insight-card"}}
+    {{/foreach}}
+  </div>
+
+  {{#if pagination.next}}
+  <div class="reveal" style="margin-top: 56px; text-align: center;">
+    <a href="{{page_url pagination.next}}" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; border: 1px solid var(--ink); padding: 14px 24px; display: inline-block;">Older insights →</a>
+  </div>
+  {{/if}}
+</section>
+{{else}}
+<section class="section">
+  <p class="deck">No insights published yet. The first will appear here as soon as it's ready.</p>
+</section>
+{{/if}}
+
+<section class="section dark">
+  <div class="section-inner">
+    {{> "newsletter"}}
+  </div>
+</section>

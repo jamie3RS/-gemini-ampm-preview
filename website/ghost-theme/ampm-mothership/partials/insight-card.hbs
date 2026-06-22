@@ -1,0 +1,17 @@
+{{!-- Insight card for the Insights index. Expects to be inside {{#foreach posts}}. --}}
+<a class="insight-card" href="{{url}}">
+  <div class="insight-card-meta">
+    {{#primary_tag}}<span class="topic">{{name}}</span>{{/primary_tag}}
+    <span>{{date format="DD MMM YYYY"}}</span>
+    <span>·</span>
+    <span>{{reading_time}}</span>
+  </div>
+  <h3>{{title}}</h3>
+  {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{else}}<p>{{excerpt words="32"}}</p>{{/if}}
+  {{#primary_author}}
+  <div class="insight-card-by">
+    <span class="name">{{name}}</span>
+    {{#if bio}}<span class="role">{{bio}}</span>{{/if}}
+  </div>
+  {{/primary_author}}
+</a>

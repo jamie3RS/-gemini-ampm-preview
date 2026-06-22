@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>AMPM Group — Restructure &amp; Filing Instructions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:#f6f3ec; --paper-2:#efeadf; --paper-tint:#f3f1e6;
+  --rule:#d9d2c1; --rule-strong:#b8af9a;
+  --ink:#1a1f2b; --ink-2:#3a4150; --ink-3:#6b7080;
+  --oxblood:#6b2a2a; --moss:#3d5a3d;
+  --c-orange:#E8742C; --c-green:#3D8E2E; --c-blue:#2E5FAB; --c-purple:#7A2E8F;
+  --serif:"Source Serif 4",Georgia,serif;
+  --sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;}
+body{
+  font-family:var(--sans); color:var(--ink); background:#e7e2d6;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  font-size:16px; line-height:1.5;
+}
+
+/* ——— Running head ——— */
+.running-head{
+  position:sticky; top:0; z-index:50;
+  background:rgba(246,243,236,0.92); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:13px 0; border-bottom:1px solid var(--rule);
+}
+.running-head .rh-inner{ width:100%; max-width:880px; margin:0 auto; padding:0 56px; display:flex; justify-content:space-between; align-items:center; }
+.brand-mini{ display:flex; align-items:center; gap:11px; white-space:nowrap; font-family:var(--serif); font-size:15px; font-weight:600; letter-spacing:-0.01em; color:var(--ink); }
+.meridian-mini{ display:flex; gap:1px; width:40px; height:9px; }
+.meridian-mini span{ flex:1; }
+.rh-meta{ font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-3); }
+
+/* ——— Sheet ——— */
+.sheet{ background:var(--paper); max-width:880px; margin:0 auto; }
+.doc{ padding:0 56px 96px; }
+
+/* ——— Letterhead ——— */
+.letterhead{
+  background:var(--ink); color:var(--paper);
+  padding:48px 56px 40px; position:relative; overflow:hidden;
+}
+.lh-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap; }
+.lh-wordmark{ font-family:var(--serif); font-weight:500; font-size:30px; letter-spacing:-0.02em; margin:0; line-height:1; white-space:nowrap; }
+.lh-wordmark .ltd{ color:rgba(246,243,236,0.5); font-weight:400; }
+.lh-meridian{ display:flex; width:128px; height:7px; margin-top:14px; }
+.lh-meridian span{ flex:1; }
+.lh-meridian span:nth-child(2){ flex:2.4; }
+.lh-office{ text-align:right; font-family:var(--mono); font-size:10px; letter-spacing:0.1em; line-height:1.7; text-transform:uppercase; color:rgba(246,243,236,0.62); }
+.lh-office strong{ color:rgba(246,243,236,0.9); font-weight:500; }
+.lh-confidential{
+  margin-top:34px; display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--mono); font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--c-orange);
+}
+.lh-confidential::before{ content:""; width:22px; height:1px; background:var(--c-orange); }
+
+/* ——— Document title block ——— */
+.titleblock{ padding:52px 0 8px; border-bottom:1px solid var(--ink); }
+.tb-eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-3); margin-bottom:22px; }
+.tb-title{
+  font-family:var(--serif); font-weight:400; font-size:clamp(38px,6vw,62px);
+  line-height:1.02; letter-spacing:-0.025em; margin:0 0 30px; text-wrap:balance; max-width:18ch;
+}
+.tb-title em{ font-style:italic; color:var(--ink-3); }
+
+/* correspondence meta (To/From/Date/Re) */
+.corr{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:0;
+  border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); margin-bottom:0;
+}
+.corr-cell{ padding:22px 0; }
+.corr-cell:nth-child(odd){ padding-right:32px; border-right:1px solid var(--rule); }
+.corr-cell:nth-child(even){ padding-left:32px; }
+.corr-cell.full{ grid-column:1 / -1; border-top:1px solid var(--rule); padding-left:0; padding-right:0; border-right:0; }
+.corr-lbl{ font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-3); margin-bottom:9px; }
+.corr-val{ font-family:var(--serif); font-size:18px; color:var(--ink); line-height:1.4; }
+.corr-val .sub{ display:block; font-size:14px; color:var(--ink-2); margin-top:3px; }
+
+/* ——— Sections ——— */
+.section{ padding:54px 0 0; border-top:1px solid var(--rule-strong); margin-top:54px; }
+.section:first-of-type{ border-top:0; margin-top:0; }
+.sec-no{ font-family:var(--mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink-3); margin-bottom:16px; }
+.sec-title{
+  font-family:var(--serif); font-weight:400; font-size:clamp(28px,3.6vw,40px);
+  line-height:1.06; letter-spacing:-0.02em; margin:0 0 26px; text-wrap:balance; max-width:24ch;
+}
+.lede{ font-family:var(--serif); font-size:20px; line-height:1.55; color:var(--ink); margin:0 0 24px; text-wrap:pretty; }
+
+.h2{ font-family:var(--serif); font-weight:600; font-size:23px; line-height:1.2; letter-spacing:-0.012em; margin:42px 0 14px; }
+.h2 .step{ font-family:var(--mono); font-weight:400; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--c-blue); display:block; margin-bottom:8px; }
+.h3{ font-family:var(--serif); font-weight:600; font-size:19px; line-height:1.25; margin:32px 0 12px; }
+
+p{ font-family:var(--serif); font-size:17px; line-height:1.62; color:var(--ink); margin:0 0 18px; text-wrap:pretty; }
+p:last-child{ margin-bottom:0; }
+strong{ font-weight:600; } em{ font-style:italic; }
+
+ul,ol{ padding-left:0; margin:0 0 22px; list-style:none; }
+ul li, ol li{ font-family:var(--serif); font-size:17px; line-height:1.6; color:var(--ink); padding-left:30px; position:relative; margin-bottom:13px; text-wrap:pretty; }
+ul li::before{ content:""; position:absolute; left:0; top:13px; width:15px; height:1px; background:var(--ink); }
+ol{ counter-reset:list; }
+ol li{ counter-increment:list; }
+ol li::before{ content:counter(list,decimal-leading-zero); position:absolute; left:0; top:2px; font-family:var(--mono); font-size:11px; letter-spacing:0.06em; color:var(--ink-3); }
+li ul{ margin:13px 0 4px; }
+li ul li{ font-size:16px; margin-bottom:9px; }
+li ul li::before{ width:9px; background:var(--ink-3); top:12px; }
+
+/* ——— Companies comparison table ——— */
+table.fin{ width:100%; border-collapse:collapse; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); margin:8px 0 28px; }
+table.fin th, table.fin td{ text-align:left; padding:14px 18px 14px 0; border-bottom:1px solid var(--rule); font-size:15px; line-height:1.45; vertical-align:top; font-family:var(--serif); }
+table.fin th{ font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-3); font-weight:500; border-bottom:1px solid var(--ink); }
+table.fin td.rowlbl{ font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3); width:30%; padding-top:16px; }
+table.fin td .co{ font-family:var(--serif); font-weight:600; font-size:16px; }
+table.fin td .mono{ font-family:var(--mono); font-size:13px; letter-spacing:0.02em; }
+table.fin tr:last-child td{ border-bottom:0; }
+
+/* ——— Highlight / note panel ——— */
+.panel{ background:var(--paper-2); padding:30px 34px; margin:30px 0; border-left:3px solid var(--ink); }
+.panel.action{ border-left-color:var(--c-blue); }
+.panel.warn{ border-left-color:var(--oxblood); background:#f3ece8; }
+.panel.key{ border-left-color:var(--c-orange); }
+.panel-lbl{ font-family:var(--mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink); margin:0 0 14px; }
+.panel.warn .panel-lbl{ color:var(--oxblood); }
+.panel.key .panel-lbl{ color:var(--c-orange); }
+.panel p{ font-size:16px; margin-bottom:0; }
+.panel p + p{ margin-top:12px; }
+
+/* ——— Ownership diagram ——— */
+.orgchart{ margin:18px 0 8px; }
+.org-tier-lbl{ font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-3); margin:0 0 16px; }
+.owners{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.node{ border:1px solid var(--rule-strong); background:#fff; padding:18px 18px 16px; position:relative; }
+.node .nm{ font-family:var(--serif); font-weight:600; font-size:17px; line-height:1.2; }
+.node .meta{ font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-3); margin-top:8px; line-height:1.5; }
+.node .share{ position:absolute; top:14px; right:16px; font-family:var(--mono); font-size:12px; color:var(--ink); letter-spacing:0.04em; }
+.node.owner{ border-top:3px solid var(--c-blue); }
+.node.owner:nth-child(1){ border-top-color:var(--c-orange); }
+.node.owner:nth-child(2){ border-top-color:var(--c-green); }
+.node.owner:nth-child(3){ border-top-color:var(--c-purple); }
+.connector{ display:flex; flex-direction:column; align-items:center; }
+.connector .vline{ width:1px; height:26px; background:var(--rule-strong); }
+.connector .label{ font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-3); padding:5px 0; }
+.node.group{ border:1px solid var(--ink); border-top:3px solid var(--ink); background:var(--ink); color:var(--paper); padding:24px 26px; }
+.node.group .nm{ font-size:22px; color:var(--paper); }
+.node.group .meta{ color:rgba(246,243,236,0.6); }
+.node.sub{ border:1px solid var(--rule-strong); background:#fff; padding:22px 26px; }
+.node.sub .nm{ font-size:20px; }
+.org-foot{ font-family:var(--serif); font-size:15px; color:var(--ink-2); margin-top:20px; line-height:1.55; font-style:italic; }
+
+/* ——— Director detail cards ——— */
+.dir-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:8px 0 0; }
+.dir-card{ border:1px solid var(--rule); background:#fff; padding:28px 30px; }
+.dir-card h3{ font-family:var(--serif); font-weight:600; font-size:21px; margin:0 0 4px; }
+.dir-card .role{ font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--c-blue); margin-bottom:20px; }
+.dl{ display:grid; grid-template-columns:auto 1fr; gap:9px 18px; }
+.dl dt{ font-family:var(--mono); font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3); padding-top:3px; white-space:nowrap; }
+.dl dd{ font-family:var(--serif); font-size:15px; color:var(--ink); margin:0; line-height:1.4; }
+.dl dd .priv{ display:block; font-family:var(--mono); font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--oxblood); margin-top:3px; }
+.dir-note{ font-family:var(--serif); font-size:14px; font-style:italic; color:var(--ink-2); margin-top:20px; }
+
+/* FIC blocks */
+.fic{ border:1px solid var(--rule); background:#fff; padding:30px 34px; margin:24px 0; }
+.fic .fic-name{ font-family:var(--serif); font-weight:600; font-size:21px; margin:0; }
+.fic .fic-tag{ font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-3); margin:6px 0 22px; }
+.fic .fic-tag.confirmed{ color:var(--moss); }
+.fic .fic-tag.tbc{ color:var(--mustard,#8a6a1f); }
+.share-class{ display:grid; grid-template-columns:120px 1fr; gap:14px 24px; padding:16px 0; border-top:1px solid var(--rule); }
+.share-class:first-of-type{ border-top:1px solid var(--ink); }
+.sc-lbl{ font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); padding-top:2px; }
+.sc-lbl .kind{ display:block; color:var(--ink-3); margin-top:3px; font-size:9px; }
+.sc-holders{ font-family:var(--serif); font-size:16px; line-height:1.55; color:var(--ink); }
+.sc-holders .dob{ font-family:var(--mono); font-size:11px; color:var(--ink-3); letter-spacing:0.02em; }
+
+/* ——— Sign-off ——— */
+.signoff{ margin-top:56px; padding-top:42px; border-top:1px solid var(--ink); }
+.signoff p{ font-size:17px; }
+.sig-name{ font-family:var(--serif); font-size:22px; font-weight:600; margin:32px 0 2px; }
+.sig-meta{ font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-3); line-height:1.7; }
+
+/* ——— Foot ——— */
+.doc-foot{ display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;
+  padding:26px 56px; background:var(--ink); color:rgba(246,243,236,0.62);
+  font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; }
+.doc-foot .meridian-mini{ width:48px; }
+
+@media (max-width:720px){
+  .running-head .rh-inner, .doc{ padding-left:26px; padding-right:26px; }
+  .letterhead{ padding:36px 26px 30px; }
+  .corr, .owners, .dir-grid{ grid-template-columns:1fr; }
+  .corr-cell:nth-child(odd){ padding-right:0; border-right:0; }
+  .corr-cell:nth-child(even){ padding-left:0; border-top:1px solid var(--rule); }
+  .doc-foot{ padding:22px 26px; }
+  .share-class{ grid-template-columns:1fr; gap:6px; }
+}
+
+@media print{
+  @page{ size:A4; margin:16mm 15mm; }
+  body{ background:#fff; font-size:10.5pt; }
+  .running-head{ display:none; }
+  .sheet{ max-width:none; }
+  .doc{ padding:0; }
+  .letterhead{ margin-bottom:10mm; padding:18mm 16mm 14mm; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .node.group, .node.owner, .doc-foot, .panel{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .section{ page-break-inside:avoid; }
+  .h2{ page-break-after:avoid; }
+  table.fin, .panel, .orgchart, .dir-card, .fic, .signoff{ page-break-inside:avoid; }
+  .dir-grid{ page-break-inside:avoid; }
+  .doc-foot{ margin-top:10mm; }
+  a{ color:var(--ink); }
+}
+</style>
+</head>
+<body>
+
+<div class="running-head">
+  <div class="rh-inner">
+    <div class="brand-mini">
+      <span>AMPM Group</span>
+      <span class="meridian-mini"><span style="background:var(--c-orange)"></span><span style="background:var(--c-green)"></span><span style="background:var(--c-blue)"></span><span style="background:var(--c-purple)"></span></span>
+    </div>
+    <div class="rh-meta">Private &amp; Confidential</div>
+  </div>
+</div>
+
+<div class="sheet">
+
+  <!-- LETTERHEAD -->
+  <header class="letterhead" data-screen-label="Letterhead">
+    <div class="lh-top">
+      <div>
+        <h1 class="lh-wordmark">AMPM Group <span class="ltd">Ltd</span></h1>
+        <div class="lh-meridian"><span style="background:var(--c-orange)"></span><span style="background:var(--c-green)"></span><span style="background:var(--c-blue)"></span><span style="background:var(--c-purple)"></span></div>
+      </div>
+      <div class="lh-office">
+        <strong>Company No. 17136810</strong><br />
+        Registered in England &amp; Wales<br />
+        Unit 2 Regent Business Centre<br />
+        Jubilee Road, Burgess Hill<br />
+        RH15 9TL
+      </div>
+    </div>
+    <div class="lh-confidential">Private &amp; Confidential — for the addressee only</div>
+  </header>
+
+  <div class="doc">
+
+    <!-- TITLE BLOCK -->
+    <div class="titleblock">
+      <div class="tb-eyebrow">Instruction Letter · Group Reorganisation</div>
+      <h2 class="tb-title">Restructure &amp; <em>filing</em> instructions</h2>
+      <div class="corr">
+        <div class="corr-cell">
+          <div class="corr-lbl">To</div>
+          <div class="corr-val">Joe Funnell<span class="sub">Watson Associates — Accountants</span></div>
+        </div>
+        <div class="corr-cell">
+          <div class="corr-lbl">From</div>
+          <div class="corr-val">Jamie Dawson<span class="sub">Director, AMPM Group Ltd</span></div>
+        </div>
+        <div class="corr-cell">
+          <div class="corr-lbl">Date</div>
+          <div class="corr-val">9 June 2026</div>
+        </div>
+        <div class="corr-cell">
+          <div class="corr-lbl">Reference</div>
+          <div class="corr-val">Group reorganisation</div>
+        </div>
+        <div class="corr-cell full">
+          <div class="corr-lbl">Re</div>
+          <div class="corr-val">Group reorganisation, director appointments, and two Family Investment Companies</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1 OBJECTIVE -->
+    <section class="section" data-screen-label="1 Objective">
+      <div class="sec-no">Section 01</div>
+      <h2 class="sec-title">Objective</h2>
+      <p class="lede">Two newly-incorporated, non-trading companies need their directorships and shareholdings set into the intended group structure now — while both are dormant and nil-value, which is the cleanest time to do it.</p>
+      <p>Alongside this, two Family Investment Companies (FICs) are to be formed, each to hold a third of the Group.</p>
+    </section>
+
+    <!-- 2 THE COMPANIES -->
+    <section class="section" data-screen-label="2 The companies">
+      <div class="sec-no">Section 02</div>
+      <h2 class="sec-title">The companies</h2>
+      <table class="fin">
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th>AMPM Group Ltd</th>
+            <th>AMPM Building Services Ltd</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rowlbl">Company number</td>
+            <td><span class="mono">17136810</span></td>
+            <td><span class="mono">17225766</span></td>
+          </tr>
+          <tr>
+            <td class="rowlbl">Incorporated</td>
+            <td>4 Apr 2026</td>
+            <td>18 May 2026</td>
+          </tr>
+          <tr>
+            <td class="rowlbl">Current registered office</td>
+            <td>Unit 2 Regent Business Centre, Jubilee Road, Burgess Hill, RH15 9TL</td>
+            <td>As left (same)</td>
+          </tr>
+          <tr>
+            <td class="rowlbl">Current sole director</td>
+            <td>Jamie Lloyd Dawson</td>
+            <td>Jamie Lloyd Dawson</td>
+          </tr>
+          <tr>
+            <td class="rowlbl">Current shareholder</td>
+            <td>Jamie Dawson — 100 ordinary £1</td>
+            <td>Jamie Dawson — 100% <em>(confirm count)</em></td>
+          </tr>
+          <tr>
+            <td class="rowlbl">Current PSC</td>
+            <td>Jamie Dawson (75%+)</td>
+            <td>Jamie Dawson (75%+)</td>
+          </tr>
+          <tr>
+            <td class="rowlbl">Status</td>
+            <td>Dormant / non-trading</td>
+            <td>Dormant / non-trading</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="panel key">
+        <div class="panel-lbl">Registered office — all four companies</div>
+        <p>The registered office for all four companies (the two above plus both FICs) is to be <strong>Watson Associates, 30–34 North Street, Hailsham, East Sussex, BN27 1DW.</strong></p>
+        <p>Watson Associates to confirm they consent to act as the registered-office address.</p>
+      </div>
+    </section>
+
+    <!-- 3 TARGET STRUCTURE -->
+    <section class="section" data-screen-label="3 Target structure">
+      <div class="sec-no">Section 03</div>
+      <h2 class="sec-title">Target structure</h2>
+
+      <div class="orgchart">
+        <div class="org-tier-lbl">Shareholders — one third each</div>
+        <div class="owners">
+          <div class="node owner">
+            <div class="nm">Daniel Small</div>
+            <div class="share">⅓</div>
+            <div class="meta">Personally held</div>
+          </div>
+          <div class="node owner">
+            <div class="nm">Bold Wolff Ltd</div>
+            <div class="share">⅓</div>
+            <div class="meta">Jamie's FIC · §6a</div>
+          </div>
+          <div class="node owner">
+            <div class="nm">Luke's FIC</div>
+            <div class="share">⅓</div>
+            <div class="meta">Name TBC · §6b</div>
+          </div>
+        </div>
+
+        <div class="connector"><div class="vline"></div><div class="label">hold 100% of</div><div class="vline"></div></div>
+
+        <div class="node group">
+          <div class="share" style="color:rgba(246,243,236,0.6)">Holding company</div>
+          <div class="nm">AMPM Group Ltd</div>
+          <div class="meta">Directors — Jamie Dawson (Chair) · Daniel Small (MD) · Luke Finney (Commercial Director)</div>
+        </div>
+
+        <div class="connector"><div class="vline"></div><div class="label">owns 100% of</div><div class="vline"></div></div>
+
+        <div class="node sub">
+          <div class="share" style="color:var(--ink-3)">Trading subsidiary</div>
+          <div class="nm">AMPM Building Services Ltd</div>
+          <div class="meta" style="font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);margin-top:8px;">Directors — the same three</div>
+        </div>
+
+        <p class="org-foot">Jamie retains control via the board and via the voting shares in his own FIC; he holds no shares in the Group personally afterwards.</p>
+      </div>
+
+      <p style="margin-top:30px;"><strong>In short:</strong></p>
+      <ul>
+        <li><strong>AMPM Group Ltd</strong> — directors: Jamie Dawson (Chair), Daniel Small (MD), Luke Finney (Commercial Director). Shares split into thirds: Daniel Small personally; Bold Wolff Ltd (Jamie's FIC, §6a); and Luke's FIC (§6b).</li>
+        <li><strong>AMPM Building Services Ltd</strong> — directors: the same three. Owned 100% by AMPM Group Ltd.</li>
+        <li><strong>Two FICs to be formed</strong> — one for Jamie (Bold Wolff Ltd), one for Luke — to hold the Group shares.</li>
+      </ul>
+      <div class="panel">
+        <p><strong>Note on titles.</strong> The job titles (Chair / MD / Commercial Director) are internal roles for the board minutes and shareholders' agreement only — Companies House records all three simply as “director.”</p>
+      </div>
+    </section>
+
+    <!-- 4 ACTIONS -->
+    <section class="section" data-screen-label="4 Actions">
+      <div class="sec-no">Section 04</div>
+      <h2 class="sec-title">Actions — in this order</h2>
+
+      <div class="h2"><span class="step">Step 1 · AD01 × 2</span>Registered office</div>
+      <ul>
+        <li>Change AMPM Group Ltd and AMPM Building Services Ltd registered office to <strong>Watson Associates, 30–34 North Street, Hailsham, East Sussex, BN27 1DW.</strong> Incorporate both FICs at the same address.</li>
+      </ul>
+
+      <div class="h2"><span class="step">Step 2 · AP01 × 4</span>Appoint directors</div>
+      <ul>
+        <li><strong>AMPM Group Ltd:</strong> appoint Daniel Small and Luke Finney.</li>
+        <li><strong>AMPM Building Services Ltd:</strong> appoint Daniel Small and Luke Finney.</li>
+        <li>Jamie is already a director of both. Director details in §5.</li>
+      </ul>
+
+      <div class="h2"><span class="step">Step 3</span>Form the two FICs</div>
+      <p>See §6. They must exist before they can hold the Group shares.</p>
+
+      <div class="h2"><span class="step">Step 4</span>Put Building Services under the Group</div>
+      <ul>
+        <li>Jamie transfers his entire holding in AMPM Building Services Ltd to AMPM Group Ltd (stock transfer form + board minutes of both companies).</li>
+        <li>Consideration nil (dormant / nil-value) → no stamp duty.</li>
+        <li><strong>PSC update:</strong> Jamie comes off as individual PSC of BS; AMPM Group Ltd goes on as the corporate PSC / RLE.</li>
+      </ul>
+
+      <div class="h2"><span class="step">Step 5</span>Split the Group into thirds</div>
+      <ul>
+        <li>Re-organise to a share count cleanly divisible by three (e.g. 99 = 33 each, or allot 2 to make 102 = 34 each — your call). Jamie transfers out his entire personal holding so the result is: Daniel Small, Bold Wolff Ltd (Jamie's FIC), Luke's FIC — one third each.</li>
+        <li>Jamie retains control via the board and via the voting shares in his own FIC; he holds no shares in the Group personally afterwards.</li>
+        <li><strong>PSC update:</strong> Jamie off as 75%+ PSC; Daniel Small on as individual PSC (~33%); each FIC on as an RLE (~33% each). Each FIC then maintains its own PSC register.</li>
+      </ul>
+
+      <div class="h2"><span class="step">Step 6</span>Tidy up</div>
+      <ul>
+        <li>Update statutory registers (members, directors, PSC) for all companies.</li>
+        <li>Share changes confirmed at the next Confirmation Statement (CS01); PSC changes filed promptly on their own forms (PSC01/02/07 as applicable).</li>
+      </ul>
+    </section>
+
+    <!-- 5 DIRECTOR DETAILS -->
+    <section class="section" data-screen-label="5 Director details">
+      <div class="sec-no">Section 05</div>
+      <h2 class="sec-title">Director appointment details</h2>
+      <p style="margin-bottom:28px;">For the AP01s.</p>
+      <div class="dir-grid">
+        <div class="dir-card">
+          <h3>Mr Daniel Brian Small</h3>
+          <div class="role">Managing Director</div>
+          <dl class="dl">
+            <dt>DOB</dt><dd>14/10/1984</dd>
+            <dt>Nationality</dt><dd>British</dd>
+            <dt>Resident</dt><dd>England</dd>
+            <dt>Occupation</dt><dd>Managing Director</dd>
+            <dt>Service addr.</dt><dd>Company registered office (Watson Associates, Hailsham)</dd>
+            <dt>Residential</dt><dd>Thompsetts Cottage, Stairbridge Lane, Bolney, RH17 5PA<span class="priv">Private — not published</span></dd>
+            <dt>Consent</dt><dd>To confirm with Dan</dd>
+          </dl>
+        </div>
+        <div class="dir-card">
+          <h3>Mr Luke James Finney</h3>
+          <div class="role">Commercial Director</div>
+          <dl class="dl">
+            <dt>DOB</dt><dd>08/09/1977</dd>
+            <dt>Nationality</dt><dd>British</dd>
+            <dt>Resident</dt><dd>England</dd>
+            <dt>Occupation</dt><dd>Commercial Director</dd>
+            <dt>Service addr.</dt><dd>Company registered office (Watson Associates, Hailsham)</dd>
+            <dt>Residential</dt><dd>36 Mornington Road, Woodford Green, Essex, IG8 0TL<span class="priv">Private — not published</span></dd>
+            <dt>Consent</dt><dd>To confirm with Luke</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="dir-note">Name, DOB month &amp; year, and nationality verified from their existing Gemini AMPM Ltd appointments.</p>
+    </section>
+
+    <!-- 6 THE TWO FICs -->
+    <section class="section" data-screen-label="6 FICs">
+      <div class="sec-no">Section 06</div>
+      <h2 class="sec-title">The two Family Investment Companies</h2>
+      <p>Each FIC holds one third of AMPM Group Ltd. The founder takes the voting / control shares; family members take separate classes (growth / dividend, typically non-voting). Allocations below need your tax sign-off — see §7.</p>
+
+      <div class="fic">
+        <h3 class="fic-name">6a · Bold Wolff Ltd — Jamie's FIC</h3>
+        <div class="fic-tag confirmed">Confirmed by Jamie · available on the register as at 9 Jun 2026 · “Bold” = Bailey, Oscar, Louie, Dawson</div>
+        <div class="share-class">
+          <div class="sc-lbl">Director<span class="kind">& reg. office</span></div>
+          <div class="sc-holders">Jamie Dawson. Registered office: Watson Associates, Hailsham (as §2).</div>
+        </div>
+        <div class="share-class">
+          <div class="sc-lbl">Ordinary<span class="kind">Voting / control</span></div>
+          <div class="sc-holders">Jamie Dawson</div>
+        </div>
+        <div class="share-class">
+          <div class="sc-lbl">B shares</div>
+          <div class="sc-holders">Bailey Lloyd Dawson <span class="dob">DOB 05/09/2000</span> · Katie Wolff <span class="dob">DOB 29/03/1974</span> · Sophie Wolff <span class="dob">DOB 11/02/2000</span></div>
+        </div>
+        <div class="share-class">
+          <div class="sc-lbl">C shares<span class="kind">Both under 18</span></div>
+          <div class="sc-holders">Oscar Louie Dawson <span class="dob">DOB 19/11/2013</span> · Louie Rosco Dawson <span class="dob">DOB 30/11/2016</span></div>
+        </div>
+        <p style="font-family:var(--serif);font-size:14px;font-style:italic;color:var(--ink-2);margin:18px 0 0;">No other share classes.</p>
+      </div>
+
+      <div class="fic">
+        <h3 class="fic-name">6b · Luke's FIC</h3>
+        <div class="fic-tag tbc">Luke to give final confirmation — name TBC</div>
+        <div class="share-class">
+          <div class="sc-lbl">Director<span class="kind">& reg. office</span></div>
+          <div class="sc-holders">Luke Finney. Registered office: Watson Associates, Hailsham (as §2).</div>
+        </div>
+        <div class="share-class">
+          <div class="sc-lbl">Ordinary<span class="kind">Voting / control</span></div>
+          <div class="sc-holders">Luke Finney</div>
+        </div>
+        <div class="share-class">
+          <div class="sc-lbl">B shares<span class="kind">Equal — half each</span></div>
+          <div class="sc-holders">Charlotte Catherall <span class="dob">DOB 10/02/1988</span> · Joseph Finney <span class="dob">(Luke's son) · DOB 06/02/2004</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 TAX & COMPLIANCE -->
+    <section class="section" data-screen-label="7 Tax & compliance">
+      <div class="sec-no">Section 07</div>
+      <h2 class="sec-title">Tax &amp; compliance notes for your attention</h2>
+      <ul>
+        <li><strong>s431 elections</strong> within 14 days of Daniel and Luke receiving Group shares (director-shareholders). Nil value now, so protective only.</li>
+        <li><strong>Minor children as shareholders (Bold Wolff Ltd):</strong> Oscar (b. 2013) and Louie (b. 2016) hold the C shares. Please advise on the parental settlements rules (ITTOIA 2005 s629) and whether their shares should be held via a bare trust with an adult trustee.</li>
+        <li><strong>Stamp duty:</strong> nil on the share moves while the companies are nil-value.</li>
+        <li><strong>FIC articles / shareholders' agreements:</strong> both FICs want bespoke articles defining the share classes (voting, dividend, capital rights) rather than off-the-shelf model articles.</li>
+        <li><strong>IHT / growth-share design</strong> for the family classes — your recommendation welcomed.</li>
+      </ul>
+      <div class="panel warn">
+        <div class="panel-lbl">Main point for your steer</div>
+        <p>The treatment of the minor children's C shares in Bold Wolff Ltd — the parental settlements rules and whether a bare trust with an adult trustee is the right route — is the main point Jamie wants your steer on.</p>
+      </div>
+    </section>
+
+    <!-- 8 INFO NEEDED -->
+    <section class="section" data-screen-label="8 Information needed">
+      <div class="sec-no">Section 08</div>
+      <h2 class="sec-title">Information still needed before filing</h2>
+      <ul>
+        <li>Written confirmation Daniel and Luke consent to act as directors.</li>
+        <li>Luke's FIC name + his final sign-off (§6b).</li>
+        <li>Watson Associates to confirm consent to act as registered office for all four companies.</li>
+      </ul>
+    </section>
+
+    <!-- 9 COORDINATION -->
+    <section class="section" data-screen-label="9 Coordination">
+      <div class="sec-no">Section 09</div>
+      <h2 class="sec-title">Coordination note</h2>
+      <p>There is a live CMS matter. Jamie is keeping his family solicitor informed of his third going into a FIC. Please flag if any of the above has a bearing on the timing from your side.</p>
+
+      <div class="signoff">
+        <p>With thanks,</p>
+        <div class="sig-name">Jamie Dawson</div>
+        <div class="sig-meta">Director · AMPM Group Ltd<br />Company No. 17136810</div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="doc-foot">
+    <div>AMPM Group Ltd · Private &amp; Confidential</div>
+    <span class="meridian-mini"><span style="background:var(--c-orange)"></span><span style="background:var(--c-green)"></span><span style="background:var(--c-blue)"></span><span style="background:var(--c-purple)"></span></span>
+    <div>Restructure &amp; Filing Instructions · 9 Jun 2026</div>
+  </footer>
+
+</div>
+
+<script>
+(async () => {
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  @page { margin: 0.5cm; }\n  html, body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }\n  section, article, figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* AMPM Group — Brand & Web Review
+   Shared tokens + strategy artboard styles.
+   Directions A/B/C each have their own scoped sheet. */
+
+:root {
+  --paper: #f6f3ec;
+  --paper-2: #efeadf;
+  --rule: #d9d2c1;
+  --rule-strong: #b8af9a;
+  --ink: #1a1f2b;
+  --ink-2: #3a4150;
+  --ink-3: #6b7080;
+
+  /* Meridian — one colour per discipline. The mark IS the offer. */
+  --m-orange: #E8742C;  /* Mechanical & Electrical */
+  --m-green:  #3D8E2E;  /* Fit-out */
+  --m-blue:   #2E5FAB;  /* Roofing */
+  --m-purple: #7A2E8F;  /* Groundworks */
+
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+
+/* ============ shared atoms ============ */
+.meridian { display: flex; }
+.meridian span { flex: 1; }
+.meridian .c1 { background: var(--m-orange); }
+.meridian .c2 { background: var(--m-green); }
+.meridian .c3 { background: var(--m-blue); }
+.meridian .c4 { background: var(--m-purple); }
+
+/* ============ Strategy artboard ============ */
+.strat {
+  width: 100%; height: 100%; background: var(--paper); color: var(--ink);
+  font-family: var(--sans); padding: 56px 64px; box-sizing: border-box;
+  display: flex; flex-direction: column; gap: 0;
+}
+.strat > * { flex-shrink: 0; }
+.strat-mast { display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 1px solid var(--ink); padding-bottom: 16px; }
+.strat-mast .wm { font-family: var(--serif); font-size: 21px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+.strat-mast .tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; margin-left: 24px; }
+.strat h1 { font-family: var(--serif); font-weight: 400; font-size: 44px; line-height: 1.06;
+  letter-spacing: -0.022em; margin: 34px 0 14px; max-width: 26ch; }
+.strat h1 em { font-style: italic; color: var(--ink-3); }
+.strat .deck { font-family: var(--serif); font-size: 18px; line-height: 1.5; color: var(--ink-2); max-width: 64ch; margin: 0 0 36px; }
+
+.strat-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ink-3); display: flex; align-items: center; gap: 10px; margin: 34px 0 16px; }
+.strat-lbl::after { content: ""; flex: 1; height: 1px; background: var(--rule-strong); }
+
+.field-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.field-col { border: 1px solid var(--rule-strong); background: #fff; padding: 22px 24px; }
+.field-col.win { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.field-col h3 { font-family: var(--serif); font-size: 19px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01em; }
+.field-col ul { margin: 0; padding: 0; list-style: none; }
+.field-col li { font-size: 13.5px; line-height: 1.5; padding: 8px 0 8px 0; border-top: 1px solid var(--rule); color: var(--ink-2); }
+.field-col.win li { border-top-color: rgba(246,243,236,0.18); color: rgba(246,243,236,0.85); }
+.field-col li strong { color: var(--ink); font-weight: 600; }
+.field-col.win li strong { color: var(--paper); }
+
+/* brand architecture diagram */
+.arch { border: 1px solid var(--rule-strong); background: #fff; padding: 30px 34px 26px; }
+.arch-parent { border: 1px solid var(--ink); background: var(--ink); color: var(--paper);
+  padding: 16px 22px; display: flex; justify-content: space-between; align-items: center; }
+.arch-parent .nm { font-family: var(--serif); font-size: 20px; font-weight: 600; }
+.arch-parent .role { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(246,243,236,0.6); }
+.arch-link { display: flex; justify-content: center; gap: 280px; }
+.arch-link span { width: 1px; height: 26px; background: var(--rule-strong); }
+.arch-kids { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.arch-kid { border: 1px solid var(--rule-strong); padding: 16px 20px 14px; position: relative; }
+.arch-kid .nm { font-family: var(--serif); font-size: 17px; font-weight: 600; }
+.arch-kid .role { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-top: 6px; line-height: 1.6; }
+.arch-note { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--ink-2); margin: 18px 0 0; }
+
+/* system tokens row */
+.sys-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 14px; }
+.sys-card { border: 1px solid var(--rule-strong); background: #fff; padding: 20px 22px; }
+.sys-card h4 { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 14px; font-weight: 500; }
+.sys-card .big-serif { font-family: var(--serif); font-size: 26px; letter-spacing: -0.015em; line-height: 1.15; }
+.sys-card .big-serif em { font-style: italic; }
+.sys-card .stack-line { font-size: 13px; color: var(--ink-2); margin-top: 8px; line-height: 1.5; }
+.sys-card .stack-line code { font-family: var(--mono); font-size: 11px; }
+.disc-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-top: 1px solid var(--rule); }
+.disc-row:first-of-type { border-top: 0; }
+.disc-row .chip { width: 22px; height: 8px; }
+.disc-row .nm { font-size: 13px; font-weight: 500; }
+.disc-row .mono { font-family: var(--mono); font-size: 10px; color: var(--ink-3); margin-left: auto; letter-spacing: 0.06em; }
+
+/* CTA exploration strip */
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.cta-card { border: 1px solid var(--rule-strong); background: #fff; padding: 18px 20px; }
+.cta-card .dir { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 10px; }
+.cta-card .move { font-family: var(--serif); font-size: 16px; font-weight: 600; line-height: 1.3; margin-bottom: 8px; }
+.cta-card p { font-size: 12.5px; line-height: 1.5; color: var(--ink-2); margin: 0; }
+
+.strat-foot { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--ink);
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
+.strat-foot .meridian { width: 64px; height: 6px; }

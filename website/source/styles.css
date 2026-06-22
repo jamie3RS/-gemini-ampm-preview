@@ -1,0 +1,219 @@
+/* AMPM Group — board-grade design system
+   Sober institutional. Off-white, navy/charcoal, restrained type.
+*/
+
+:root {
+  /* Neutrals — warm off-white, deep institutional navy/charcoal */
+  --paper: #f6f3ec;          /* warm off-white, board-pack paper */
+  --paper-2: #efeadf;        /* secondary paper */
+  --rule: #d9d2c1;           /* hairline rule */
+  --rule-strong: #b8af9a;
+  --ink: #1a1f2b;            /* near-black, slight blue */
+  --ink-2: #3a4150;          /* secondary text */
+  --ink-3: #6b7080;          /* tertiary / metadata */
+
+  /* Accents — used sparingly, all share chroma */
+  --navy: #1d2a44;           /* primary brand-ish */
+  --oxblood: #6b2a2a;        /* risk / red-line */
+  --moss: #3d5a3d;           /* delivered / on-track */
+  --mustard: #8a6a1f;        /* in-flight / amber */
+
+  /* Type */
+  --serif: "Source Serif 4", "Source Serif Pro", "Charter", Georgia, serif;
+  --sans: "Inter Tight", "Söhne", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Meridian — four-colour family. Override per-tweak from the App. */
+  --ampm-c1: #E8742C;
+  --ampm-c2: #5BAA47;
+  --ampm-c3: #2E5FAB;
+  --ampm-c4: #7A2E8F;
+
+  /* Type scale + density — bound by tweaks. */
+  --type-scale: 1;
+  --section-pad: 96px;
+}
+
+html { font-size: calc(16px * var(--type-scale)); }
+
+html, body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ——— Artboard chrome ——— */
+.artboard {
+  background: var(--paper);
+  color: var(--ink);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.artboard-inner {
+  padding: 56px 64px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ——— Document header ——— */
+.doc-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 18px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.doc-meta .left { display: flex; gap: 28px; align-items: baseline; }
+.doc-meta .marque {
+  font-family: var(--serif);
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-transform: none;
+  font-weight: 500;
+}
+.doc-meta .pill {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid var(--ink-2);
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+.doc-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: 0;
+  max-width: 22ch;
+  text-wrap: balance;
+}
+.doc-title em { font-style: italic; color: var(--ink-2); }
+
+.doc-deck {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--ink-2);
+  max-width: 60ch;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* ——— Section labels ——— */
+.section-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--ink-3);
+}
+
+.exhibit-no {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ——— Cards ——— */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 18px 20px;
+}
+.card-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.005em;
+}
+.card-body {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* ——— Status colour swatches ——— */
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.dot-on { background: var(--moss); }
+.dot-mid { background: var(--mustard); }
+.dot-off { background: var(--oxblood); }
+.dot-future { background: var(--ink-3); }
+
+/* ——— Tables ——— */
+table.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.ledger th, table.ledger td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+table.ledger th {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+  border-bottom: 1px solid var(--ink);
+}
+table.ledger tr:last-child td { border-bottom: none; }
+
+/* ——— Misc ——— */
+.kbd {
+  font-family: var(--mono);
+  font-size: 11px;
+  background: var(--paper-2);
+  padding: 2px 6px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+
+.hr-strong {
+  height: 1px;
+  background: var(--ink);
+  border: 0;
+  margin: 0;
+}
+
+.muted { color: var(--ink-3); }
+.serif { font-family: var(--serif); }
+.mono { font-family: var(--mono); }

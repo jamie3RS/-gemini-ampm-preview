@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>AMPM Group · Strategic Artefacts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<style>
+  body { margin: 0; background: #ece7da; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="design-canvas.jsx"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="artefact-architecture.jsx"></script>
+  <script type="text/babel" src="artefact-window.jsx"></script>
+  <script type="text/babel" src="artefact-matrix.jsx"></script>
+  <script type="text/babel" src="artefact-brand-dna.jsx"></script>
+  <script type="text/babel" src="artefact-brand-continuum.jsx"></script>
+  <script type="text/babel" src="artefact-brand-meridian.jsx"></script>
+  <script type="text/babel" src="artefact-brand-applications.jsx"></script>
+  <script type="text/babel" src="artefact-brand-shapes.jsx"></script>
+
+  <script type="text/babel" data-presets="env,react">
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "audience": "trustees",
+      "horizon": 5,
+      "density": "full",
+      "structureMode": "full",
+      "brandDirection": "meridian"
+    }/*EDITMODE-END*/;
+
+    function App() {
+      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+      return (
+        <>
+          <DesignCanvas
+            title="AMPM Group · Strategic Artefacts"
+            subtitle="Three angles on the same question — how does AMPM Group earn the title of mothership? Drag, reorder, click any artefact to focus."
+            meta={[
+              { label: "Audience", value: t.audience === "trustees" ? "Board / EOT trustees" : t.audience === "smt" ? "SMT internal" : t.audience === "buyer" ? "External buyer" : "Capital / investor" },
+              { label: "Horizon", value: `${t.horizon}-year view` },
+              { label: "Density", value: t.density === "full" ? "Full detail" : "Executive summary" },
+            ]}
+          >
+            <DCSection id="strategy" title="Strategic artefacts">
+              <DCArtboard id="architecture" label="01 · Group Architecture" width={1280} height={900}>
+                <ArchitectureArtefact horizon={t.horizon} structureMode={t.structureMode} />
+              </DCArtboard>
+              <DCArtboard id="window" label="02 · Strategic Window" width={1280} height={1260}>
+                <WindowArtefact density={t.density} />
+              </DCArtboard>
+              <DCArtboard id="matrix" label="03 · Capability Matrix" width={1280} height={900}>
+                <MatrixArtefact horizon={t.horizon} />
+              </DCArtboard>
+            </DCSection>
+            <DCSection id="brand" title="Brand system">
+              <DCArtboard id="dna" label="04 · Brand DNA" width={1280} height={1100}>
+                <DnaArtefact />
+              </DCArtboard>
+              <DCArtboard id="continuum" label="05 · Direction A · Continuum" width={1280} height={1220}>
+                <ContinuumArtefact />
+              </DCArtboard>
+              <DCArtboard id="meridian" label="06 · Direction B · Meridian" width={1280} height={1160}>
+                <MeridianArtefact />
+              </DCArtboard>
+              <DCArtboard id="applications" label="07 · Applications" width={1280} height={1300}>
+                <ApplicationsArtefact direction={t.brandDirection} />
+              </DCArtboard>
+              <DCArtboard id="shapes" label="08 · Shape language" width={1280} height={1540}>
+                <ShapeLanguageArtefact />
+              </DCArtboard>
+            </DCSection>
+          </DesignCanvas>
+
+          <TweaksPanel title="Tweaks">
+            <TweakSection title="Audience">
+              <TweakRadio
+                value={t.audience}
+                onChange={(v) => setTweak("audience", v)}
+                options={[
+                  { value: "trustees", label: "Trustees" },
+                  { value: "smt", label: "SMT" },
+                  { value: "buyer", label: "Buyer" },
+                ]}
+              />
+            </TweakSection>
+            <TweakSection title="Year horizon" subtitle="Controls which subsidiaries appear">
+              <TweakRadio
+                value={String(t.horizon)}
+                onChange={(v) => setTweak("horizon", parseInt(v))}
+                options={[
+                  { value: "1", label: "1 yr" },
+                  { value: "3", label: "3 yr" },
+                  { value: "5", label: "5 yr" },
+                ]}
+              />
+            </TweakSection>
+            <TweakSection title="Density">
+              <TweakRadio
+                value={t.density}
+                onChange={(v) => setTweak("density", v)}
+                options={[
+                  { value: "exec", label: "Exec summary" },
+                  { value: "full", label: "Full detail" },
+                ]}
+              />
+            </TweakSection>
+            <TweakSection title="Brand direction" subtitle="Applies to artefact 07">
+              <TweakRadio
+                value={t.brandDirection}
+                onChange={(v) => setTweak("brandDirection", v)}
+                options={[
+                  { value: "continuum", label: "Continuum" },
+                  { value: "meridian", label: "Meridian" },
+                ]}
+              />
+            </TweakSection>
+          </TweaksPanel>
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{{!< default}}
+<section class="section" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+  <div class="reveal">
+    <div class="eyebrow">Error · {{code}}</div>
+    <h1 class="display">{{#match code "404"}}A page that doesn't exist.{{else}}{{message}}{{/match}}</h1>
+    <p class="deck" style="margin-top: 24px;">
+      {{#match code "404"}}
+        The URL didn't resolve. Try the <a href="/" style="border-bottom: 1px solid var(--ink);">home page</a>, or browse <a href="/work/" style="border-bottom: 1px solid var(--ink);">work</a> and <a href="/insights/" style="border-bottom: 1px solid var(--ink);">insights</a>.
+      {{else}}
+        Something went wrong on our side. Try refreshing, or email <a href="mailto:hello@ampm.co.uk" style="border-bottom: 1px solid var(--ink);">hello@ampm.co.uk</a>.
+      {{/match}}
+    </p>
+  </div>
+</section>

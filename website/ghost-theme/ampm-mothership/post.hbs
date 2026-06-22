@@ -1,0 +1,13 @@
+{{!< default}}
+{{!-- Route to the right post partial based on primary tag. --}}
+{{#post}}
+  {{#has tag="case-study"}}
+    {{> "post-case-study"}}
+  {{else}}
+    {{#has tag="insight"}}
+      {{> "post-insight"}}
+    {{else}}
+      {{> "post-default"}}
+    {{/has}}
+  {{/has}}
+{{/post}}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>AMPM Group — Brand &amp; Web Review</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Big+Shoulders+Display:wght@500;600;700;800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="brand-review/review-base.css" />
+<link rel="stylesheet" href="brand-review/dir-a.css" />
+<link rel="stylesheet" href="brand-review/dir-b.css" />
+<link rel="stylesheet" href="brand-review/dir-c.css" />
+<link rel="stylesheet" href="brand-review/dir-d.css" />
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="brand-review/image-slot.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="brand-review/design-canvas.jsx"></script>
+  <script type="text/babel" src="brand-review/bw-strategy.jsx"></script>
+  <script type="text/babel" src="brand-review/bw-direction-a.jsx"></script>
+  <script type="text/babel" src="brand-review/bw-direction-b.jsx"></script>
+  <script type="text/babel" src="brand-review/bw-direction-c.jsx"></script>
+  <script type="text/babel" src="brand-review/bw-direction-d.jsx"></script>
+  <script type="text/babel" data-presets="env,react">
+    function ReviewApp() {
+      return (
+        <DesignCanvas title="AMPM Group — Brand & Web Review">
+          <DCSection
+            id="review"
+            title="01 · The review"
+            subtitle="Where the field is, where we win, and the system that travels across all three companies"
+          >
+            <DCArtboard id="strategy" label="Strategy on a page" width={1280} height={2080}>
+              <StrategyBoard />
+            </DCArtboard>
+          </DCSection>
+
+          <DCSection
+            id="directions"
+            title="02 · AMPM Building Services — three homepage directions"
+            subtitle="Same brand DNA — meridian, type stack, plain-spoken voice — three different temperatures. Drag your photos onto any grey frame. Click a board to focus it fullscreen."
+          >
+            <DCArtboard id="dir-a" label="A · Engineered Precision — dark, technical, data-led" width={1440} height={5050}>
+              <DirectionA />
+            </DCArtboard>
+            <DCArtboard id="dir-b" label="B · Quiet Premium — light, photographic, gallery restraint" width={1440} height={4630}>
+              <DirectionB />
+            </DCArtboard>
+            <DCArtboard id="dir-c" label="C · Modern Heritage — warm paper, institutional, editorial" width={1440} height={3560}>
+              <DirectionC />
+            </DCArtboard>
+          </DCSection>
+          <DCSection
+            id="unique"
+            title="03 · The concept direction — AM→PM"
+            subtitle="Derived from the name itself: the page is a day in the life of your building — dawn to night, ending on the 24/7 promise. New type (Big Shoulders + Archivo), no template grammar."
+          >
+            <DCArtboard id="dir-d" label="D · AM→PM — the day arc" width={1440} height={5150}>
+              <DirectionD />
+            </DCArtboard>
+          </DCSection>
+        </DesignCanvas>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<ReviewApp />);
+  </script>
+</body>
+</html>

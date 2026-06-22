@@ -1,0 +1,34 @@
+{
+  "name": "ampm-mothership",
+  "description": "AMPM Group — mothership theme. Compliance-led mid-market group; case studies + insights publication.",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=5.0.0",
+    "ghost-api": "v5"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "AMPM Group",
+    "email": "hello@ampm.co.uk"
+  },
+  "keywords": ["ghost-theme", "ampm", "publication"],
+  "config": {
+    "posts_per_page": 12,
+    "image_sizes": {
+      "xs": { "width": 150 },
+      "s":  { "width": 400 },
+      "m":  { "width": 800 },
+      "l":  { "width": 1200 },
+      "xl": { "width": 2000 }
+    },
+    "card_assets": {
+      "exclude": ["bookmark"]
+    },
+    "custom": {
+      "site_tagline": {
+        "type": "text",
+        "default": "Holding company · Established 2026"
+      }
+    }
+  }
+}

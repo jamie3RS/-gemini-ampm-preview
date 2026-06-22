@@ -1,0 +1,130 @@
+/* Direction D — AM→PM. The day-arc concept. Scoped under .dirD
+   The page IS a day: dawn → daylight → dusk → night.
+   Type: Big Shoulders (condensed display) + Archivo. No serif, no mono-eyebrow grammar. */
+
+.dirD {
+  width: 100%; height: 100%; box-sizing: border-box; overflow: hidden;
+  font-family: "Archivo", "Helvetica Neue", sans-serif; color: #1c1812;
+  display: flex; flex-direction: column;
+  background: linear-gradient(180deg,
+    #f3dfc4 0%, #f9efdd 9%,
+    #fdfaf2 18%, #fdfaf2 46%,
+    #f2e3cd 54%, #d9b08c 60%,
+    #41507c 70%, #1b2440 78%,
+    #0b0e1c 86%, #0b0e1c 100%);
+  --d-display: "Big Shoulders Display", "Archivo", sans-serif;
+}
+.dirD * { box-sizing: border-box; }
+
+/* ===== the time spine ===== */
+.d-spine { position: absolute; left: 84px; top: 0; bottom: 0; width: 2px; background: rgba(28,24,18,0.22); z-index: 1; }
+.d-stamp { font-family: var(--d-display); font-weight: 700; font-size: 30px; letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+.d-stamp .tick { width: 46px; height: 2px; background: currentColor; margin-left: -130px; }
+.d-stamp .shift { font-family: "Archivo"; font-size: 12px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.6; }
+
+/* ===== nav ===== */
+.d-nav { position: relative; z-index: 2; display: flex; align-items: center; gap: 36px; padding: 26px 64px 22px 130px; }
+.d-sunmark { display: inline-flex; align-items: center; gap: 12px; }
+.d-sunmark .disc { width: 30px; height: 30px; position: relative; overflow: hidden; }
+.d-sunmark .disc::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 15px;
+  background: #1c1812; border-radius: 15px 15px 0 0; }
+.d-sunmark .disc::after { content: ""; position: absolute; left: 0; right: 0; top: 16px; height: 3px; background: #1c1812; }
+.d-nav .wm { font-family: var(--d-display); font-weight: 800; font-size: 27px; letter-spacing: 0.02em; white-space: nowrap; }
+.d-nav .wm small { font-weight: 600; opacity: 0.55; letter-spacing: 0.06em; }
+.d-nav .links { display: flex; gap: 30px; margin-left: auto; font-size: 14px; font-weight: 600; letter-spacing: 0.01em; opacity: 0.85; }
+.d-nav .phone { font-family: var(--d-display); font-weight: 700; font-size: 19px; letter-spacing: 0.05em; white-space: nowrap;
+  border: 2px solid #1c1812; padding: 8px 16px; }
+
+/* ===== hero — dawn ===== */
+.d-hero { position: relative; z-index: 2; padding: 64px 64px 90px 130px; }
+.d-hero h1 { font-family: var(--d-display); font-weight: 800; font-size: 176px; line-height: 0.88;
+  letter-spacing: 0.005em; text-transform: uppercase; margin: 18px 0 0; }
+.d-hero h1 .arrow { display: inline-block; transform: translateY(-12px); }
+.d-hero .sub-row { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; margin-top: 44px; align-items: start; }
+.d-hero .standfirst { font-size: 21px; line-height: 1.55; font-weight: 500; max-width: 30ch; }
+.d-hero .standfirst strong { font-weight: 700; }
+.d-cta-row { display: flex; gap: 16px; margin-top: 32px; }
+.d-btn { background: #1c1812; color: #f9efdd; font-family: var(--d-display); font-weight: 700; font-size: 19px;
+  letter-spacing: 0.06em; text-transform: uppercase; padding: 16px 28px; white-space: nowrap; }
+.d-btn.line { background: transparent; color: #1c1812; border: 2px solid #1c1812; }
+.d-hero-fig { position: relative; margin-top: -120px; }
+.d-hero-fig image-slot { background: rgba(28,24,18,0.08); }
+.d-hero-fig .cap { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.55; margin-top: 10px; }
+
+/* discipline ribbon — the day compressed into a bar */
+.d-ribbon { position: relative; z-index: 2; margin: 0 64px 0 130px; }
+.d-ribbon .bar { display: flex; height: 64px; }
+.d-ribbon .bar .seg { flex: 1; display: flex; align-items: center; justify-content: space-between; padding: 0 18px;
+  font-family: var(--d-display); font-weight: 700; font-size: 19px; letter-spacing: 0.05em; text-transform: uppercase; color: #fff; }
+.d-ribbon .bar .seg small { font-family: "Archivo"; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; opacity: 0.8; }
+.d-ribbon .legend { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; padding: 12px 2px 0; }
+
+/* ===== morning — services ===== */
+.d-services { position: relative; z-index: 2; padding: 110px 64px 40px 130px; }
+.d-services h2, .d-cases h2, .d-dusk h2 { font-family: var(--d-display); font-weight: 800; font-size: 92px;
+  line-height: 0.92; text-transform: uppercase; letter-spacing: 0.005em; margin: 0 0 48px; }
+.d-svc-stack { display: flex; flex-direction: column; }
+.d-svc { display: grid; grid-template-columns: 150px 1fr 1.1fr 70px; gap: 36px; align-items: center;
+  border-top: 3px solid #1c1812; padding: 30px 0; }
+.d-svc:last-child { border-bottom: 3px solid #1c1812; }
+.d-svc .num { font-family: var(--d-display); font-weight: 800; font-size: 80px; line-height: 1; }
+.d-svc .nm { font-family: var(--d-display); font-weight: 700; font-size: 42px; line-height: 0.95; text-transform: uppercase; letter-spacing: 0.01em; }
+.d-svc .nm .swatch { display: inline-block; width: 38px; height: 14px; margin-left: 14px; }
+.d-svc p { font-size: 15.5px; line-height: 1.55; font-weight: 500; margin: 0; opacity: 0.85; max-width: 44ch; }
+.d-svc .go { font-family: var(--d-display); font-weight: 800; font-size: 44px; text-align: right; }
+
+/* ===== midday proof strip ===== */
+.d-proof { position: relative; z-index: 2; margin: 60px 64px 0 130px; display: flex; gap: 0; border: 3px solid #1c1812; }
+.d-proof .cell { flex: 1; padding: 26px 26px 24px; border-right: 3px solid #1c1812; }
+.d-proof .cell:last-child { border-right: 0; }
+.d-proof .big { font-family: var(--d-display); font-weight: 800; font-size: 62px; line-height: 0.95; }
+.d-proof .lbl { font-size: 13px; font-weight: 600; line-height: 1.4; margin-top: 8px; opacity: 0.8; }
+
+/* ===== afternoon — casework ===== */
+.d-cases { position: relative; z-index: 2; padding: 120px 64px 30px 130px; }
+.d-case-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+.d-case { position: relative; }
+.d-case image-slot { background: rgba(28,24,18,0.1); }
+.d-case .tag { position: absolute; top: 0; left: 0; background: #1c1812; color: #f9efdd;
+  font-family: var(--d-display); font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; z-index: 2; }
+.d-case h3 { font-family: var(--d-display); font-weight: 700; font-size: 27px; line-height: 0.98; text-transform: uppercase; margin: 16px 0 8px; }
+.d-case p { font-size: 14px; font-weight: 500; line-height: 1.5; margin: 0; opacity: 0.8; }
+
+/* ===== dusk — the group ===== */
+.d-dusk { position: relative; z-index: 2; padding: 150px 64px 60px 130px; color: #f4ead8; }
+.d-dusk .d-stamp .tick { background: #f4ead8; }
+.d-dusk h2 { margin-bottom: 28px; }
+.d-dusk .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.d-dusk p { font-size: 17px; line-height: 1.6; font-weight: 500; margin: 0 0 16px; color: rgba(244,234,216,0.85); max-width: 52ch; }
+.d-dusk p strong { color: #fff; font-weight: 700; }
+.d-group-card { border: 3px solid rgba(244,234,216,0.9); padding: 34px 36px; }
+.d-group-card .gw { font-family: var(--d-display); font-weight: 800; font-size: 34px; letter-spacing: 0.02em; text-transform: uppercase; }
+.d-group-card .row { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(244,234,216,0.35);
+  padding: 14px 0; font-size: 14.5px; font-weight: 600; }
+.d-group-card .row:first-of-type { margin-top: 22px; }
+.d-group-card .row .yr { font-family: var(--d-display); font-weight: 700; font-size: 19px; letter-spacing: 0.06em; }
+
+/* ===== night — 24/7 CTA ===== */
+.d-night { position: relative; z-index: 2; padding: 130px 64px 80px 130px; color: #f4ead8; }
+.d-night .d-stamp { color: #f4ead8; }
+.d-night .d-stamp .tick { background: #f4ead8; }
+.d-night h2 { font-family: var(--d-display); font-weight: 800; font-size: 120px; line-height: 0.88; text-transform: uppercase; margin: 0 0 30px; color: #fff; }
+.d-night .story { font-size: 19px; line-height: 1.6; font-weight: 500; color: rgba(244,234,216,0.85); max-width: 56ch; margin: 0 0 44px; }
+.d-night .story strong { color: #fff; }
+.d-night .phone-block { display: flex; align-items: center; gap: 36px; flex-wrap: wrap; }
+.d-night .phone-big { font-family: var(--d-display); font-weight: 800; font-size: 76px; letter-spacing: 0.03em; color: #fff;
+  border: 4px solid #f4ead8; padding: 10px 34px; white-space: nowrap; }
+.d-night .phone-side { font-size: 14px; font-weight: 600; line-height: 1.6; letter-spacing: 0.04em; color: rgba(244,234,216,0.8); }
+.d-night .phone-side strong { color: #fff; }
+
+/* footer */
+.d-footer { position: relative; z-index: 2; margin: 60px 64px 0 130px; border-top: 2px solid rgba(244,234,216,0.4);
+  padding: 26px 0 40px; display: flex; justify-content: space-between; align-items: center; color: rgba(244,234,216,0.75);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.d-footer .wm { font-family: var(--d-display); font-weight: 800; font-size: 20px; letter-spacing: 0.04em; color: #f4ead8; }
+.d-footer .sun { width: 22px; height: 22px; position: relative; overflow: hidden; }
+.d-footer .sun::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 11px;
+  background: #f4ead8; border-radius: 0 0 11px 11px; }
+.d-footer .sun::after { content: ""; position: absolute; left: 0; right: 0; bottom: 12px; height: 2px; background: #f4ead8; }

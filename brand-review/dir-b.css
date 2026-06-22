@@ -1,0 +1,118 @@
+/* Direction B — Quiet Premium. Light, photographic, gallery restraint.
+   Scoped under .dirB */
+
+.dirB {
+  width: 100%; height: 100%; background: #fcfbf8; color: #181a18;
+  font-family: var(--sans); box-sizing: border-box; overflow: hidden;
+  display: flex; flex-direction: column;
+  --b-line: #e3ded2;
+  --b-line-2: #c9c2b0;
+  --b-dim: #6e6f6a;
+  --b-dim2: #9b9c94;
+  --b-accent: #2E5FAB;
+}
+.dirB * { box-sizing: border-box; }
+
+/* nav — minimal, generous */
+.b-nav { display: flex; align-items: center; padding: 34px 72px 30px; }
+.b-nav .wordmark { font-family: var(--serif); font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+.b-nav .wordmark .grp { display: block; font-family: var(--mono); font-size: 8.5px; font-weight: 400;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--b-dim2); margin-top: 4px; }
+.b-nav .links { display: flex; gap: 34px; margin-left: auto; font-size: 14px; font-weight: 500; color: var(--b-dim); }
+.b-nav .links .on { color: #181a18; border-bottom: 1px solid #181a18; padding-bottom: 3px; }
+.b-nav .call { margin-left: 44px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: #181a18; white-space: nowrap; }
+
+/* hero — photographic, image is the statement */
+.b-hero { padding: 26px 72px 0; }
+.b-hero h1 { font-family: var(--serif); font-weight: 300; font-size: 102px; line-height: 1.0;
+  letter-spacing: -0.03em; margin: 26px 0 0; max-width: 13ch; }
+.b-hero h1 em { font-style: italic; }
+.b-hero .meridian-line { width: 110px; height: 5px; margin-top: 38px; }
+.b-hero-split { display: grid; grid-template-columns: 0.62fr 1.38fr; gap: 64px; margin-top: 56px; align-items: end; }
+.b-hero-split .standfirst { font-family: var(--serif); font-size: 21px; line-height: 1.6; color: var(--b-dim); padding-bottom: 56px; }
+.b-hero-split .standfirst strong { color: #181a18; font-weight: 600; }
+.b-hero-split .cta-row { display: flex; align-items: center; gap: 28px; margin-top: 36px; }
+.b-btn { background: #181a18; color: #fcfbf8; font-size: 14px; font-weight: 500; padding: 18px 32px; border-radius: 0; white-space: nowrap; }
+.b-link { font-size: 14px; font-weight: 500; color: #181a18; border-bottom: 1px solid var(--b-line-2); padding-bottom: 3px; white-space: nowrap; }
+.b-hero-fig { position: relative; }
+.b-hero-fig image-slot { background: #eee9dd; }
+.b-hero-fig .cap { position: absolute; left: 0; bottom: -34px; font-family: var(--mono); font-size: 9.5px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--b-dim2); }
+
+/* client line */
+.b-clients { display: flex; align-items: center; gap: 48px; padding: 80px 72px 0; }
+.b-clients .lbl { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--b-dim2); white-space: nowrap; }
+.b-clients .names { display: flex; gap: 44px; flex-wrap: wrap; font-family: var(--serif); font-size: 17px; font-style: italic; color: var(--b-dim); }
+.b-clients .names span { white-space: nowrap; }
+
+/* editorial intro */
+.b-intro { padding: 96px 72px 0; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 64px; }
+.b-intro .lbl { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--b-dim2); }
+.b-intro h2 { font-family: var(--serif); font-weight: 300; font-size: 50px; line-height: 1.08; letter-spacing: -0.024em; margin: 0; }
+.b-intro h2 em { font-style: italic; }
+.b-intro .body p { font-family: var(--serif); font-size: 18px; line-height: 1.7; color: var(--b-dim); margin: 0 0 20px; }
+.b-intro .body p strong { color: #181a18; font-weight: 600; }
+
+/* services — quiet index */
+.b-services { padding: 88px 72px 0; }
+.b-svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid #181a18; }
+.b-svc { padding: 36px 40px 40px 0; border-bottom: 1px solid var(--b-line); display: flex; gap: 26px; }
+.b-svc:nth-child(odd) { border-right: 1px solid var(--b-line); }
+.b-svc:nth-child(even) { padding-left: 40px; }
+.b-svc .tick { width: 4px; min-width:4px; height: 52px; margin-top: 6px; }
+.b-svc h3 { font-family: var(--serif); font-weight: 400; font-size: 27px; letter-spacing: -0.015em; margin: 0 0 10px; }
+.b-svc p { font-size: 14.5px; line-height: 1.65; color: var(--b-dim); margin: 0 0 14px; max-width: 42ch; }
+.b-svc .more { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #181a18; }
+
+/* featured project — full-bleed editorial */
+.b-feature { margin-top: 96px; position: relative; }
+.b-feature image-slot { background: #eee9dd; }
+.b-feature .panel { position: absolute; left: 72px; bottom: 56px; background: #fcfbf8; padding: 38px 42px 34px; max-width: 480px; }
+.b-feature .panel .cl { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--b-accent); margin-bottom: 14px; }
+.b-feature .panel h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.15; letter-spacing: -0.018em; margin: 0 0 14px; }
+.b-feature .panel p { font-size: 14px; line-height: 1.6; color: var(--b-dim); margin: 0 0 18px; }
+.b-feature .panel .more { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* work pair */
+.b-workpair { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; padding: 72px 72px 0; }
+.b-wp image-slot { background: #eee9dd; }
+.b-wp .cap-row { display: flex; justify-content: space-between; align-items: baseline; padding-top: 18px; }
+.b-wp h4 { font-family: var(--serif); font-weight: 400; font-size: 21px; letter-spacing: -0.012em; margin: 0; }
+.b-wp .meta { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--b-dim2); }
+.b-wp p { font-size: 14px; line-height: 1.6; color: var(--b-dim); margin: 10px 0 0; max-width: 48ch; }
+
+/* assurance — understated proof band */
+.b-assure { margin: 96px 72px 0; border-top: 1px solid #181a18; display: grid; grid-template-columns: repeat(4, 1fr); }
+.b-assure .cell { padding: 30px 28px 34px 0; border-right: 1px solid var(--b-line); }
+.b-assure .cell:last-child { border-right: 0; }
+.b-assure .cell + .cell { padding-left: 28px; }
+.b-assure .num { font-family: var(--serif); font-weight: 300; font-size: 46px; letter-spacing: -0.02em; }
+.b-assure .num sup { font-size: 22px; }
+.b-assure .lbl { font-size: 13px; line-height: 1.55; color: var(--b-dim); margin-top: 8px; }
+
+/* group provenance */
+.b-prov { padding: 96px 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.b-prov .mark { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--b-line-2); padding: 44px 48px; }
+.b-prov .mark .gw { font-family: var(--serif); font-size: 30px; font-weight: 600; letter-spacing: -0.015em; }
+.b-prov .mark .meridian { width: 120px; height: 6px; margin: 18px 0 26px; }
+.b-prov .mark .kids { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--b-dim); line-height: 2.1; }
+.b-prov h2 { font-family: var(--serif); font-weight: 300; font-size: 44px; line-height: 1.1; letter-spacing: -0.022em; margin: 0 0 18px; }
+.b-prov h2 em { font-style: italic; }
+.b-prov p { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--b-dim); margin: 0 0 14px; max-width: 50ch; }
+
+/* CTA — confidence move */
+.b-cta { background: #181a18; color: #fcfbf8; padding: 96px 72px; }
+.b-cta .inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 64px; align-items: center; }
+.b-cta h2 { font-family: var(--serif); font-weight: 300; font-size: 64px; line-height: 1.02; letter-spacing: -0.026em; margin: 0; }
+.b-cta h2 em { font-style: italic; color: #9b9c94; }
+.b-cta .right p { font-family: var(--serif); font-size: 18px; line-height: 1.6; color: rgba(252,251,248,0.65); margin: 0 0 30px; }
+.b-cta .right p strong { color: #fcfbf8; font-weight: 600; }
+.b-btn-light { display: inline-block; background: #fcfbf8; color: #181a18; font-size: 14px; font-weight: 500; padding: 18px 32px; white-space: nowrap; }
+.b-cta .alt { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; color: rgba(252,251,248,0.5); margin-top: 18px; }
+.b-cta .alt strong { color: #fcfbf8; }
+
+/* footer */
+.b-footer { padding: 44px 72px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--b-line); }
+.b-footer .wm { font-family: var(--serif); font-size: 16px; font-weight: 600; }
+.b-footer .meridian { width: 72px; height: 5px; }
+.b-footer .legal { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--b-dim2); }

@@ -1,0 +1,420 @@
+/* ════════════════════════════════════════════════════════════
+   AMPM Group · Investor Portal
+   Layered on top of business-plan.css + styles.css.
+   ════════════════════════════════════════════════════════════ */
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+/* ——— Watermark overlay ——————————————————————————————————————— */
+.watermark {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-repeat: repeat;
+  background-size: 720px 720px;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+}
+@media print {
+  .watermark { opacity: 0.12; }
+}
+
+/* ——— Top nav (sticky) ——————————————————————————————————————— */
+.ipnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 1px solid rgba(246, 243, 236, 0.12);
+}
+.ipnav-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Brand block */
+.ipnav-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  color: inherit;
+}
+.ipnav-brand-word {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 0.9;
+  letter-spacing: -0.015em;
+}
+.ipnav-brand-sub {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+.ipnav-meridian {
+  display: flex;
+  width: 96px;
+  height: 2px;
+  margin-top: 2px;
+}
+.ipnav-meridian > span { flex: 1; }
+
+/* Nav links */
+.ipnav-links {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ipnav-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(246, 243, 236, 0.7);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+.ipnav-link:hover { color: var(--paper); background: rgba(246, 243, 236, 0.08); }
+.ipnav-link.is-active {
+  color: var(--ink);
+  background: var(--paper);
+}
+.ipnav-no {
+  font-family: var(--mono);
+  font-size: 9px;
+  opacity: 0.55;
+}
+.ipnav-link.is-active .ipnav-no { opacity: 0.7; }
+
+/* Viewer block (right) */
+.ipnav-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-end;
+}
+.ipnav-viewer-lbl {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.ipnav-viewer-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(246, 243, 236, 0.25);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 4px 0;
+  width: 220px;
+  text-align: right;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.ipnav-viewer-input:focus { border-bottom-color: rgba(246, 243, 236, 0.7); }
+
+/* ——— Body / page switcher ——————————————————————————————————— */
+.ip-body {
+  position: relative;
+}
+.ip-page {
+  display: none;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 32px 80px;
+}
+.ip-page.is-active {
+  display: block;
+  animation: ipFade 0.25s ease-out;
+}
+@keyframes ipFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ip-page-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 16px;
+}
+.ip-page-title {
+  font-family: var(--serif);
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin: 0 0 48px;
+  text-wrap: balance;
+}
+
+/* Override business-plan.css max-widths inside the portal */
+.ip-page .doc {
+  max-width: none;
+  padding: 0;
+}
+.ip-page .section-block {
+  padding: 48px 0;
+  border-top: 1px solid var(--rule);
+}
+.ip-page .section-block:first-child { border-top: none; padding-top: 0; }
+.ip-page .section-block + .section-block { /* no extra rule needed */ }
+
+/* The cover element from business-plan.css doesn't appear here, but if it did, suppress */
+.ip-page .cover { display: none; }
+
+/* ——— Hub page —————————————————————————————————————————————— */
+.hub-hero {
+  padding: 32px 0 56px;
+}
+.hub-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 24px;
+}
+.hub-title {
+  font-family: var(--serif);
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin: 0 0 32px;
+  text-wrap: balance;
+}
+.hub-title em {
+  font-style: italic;
+  color: var(--ink-2);
+}
+.hub-deck {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 760px;
+  margin: 0 0 56px;
+  text-wrap: pretty;
+}
+
+.hub-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
+}
+.hub-stat-n {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+.hub-stat-n .unit {
+  font-size: 0.5em;
+  margin-left: 4px;
+  color: var(--ink-2);
+}
+.hub-stat-l {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-top: 8px;
+}
+
+/* Hub cards (6 sections) */
+.hub-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  margin: 72px 0 56px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.hub-card {
+  background: var(--paper);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease;
+  min-height: 180px;
+}
+.hub-card:hover {
+  background: #f0ede5;
+}
+.hub-card-no {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--ink-2);
+}
+.hub-card-title {
+  font-family: var(--serif);
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  flex: 1;
+}
+.hub-card-eyebrow {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.hub-card-cta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-top: 4px;
+}
+
+.hub-foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.hub-foot-cell .lbl {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 6px;
+}
+.hub-foot-cell .val {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* ——— Prev / Next pager ————————————————————————————————————— */
+.ip-pagernav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.pn-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 24px;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.pn-link:hover {
+  background: #f0ede5;
+  border-color: var(--ink);
+}
+.pn-next {
+  text-align: right;
+  align-items: flex-end;
+}
+.pn-dir {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.pn-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.pn-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ——— Footer ———————————————————————————————————————————————— */
+.ipfoot {
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  margin-top: 32px;
+}
+.ipfoot-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+/* ——— Responsive ————————————————————————————————————————————— */
+@media (max-width: 1100px) {
+  .ipnav-inner {
+    grid-template-columns: auto auto;
+    gap: 16px;
+  }
+  .ipnav-links {
+    order: 3;
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin: 0 -32px;
+    padding: 0 32px 4px;
+  }
+  .ipnav-viewer-input { width: 180px; }
+}
+@media (max-width: 720px) {
+  .ipnav-inner { padding: 14px 20px; }
+  .ip-page { padding: 40px 20px 56px; }
+  .hub-stats { grid-template-columns: repeat(2, 1fr); }
+  .hub-cards { grid-template-columns: 1fr; }
+  .hub-foot { grid-template-columns: 1fr; }
+  .ip-pagernav { grid-template-columns: 1fr; }
+  .pn-next { text-align: left; align-items: flex-start; }
+  .ipnav-viewer-input { width: 140px; font-size: 11px; }
+}

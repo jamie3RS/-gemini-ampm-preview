@@ -1,0 +1,133 @@
+{{!--
+  custom-investor.hbs
+  Members-only investor portal for AMPM Group.
+  Apply this template to any page whose slug starts with "investors".
+
+  REQUIREMENTS:
+    · Each page using this template must have Access = "Members only" in Ghost Admin.
+    · The page bodies live in /website/investor-portal/pages/ and are pasted into Ghost as HTML cards.
+    · The companion stylesheet is loaded below from /assets/css/investor-portal.css.
+
+  The watermark uses the live member's email, pulled server-side from {{@member.email}},
+  so any screenshot or photograph is traceable back to the viewing investor.
+--}}
+
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+  <meta charset="utf-8" />
+  <title>{{meta_title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="{{meta_description}}" />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <link rel="canonical" href="{{url absolute="true"}}" />
+
+  {{!-- Fonts (same stack as the main site) --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  {{!-- Base theme styles + business-plan typography + portal layer --}}
+  <link rel="stylesheet" href="{{asset "css/main.css"}}" />
+  <link rel="stylesheet" href="{{asset "css/business-plan.css"}}" />
+  <link rel="stylesheet" href="{{asset "css/investor-portal.css"}}" />
+
+  {{ghost_head}}
+</head>
+
+<body class="{{body_class}} investor-portal"
+      data-viewer-email="{{#if @member}}{{@member.email}}{{else}}CONFIDENTIAL{{/if}}">
+
+  {{!-- ────────────────────────── Watermark layer ────────────────────────── --}}
+  <div class="watermark" id="watermark" aria-hidden="true"></div>
+
+  {{!-- ────────────────────────── Sticky top nav ────────────────────────── --}}
+  <header class="ipnav">
+    <div class="ipnav-inner">
+      <a class="ipnav-brand" href="/investors/">
+        <div class="ipnav-brand-word">AMPM Group</div>
+        <div class="ipnav-brand-sub">Investor portal</div>
+        <div class="ipnav-meridian"><span></span><span></span><span></span><span></span></div>
+      </a>
+
+      <nav class="ipnav-links">
+        <a class="ipnav-link{{#match page.slug "investors"}} is-active{{/match}}" href="/investors/"><span class="ipnav-no">·</span> Hub</a>
+        <a class="ipnav-link{{#match page.slug "investors/overview"}} is-active{{/match}}" href="/investors/overview/"><span class="ipnav-no">01</span> Overview</a>
+        <a class="ipnav-link{{#match page.slug "investors/market"}} is-active{{/match}}" href="/investors/market/"><span class="ipnav-no">02</span> The market</a>
+        <a class="ipnav-link{{#match page.slug "investors/foundation"}} is-active{{/match}}" href="/investors/foundation/"><span class="ipnav-no">03</span> The foundation</a>
+        <a class="ipnav-link{{#match page.slug "investors/strategy"}} is-active{{/match}}" href="/investors/strategy/"><span class="ipnav-no">04</span> Strategy &amp; platform</a>
+        <a class="ipnav-link{{#match page.slug "investors/investment"}} is-active{{/match}}" href="/investors/investment/"><span class="ipnav-no">05</span> The investment</a>
+        <a class="ipnav-link{{#match page.slug "investors/risks-and-next-steps"}} is-active{{/match}}" href="/investors/risks-and-next-steps/"><span class="ipnav-no">06</span> Risks &amp; next steps</a>
+      </nav>
+
+      <div class="ipnav-viewer">
+        <div class="ipnav-viewer-lbl">Signed in as</div>
+        <div class="ipnav-viewer-val">{{#if @member}}{{@member.email}}{{else}}Not signed in{{/if}}</div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- ────────────────────────── Page body ──────────────────────────
+       This is the HTML the page's "HTML card" emits in Ghost Admin.
+  ────────────────────────────────────────────────────────────────── --}}
+  <main class="ip-body">
+    <section class="ip-page is-active">
+      {{{body}}}
+    </section>
+  </main>
+
+  {{!-- ────────────────────────── Footer ─────────────────────────────────── --}}
+  <footer class="ipfoot">
+    <div class="ipfoot-inner">
+      <span>AMPM Group Limited · Business Plan · v1.0 May 2026</span>
+      <span>Strictly confidential · Watermarked · View-logged</span>
+    </div>
+  </footer>
+
+  {{!-- ────────────────────────── Brand meridian colours ────────────────── --}}
+  <style>
+    :root {
+      --ampm-c1: #E8742C;
+      --ampm-c2: #5BAA47;
+      --ampm-c3: #2E5FAB;
+      --ampm-c4: #7A2E8F;
+    }
+    .ipnav-meridian span:nth-child(1) { background: var(--ampm-c1); }
+    .ipnav-meridian span:nth-child(2) { background: var(--ampm-c2); }
+    .ipnav-meridian span:nth-child(3) { background: var(--ampm-c3); }
+    .ipnav-meridian span:nth-child(4) { background: var(--ampm-c4); }
+  </style>
+
+  {{!-- ────────────────────────── Watermark renderer ─────────────────────── --}}
+  <script>
+    (function () {
+      var email = document.body.getAttribute('data-viewer-email') || 'CONFIDENTIAL';
+      var stamp = email.toUpperCase() + '  ·  AMPM GROUP CONFIDENTIAL  ·  ' + new Date().toISOString().slice(0,10);
+      var lines = [];
+      for (var row = 0; row < 8; row++) {
+        var y = 40 + row * 80;
+        var x = (row % 2) * 240;
+        lines.push('<text x="' + (-200 + x) + '" y="' + y + '">' + stamp + '</text>');
+        lines.push('<text x="' + (280 + x) + '" y="' + y + '">' + stamp + '</text>');
+      }
+      var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">'
+              + '<g transform="rotate(-28 360 360)" font-family="JetBrains Mono, monospace" font-size="13" fill="#1A1F2B" font-weight="500">'
+              + lines.join('') + '</g></svg>';
+      var url = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+      document.getElementById('watermark').style.backgroundImage = 'url("' + url + '")';
+    })();
+  </script>
+
+  {{!-- Light deterrents (cosmetic only — cannot truly prevent screenshots) --}}
+  <script>
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    document.addEventListener('keydown', function (e) {
+      // Block Ctrl/Cmd + P (print) and Ctrl/Cmd + S (save) on this page
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 's')) { e.preventDefault(); }
+    });
+  </script>
+
+  {{ghost_foot}}
+</body>
+</html>

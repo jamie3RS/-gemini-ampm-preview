@@ -1,0 +1,70 @@
+{{!< default}}
+{{!-- Contact page. Assigned to /contact/ Ghost Page via Page Settings → Template. --}}
+
+{{#page}}
+<section class="section">
+  <div class="reveal" style="margin-bottom: 48px;">
+    <div class="eyebrow">Contact</div>
+    <h1 class="display">Direct lines, <em>not 0845.</em></h1>
+  </div>
+
+  <div class="contact-grid reveal">
+    <div class="contact-block">
+      <div class="lbl">Bid · tender enquiries</div>
+      <div class="val">bids@ampm.co.uk</div>
+
+      <div class="lbl" style="margin-top: 24px;">Acquisitions · Ventures</div>
+      <div class="val">ventures@ampm.co.uk</div>
+
+      <div class="lbl" style="margin-top: 24px;">General · group</div>
+      <div class="val">hello@ampm.co.uk</div>
+
+      <div class="lbl" style="margin-top: 24px;">Press · partnerships</div>
+      <div class="val">press@ampm.co.uk</div>
+
+      <div class="lbl" style="margin-top: 24px;">Careers · apprenticeships</div>
+      <div class="val">careers@ampm.co.uk</div>
+    </div>
+
+    <div class="contact-block">
+      <div class="lbl">Registered office</div>
+      <div class="val">
+        AMPM Group Limited<br>
+        Burgess Hill<br>
+        West Sussex
+      </div>
+
+      <div class="lbl" style="margin-top: 24px;">Company number</div>
+      <div class="val" style="font-family: var(--mono); font-size: 18px; letter-spacing: 0.06em;">CRN 17136810</div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="eyebrow on-dark">Operating subsidiaries</div>
+        <h2 class="display" style="font-size: clamp(28px, 3vw, 40px);">For a specific company, write to the company.</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div>
+          <div class="lbl" style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(246,243,236,0.55); margin-bottom: 6px;">Gemini AMPM · fire, security, compliance</div>
+          <div style="font-family: var(--serif); font-size: 22px; color: var(--paper);">enquiries@geminiampm.co.uk</div>
+        </div>
+        <div>
+          <div class="lbl" style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(246,243,236,0.55); margin-bottom: 6px;">AMPM Building Services · M&amp;E, building</div>
+          <div style="font-family: var(--serif); font-size: 22px; color: var(--paper);">hello@ampm.co.uk</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- Optional editable extra copy --}}
+{{#if content}}
+<section class="section" style="padding-top: 0;">
+  <div class="prose reveal">{{content}}</div>
+</section>
+{{/if}}
+{{/page}}

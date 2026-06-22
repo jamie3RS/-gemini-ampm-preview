@@ -1,0 +1,49 @@
+## AMPM Group — Ghost routes config
+##
+## Upload this YAML in Ghost Admin → Labs → Routes → Upload routes file.
+## It maps the public URLs to the right templates and filters.
+
+routes:
+  ## Static pages — each is a Ghost Page with a Page Template assigned.
+  ## Create them in Ghost Admin → Pages with slugs matching below.
+  /:
+    controller: channel
+    template: index
+    filter: tag:-hash-internal
+    data: page.home
+  /approach/:
+    template: custom-approach
+    data: page.approach
+  /companies/:
+    template: custom-companies
+    data: page.companies
+  /people/:
+    template: custom-people
+    data: page.people
+  /contact/:
+    template: custom-contact
+    data: page.contact
+
+## Collections — group of posts at a URL prefix, with a permalink shape.
+## Case studies and insights are tag-driven, so each post needs the
+## "case-study" or "insight" tag to land in the right collection.
+collections:
+  /work/:
+    permalink: /work/{slug}/
+    template:
+      - custom-work
+      - index
+    filter: tag:case-study
+    data: page.work
+  /insights/:
+    permalink: /insights/{slug}/
+    template:
+      - custom-insights
+      - index
+    filter: tag:insight
+    data: page.insights
+
+## Taxonomies — how tag and author URLs are shaped.
+taxonomies:
+  tag: /topic/{slug}/
+  author: /author/{slug}/

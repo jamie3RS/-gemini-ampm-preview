@@ -1,0 +1,57 @@
+{{!< default}}
+{{!-- Approach page. Five principles + capability matrix.
+    Assigned to the /approach/ Ghost Page via Page Settings → Template. --}}
+
+{{#page}}
+<section class="section">
+  <div class="reveal" style="margin-bottom: 56px;">
+    <div class="eyebrow">Approach</div>
+    <h1 class="display">Five rules.<br><em>Held to.</em></h1>
+  </div>
+
+  <div class="principles reveal">
+    <div class="principle">
+      <div class="n">01</div>
+      <div>
+        <h4>Compliance-led, not compliance-loaded</h4>
+        <p>Compliance is a posture, not a department. The asset, the planning, the maintenance, the audit trail — all one workflow, all one source of truth.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="n">02</div>
+      <div>
+        <h4>Same buyer, more surface</h4>
+        <p>New companies inside the group earn their place by extending the surface of an existing buyer relationship — not by chasing new logos.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="n">03</div>
+      <div>
+        <h4>Enterprise stack, mid-market overhead</h4>
+        <p>Uptick, Procore, Microsoft 365 — deployed end-to-end. Rare at our scale. The point isn't the tools; it's the operating consequence of running them properly.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="n">04</div>
+      <div>
+        <h4>AI as leverage, never novelty</h4>
+        <p>Every AI use case removes cost, accelerates revenue, or reduces risk — ideally all three. If it does none of those, it doesn't ship.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="n">05</div>
+      <div>
+        <h4>Endorsed, not absorbed</h4>
+        <p>Each company keeps its own mark and its own focus. The AMPM signature sits underneath. The thread is the palette, not the name.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- Optional: editable additional copy from the Page body --}}
+{{#if content}}
+<section class="section" style="padding-top: 0;">
+  <div class="prose reveal">{{content}}</div>
+</section>
+{{/if}}
+{{/page}}

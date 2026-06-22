@@ -1,0 +1,73 @@
+{{!< default}}
+{{!-- Company subsidiary detail page.
+    Assigned manually to each of the 5 company Pages via Page Settings → Template.
+
+    Editor controls:
+    - title = company name (e.g. "AMPM Building Services")
+    - custom_excerpt = the deck (1-2 line summary, dark header)
+    - feature_image = optional cover photo
+    - tags = used for status label: one of "status-live", "status-yr1", "status-future"
+    - body = the long-form content (Overview, What we do, etc.) in markdown
+--}}
+
+{{#page}}
+<article class="article">
+  <header class="article-header is-dark">
+    <div class="article-header-inner">
+      <div class="reveal" style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;">
+        <div class="eyebrow on-dark">
+          Subsidiary
+          {{#has tag="status-live"}} · Live · EOT{{/has}}
+          {{#has tag="status-yr1"}} · Year 1 · Trading{{/has}}
+          {{#has tag="status-future"}} · Future{{/has}}
+          {{#primary_tag}}{{#match name "Status" startsWith=true}}{{else}} · {{name}}{{/match}}{{/primary_tag}}
+        </div>
+        {{> "meridian-bar" max_width=420}}
+      </div>
+
+      <div class="reveal">
+        <h1 class="display" style="color: var(--paper); max-width: 20ch;">{{title}}</h1>
+        {{#if custom_excerpt}}
+          <p class="deck" style="margin-top: 24px; color: rgba(246,243,236,0.85);">{{custom_excerpt}}</p>
+        {{/if}}
+      </div>
+
+      <div class="reveal" style="padding-top: 12px;">
+        <a href="/companies/" style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(246,243,236,0.65); border-bottom: 1px solid rgba(246,243,236,0.4); padding-bottom: 3px;">← All companies</a>
+      </div>
+    </div>
+  </header>
+
+  {{#if feature_image}}
+    <div class="article-cover reveal">
+      <img src="{{img_url feature_image size="xl"}}" alt="{{title}}" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block;">
+    </div>
+  {{/if}}
+
+  <section class="article-section reveal">
+    <div class="article-section-inner two-col">
+      <div class="article-aside">
+        <div class="eyebrow">Subsidiary</div>
+      </div>
+      <div class="article-body wide">
+        {{content}}
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="section dark">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="eyebrow on-dark">Talk to us</div>
+        <h2 class="display" style="font-size: clamp(28px, 3vw, 44px);">Want to talk to {{title}}?</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 12px;">
+        <div style="font-family: var(--serif); font-size: 26px; color: var(--paper);">hello@ampm.co.uk</div>
+        <a href="/contact/" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; border-bottom: 1px solid rgba(246,243,236,0.5); padding-bottom: 4px; color: var(--paper); display: inline-block; align-self: flex-start; margin-top: 8px;">All contact routes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{/page}}
