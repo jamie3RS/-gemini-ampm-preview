@@ -204,18 +204,21 @@ const NIGHTLOG = [
   { t: "06:02", e: "Systems disarmed for first shift. <strong>Handed back.</strong>" },
 ];
 
-// ——— Clients / trusted-by (real names referenced on the live site) ———
+// ——— Clients / trusted-by — main contractors + end clients.
+// Distinct from the manufacturer wall (Hitachi, Mitsubishi, Daikin etc. — the
+// products we install). Logos sourced from each contractor's own website for
+// the snag preview; live cutover should request brand-pack assets from each. ———
 const CLIENTS = [
-  { nm: "Equans", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
-  { nm: "Mace", what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
-  { nm: "CBRE / FM partners", what: "Managed-estate life-safety and planned maintenance across portfolios." },
-  { nm: "Local Authorities", what: "Leisure-centre and public-building works delivered around live operation." },
-  { nm: "Kia Weitz", what: "Commercial fit-out partner &mdash; life-safety packages delivered on London projects." },
-  { nm: "ARC Group London", what: "Main contractor partner &mdash; fire and security installation on commercial refurbishment programmes." },
-  { nm: "Maze Engineering", what: "M&amp;E partner &mdash; integrated fire and ventilation works on multi-trade projects." },
-  { nm: "Bancroft", what: "Construction partner &mdash; fire and security delivery on commercial schemes." },
-  { nm: "AIS Interiors", what: "Interior fit-out partner &mdash; life-safety integration during occupier handover." },
-  { nm: "Guild Prime", what: "Commercial fit-out partner &mdash; fire, security and passive fire delivery on London projects." },
+  { nm: "Equans", logo: "assets/clients/equans.png", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
+  { nm: "Mace", logo: null, what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
+  { nm: "CBRE / FM partners", logo: null, what: "Managed-estate life-safety and planned maintenance across portfolios." },
+  { nm: "Local Authorities", logo: null, what: "Leisure-centre and public-building works delivered around live operation." },
+  { nm: "Kier", logo: "assets/clients/kier.svg", what: "Fire &amp; security packages on commercial schemes." },
+  { nm: "ARC Group London", logo: "assets/clients/arc-group.png", what: "Fire &amp; security packages on commercial refurbishment programmes." },
+  { nm: "Maze Engineering", logo: null, what: "Fire &amp; security packages on multi-trade projects." },
+  { nm: "Bancroft", logo: "assets/clients/bancroft.png", what: "Fire &amp; security packages on commercial schemes." },
+  { nm: "AIS Interiors", logo: null, what: "Fire &amp; security packages on interior fit-out projects." },
+  { nm: "Guild Prime", logo: "assets/clients/guild-prime.png", what: "Fire &amp; security packages on London projects." },
 ];
 
 // ——— News / insights (live posts; slugs preserved) ———

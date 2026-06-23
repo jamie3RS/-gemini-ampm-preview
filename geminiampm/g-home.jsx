@@ -144,6 +144,9 @@ const ClientsRow = () => (
     <div className="gglass gclient-row reveal">
       {CLIENTS.map((c, i) => (
         <div className="gclient" key={i}>
+          {c.logo
+            ? <img className="gclient-logo" src={c.logo} alt={c.nm + " logo"} loading="lazy" />
+            : <span className="gclient-logo gclient-logo--text">{c.nm}</span>}
           <span className="nm">{c.nm}</span>
           <span className="what" dangerouslySetInnerHTML={{ __html: c.what }} />
         </div>
