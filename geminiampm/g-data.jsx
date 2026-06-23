@@ -214,11 +214,14 @@ const CLIENTS = [
   { nm: "CBRE / FM partners", logo: null, what: "Managed-estate life-safety and planned maintenance across portfolios." },
   { nm: "Local Authorities", logo: null, what: "Leisure-centre and public-building works delivered around live operation." },
   { nm: "Kier", logo: "assets/clients/kier.svg", what: "Fire &amp; security packages on commercial schemes." },
-  { nm: "ARC Group London", logo: "assets/clients/arc-group.png", what: "Fire &amp; security packages on commercial refurbishment programmes." },
-  { nm: "Maze Engineering", logo: null, what: "Fire &amp; security packages on multi-trade projects." },
+  { nm: "ARC Group London", logo: "assets/clients/arc-group.svg", what: "Fire &amp; security packages on commercial refurbishment programmes." },
+  { nm: "Maze Engineering", logo: "assets/clients/maze-engineering.png", what: "Fire &amp; security packages on multi-trade projects." },
   { nm: "Bancroft", logo: "assets/clients/bancroft.png", what: "Fire &amp; security packages on commercial schemes." },
-  { nm: "AIS Interiors", logo: null, what: "Fire &amp; security packages on interior fit-out projects." },
+  { nm: "AIS Interiors", logo: "assets/clients/ais-interiors.svg", what: "Fire &amp; security packages on interior fit-out projects." },
   { nm: "Guild Prime", logo: "assets/clients/guild-prime.png", what: "Fire &amp; security packages on London projects." },
+  { nm: "Wates", logo: "assets/clients/wates.png", what: "Fire &amp; security packages on commercial schemes." },
+  { nm: "Mala", logo: "assets/clients/mala.svg", what: "Fire &amp; security packages on commercial projects." },
+  { nm: "JBS Ltd", logo: "assets/clients/jbs.svg", what: "Fire &amp; security packages alongside building-services delivery." },
 ];
 
 // ——— News / insights (live posts; slugs preserved) ———
