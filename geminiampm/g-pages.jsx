@@ -34,8 +34,10 @@ const ContactBand = ({ setRoute }) => (
   </section>
 );
 
-// Real accreditation wall (reused on Why + About)
-const AccredWall = ({ head }) => (
+// Real accreditation wall (reused on Why + About). Tile hover flips to
+// reveal the cert thumbnail; click navigates to the cert's own page where
+// the full PDF and scope detail live.
+const AccredWall = ({ head, setRoute }) => (
   <section className="sec tight">
     <div className="reveal" style={{ marginBottom: 24 }}>
       <Kicker>Accreditations</Kicker>
@@ -43,27 +45,153 @@ const AccredWall = ({ head }) => (
     </div>
     <div className="acc-wall reveal">
       {ACCREDS.map((a, i) => {
+        const go = (e) => { if (setRoute) { e.preventDefault(); setRoute(a.slug); } };
         const front = (
           <div className="face front">
             <div className="t">{a.t}</div>
             <div className="d" dangerouslySetInnerHTML={{ __html: a.d }} />
-            {a.pdf ? <div className="acc-go" aria-hidden="true">View certificate ↗</div> : null}
+            <div className="acc-go" aria-hidden="true">Read more →</div>
           </div>
         );
         const back = a.thumb ? (
           <div className="face back" style={{ backgroundImage: "url(" + a.thumb + ")" }} aria-hidden="true" />
         ) : null;
-        const inner = back
-          ? <div className="flipper">{front}{back}</div>
-          : front;
-        return a.pdf
-          ? <a className="cell linked" key={i} href={a.pdf} target="_blank" rel="noopener noreferrer">{inner}</a>
-          : <div className="cell" key={i}>{inner}</div>;
+        const inner = back ? <div className="flipper">{front}{back}</div> : front;
+        return (
+          <a className="cell linked" key={i} href={"#" + a.slug} onClick={go}>{inner}</a>
+        );
       })}
     </div>
-    <p className="case-note">Held and maintained live &mdash; references and certificates available on request for PQQ and tender submissions.</p>
+    <p className="case-note">Held and maintained live &mdash; click any accreditation to see the certificate and what it means. References and PQQ submissions available on request.</p>
   </section>
 );
+
+// ——— Accreditations index — /about-us/accreditations/ ———
+const AccreditationsIndexPage = ({ setRoute, skin }) => {
+  useReveal("accreditations");
+  return (
+    <PageWrap skin={skin}>
+      <PageHero kicker="Accreditations" h1="The marks behind<br />the work."
+        lede="Every system we install lands on a building where someone — a Responsible Person, a building manager, a tenant — has to trust it. The accreditations on this page are the third-party-audited reasons that trust is reasonable. Each one is verifiable on its awarding body's register; each certificate is on its dedicated page below." />
+      <AccredWall head="Every cert, on its own page." setRoute={setRoute} />
+      <section className="sec tight">
+        <div className="intro2 reveal">
+          <div>
+            <Kicker>Verification</Kicker>
+            <h2 className="dhead sm">Don't take our<br />word for it.</h2>
+          </div>
+          <div>
+            <p className="body">Each accreditation page links to the awarding body's own register so the certificate can be verified directly. The certificates themselves are uploaded as PDFs — current versions only, held by us and renewed on the schedule the awarding body audits to.</p>
+            <p className="body">For tender or PQQ submissions, copies of the live certificates and our references are available on request. Email <a href="mailto:info@geminiampm.co.uk">info@geminiampm.co.uk</a> or call <a href={"tel:" + String(CONTACT.phone).replace(/\s+/g, "")}>{CONTACT.phone}</a>.</p>
+          </div>
+        </div>
+      </section>
+    </PageWrap>
+  );
+};
+
+// ——— Single accreditation page — /about-us/accreditations/<slug>/ ———
+const AccreditationPage = ({ slug, setRoute, skin }) => {
+  useReveal("accreditation-" + slug);
+  const a = ACCRED_BY_SLUG[slug];
+  if (!a) return <PageWrap skin={skin}><PageHero kicker="Accreditation" h1="Not found" lede="" /></PageWrap>;
+  const relatedPillars = (a.pillars || []).map((pid) => PILLARS.find((p) => p.id === pid)).filter(Boolean);
+  return (
+    <PageWrap skin={skin}>
+      <PageHero kicker={"Accreditation · " + a.t} h1={a.h1} lede={a.lede} />
+
+      <section className="sec tight">
+        <div className="acc-detail reveal">
+          <div className="acc-detail-copy">
+            <Kicker>What it covers</Kicker>
+            <ul className="acc-covers">
+              {(a.covers || []).map((c, i) => <li key={i} dangerouslySetInnerHTML={{ __html: c }} />)}
+            </ul>
+          </div>
+          <div className="acc-detail-cert">
+            {a.thumb ? (
+              <a className="acc-cert-card" href={a.pdf} target="_blank" rel="noopener noreferrer">
+                <img src={a.thumb} alt={"Gemini AMPM " + a.t + " certificate"} />
+                <span className="acc-cert-go">View certificate PDF ↗</span>
+              </a>
+            ) : (
+              <div className="acc-cert-card pending">
+                <span className="acc-cert-pending">Certificate PDF pending</span>
+                <span className="acc-cert-pending-sub">Membership held; current certificate being uploaded.</span>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="sec tight">
+        <div className="intro2 reveal">
+          <div>
+            <Kicker>What it means for clients</Kicker>
+            <h2 className="dhead sm">Why this matters<br />on a real job.</h2>
+          </div>
+          <div>
+            <p className="body" dangerouslySetInnerHTML={{ __html: a.means }} />
+            {a.verify ? (
+              <p className="body" style={{ marginTop: 16 }}>
+                <a className="btn line sm" href={a.verify} target="_blank" rel="noopener noreferrer">Verify on {a.verify_label} ↗</a>
+              </p>
+            ) : null}
+          </div>
+        </div>
+      </section>
+
+      {relatedPillars.length > 0 ? (
+        <section className="sec tight">
+          <div className="reveal" style={{ marginBottom: 24 }}>
+            <Kicker>Where we apply this</Kicker>
+            <h2 className="dhead sm">The work it underpins.</h2>
+          </div>
+          <div className="acc-pillars reveal">
+            {relatedPillars.map((p) => (
+              <a key={p.id} className="acc-pillar" href={"#" + p.id}
+                 onClick={(e) => { e.preventDefault(); setRoute(p.id); }}>
+                <span className="t" dangerouslySetInnerHTML={{ __html: p.name }} />
+                <span className="d" dangerouslySetInnerHTML={{ __html: p.short }} />
+                <span className="go" aria-hidden="true">→</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      <section className="sec tight">
+        <div className="reveal" style={{ marginBottom: 24 }}>
+          <Kicker>The full set</Kicker>
+          <h2 className="dhead sm">All twelve accreditations.</h2>
+        </div>
+        <div className="acc-siblings reveal">
+          {ACCREDS.filter((x) => x.slug !== a.slug).map((x) => (
+            <a key={x.slug} className="acc-sibling" href={"#" + x.slug}
+               onClick={(e) => { e.preventDefault(); setRoute(x.slug); }}>
+              <span className="t">{x.t}</span>
+              <span className="d" dangerouslySetInnerHTML={{ __html: x.d }} />
+            </a>
+          ))}
+        </div>
+        <p className="case-note" style={{ marginTop: 24 }}>
+          <a href="#accreditations" onClick={(e) => { e.preventDefault(); setRoute("accreditations"); }}>← Back to the accreditations index</a>
+        </p>
+      </section>
+
+      {/* JSON-LD: EducationalOccupationalCredential */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "EducationalOccupationalCredential",
+        "name": a.t + " — Gemini AMPM Ltd",
+        "credentialCategory": "Industry accreditation",
+        "recognizedBy": { "@type": "Organization", "name": a.verify_label || a.t, "url": a.verify },
+        "about": { "@type": "Organization", "name": "Gemini AMPM Ltd", "url": "https://geminiampm.co.uk" },
+        "url": "https://geminiampm.co.uk/about-us/accreditations/" + a.slug + "/",
+      }) }} />
+    </PageWrap>
+  );
+};
 
 // ——— Services overview ———
 const ServicesPage = ({ setRoute, skin }) => {
@@ -141,7 +269,7 @@ const WhyPage = ({ setRoute, skin }) => {
           ))}
         </div>
       </section>
-      <AccredWall head="Owned by our people.<br />Audited by everyone else." />
+      <AccredWall head="Owned by our people.<br />Audited by everyone else." setRoute={setRoute} />
       <section className="sec tight">
         <div className="statband reveal">
           {PROOF.map((c, i) => (
@@ -204,7 +332,7 @@ const AboutPage = ({ setRoute, skin }) => {
           })}
         </div>
       </section>
-      <AccredWall head="The accreditations<br />behind the work." />
+      <AccredWall head="The accreditations<br />behind the work." setRoute={setRoute} />
       <section className="sec tight">
         <div className="statband reveal">
           {PROOF.map((c, i) => (
@@ -321,4 +449,4 @@ const ContactPage = ({ setRoute, skin, phone }) => {
   );
 };
 
-Object.assign(window, { ServicesPage, SectorsPage, WhyPage, AboutPage, NewsPage, CaseStudiesPage, ContactPage });
+Object.assign(window, { ServicesPage, SectorsPage, WhyPage, AboutPage, NewsPage, CaseStudiesPage, ContactPage, AccreditationsIndexPage, AccreditationPage });
