@@ -210,6 +210,12 @@ const CLIENTS = [
   { nm: "Mace", what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
   { nm: "CBRE / FM partners", what: "Managed-estate life-safety and planned maintenance across portfolios." },
   { nm: "Local Authorities", what: "Leisure-centre and public-building works delivered around live operation." },
+  { nm: "Kia Weitz", what: "Commercial fit-out partner &mdash; life-safety packages delivered on London projects." },
+  { nm: "ARC Group London", what: "Main contractor partner &mdash; fire and security installation on commercial refurbishment programmes." },
+  { nm: "Maze Engineering", what: "M&amp;E partner &mdash; integrated fire and ventilation works on multi-trade projects." },
+  { nm: "Bancroft", what: "Construction partner &mdash; fire and security delivery on commercial schemes." },
+  { nm: "AIS Interiors", what: "Interior fit-out partner &mdash; life-safety integration during occupier handover." },
+  { nm: "Guild Prime", what: "Commercial fit-out partner &mdash; fire, security and passive fire delivery on London projects." },
 ];
 
 // ——— News / insights (live posts; slugs preserved) ———
