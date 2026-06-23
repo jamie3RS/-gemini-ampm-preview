@@ -222,6 +222,9 @@ const CLIENTS = [
   { nm: "Wates", logo: "assets/clients/wates.png", what: "Fire &amp; security packages on commercial schemes." },
   { nm: "Mala", logo: "assets/clients/mala.svg", what: "Fire &amp; security packages on commercial projects." },
   { nm: "JBS Ltd", logo: "assets/clients/jbs.svg", what: "Fire &amp; security packages alongside building-services delivery." },
+  { nm: "FirstPort", logo: "assets/clients/firstport.png", what: "Fire safety packages on residential property portfolios." },
+  { nm: "NHS", logo: "assets/clients/nhs.svg", what: "Fire, ventilation &amp; gas suppression packages on NHS estates." },
+  { nm: "Kingston University", logo: "assets/clients/kingston-university.png", what: "Fire &amp; security packages on educational estate works." },
 ];
 
 // ——— News / insights (live posts; slugs preserved) ———
