@@ -225,6 +225,7 @@ const CLIENTS = [
   { nm: "FirstPort", logo: "assets/clients/firstport.png", what: "Fire safety packages on residential property portfolios." },
   { nm: "NHS", logo: "assets/clients/nhs.svg", what: "Fire, ventilation &amp; gas suppression packages on NHS estates." },
   { nm: "Kingston University", logo: "assets/clients/kingston-university.png", what: "Fire &amp; security packages on educational estate works." },
+  { nm: "Royal Borough of Kensington &amp; Chelsea", logo: "assets/clients/rbkc.svg", what: "Fire safety packages on social housing and public-building works." },
 ];
 
 // ——— News / insights (live posts; slugs preserved) ———
