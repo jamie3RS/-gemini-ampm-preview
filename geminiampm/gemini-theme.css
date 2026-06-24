@@ -189,13 +189,22 @@ html[data-arc="still"] .glog .hd .dotlive { animation: none; }
 @media (max-width: 480px)  { .gclient-row { grid-template-columns: 1fr; } }
 .gclient { padding: 28px 26px; border-right: 1px solid rgba(244,234,216,0.18);
   border-bottom: 1px solid rgba(244,234,216,0.18);
-  display: flex; flex-direction: column; gap: 12px; min-height: 168px; }
+  display: flex; flex-direction: column; gap: 12px; min-height: 168px;
+  text-decoration: none; color: inherit;
+  transition: background 0.18s ease; }
+.gclient--linked:hover { background: rgba(244,234,216,0.04); }
+.gclient--linked:hover .nm { color: var(--g-accent, var(--m-orange)); }
 .gclient-logo { display: block; height: 36px; width: auto; max-width: 80%; object-fit: contain;
   object-position: left center; filter: brightness(0) invert(1); opacity: 0.92; }
+/* Logos that are already white, have built-in coloured backgrounds, or
+   depend on brand colour for legibility (NHS blue, Kingston blue, Maze
+   navy box) — keep their original colour. */
+.gclient-logo--keep { filter: none; opacity: 1; height: 44px; }
 .gclient-logo--text { font-family: var(--d-display); font-weight: 700; font-size: 14px;
   letter-spacing: 0.14em; text-transform: uppercase; color: rgba(244,234,216,0.5);
   height: 36px; display: flex; align-items: center; filter: none; }
-.gclient .nm { font-family: var(--d-display); font-weight: 800; font-size: 22px; text-transform: uppercase; color: #fff; line-height: 1.05; }
+.gclient .nm { font-family: var(--d-display); font-weight: 800; font-size: 22px; text-transform: uppercase; color: #fff; line-height: 1.05;
+  transition: color 0.18s ease; }
 .gclient .what { font-size: 13px; font-weight: 500; line-height: 1.5; color: rgba(244,234,216,0.7); }
 
 /* who-we-are (Direction B) */

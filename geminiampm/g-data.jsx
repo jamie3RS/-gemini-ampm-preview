@@ -207,25 +207,30 @@ const NIGHTLOG = [
 // ——— Clients / trusted-by — main contractors + end clients.
 // Distinct from the manufacturer wall (Hitachi, Mitsubishi, Daikin etc. — the
 // products we install). Logos sourced from each contractor's own website for
-// the snag preview; live cutover should request brand-pack assets from each. ———
+// the snag preview; live cutover should request brand-pack assets from each.
+//   · link:     outbound URL for the tile (opens new tab; helps verifiability + reciprocal-link asks)
+//   · logoMode: "invert" (default) forces a pure-white CSS silhouette — works
+//               for dark-on-light logos. "keep" preserves the original artwork
+//               — needed for logos that are already white, have built-in
+//               coloured backgrounds, or rely on brand colour to be readable. ———
 const CLIENTS = [
-  { nm: "Equans", logo: "assets/clients/equans.png", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
-  { nm: "Mace", logo: null, what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
-  { nm: "CBRE / FM partners", logo: null, what: "Managed-estate life-safety and planned maintenance across portfolios." },
-  { nm: "Local Authorities", logo: null, what: "Leisure-centre and public-building works delivered around live operation." },
-  { nm: "Kier", logo: "assets/clients/kier.svg", what: "Fire &amp; security packages on commercial schemes." },
-  { nm: "ARC Group London", logo: "assets/clients/arc-group.svg", what: "Fire &amp; security packages on commercial refurbishment programmes." },
-  { nm: "Maze Engineering", logo: "assets/clients/maze-engineering.png", what: "Fire &amp; security packages on multi-trade projects." },
-  { nm: "Bancroft", logo: "assets/clients/bancroft.png", what: "Fire &amp; security packages on commercial schemes." },
-  { nm: "AIS Interiors", logo: "assets/clients/ais-interiors.svg", what: "Fire &amp; security packages on interior fit-out projects." },
-  { nm: "Guild Prime", logo: "assets/clients/guild-prime.png", what: "Fire &amp; security packages on London projects." },
-  { nm: "Wates", logo: "assets/clients/wates.png", what: "Fire &amp; security packages on commercial schemes." },
-  { nm: "Mala", logo: "assets/clients/mala.svg", what: "Fire &amp; security packages on commercial projects." },
-  { nm: "JBS Ltd", logo: "assets/clients/jbs.svg", what: "Fire &amp; security packages alongside building-services delivery." },
-  { nm: "FirstPort", logo: "assets/clients/firstport.png", what: "Fire safety packages on residential property portfolios." },
-  { nm: "NHS", logo: "assets/clients/nhs.svg", what: "Fire, ventilation &amp; gas suppression packages on NHS estates." },
-  { nm: "Kingston University", logo: "assets/clients/kingston-university.png", what: "Fire &amp; security packages on educational estate works." },
-  { nm: "Royal Borough of Kensington &amp; Chelsea", logo: "assets/clients/rbkc.svg", what: "Fire safety packages on social housing and public-building works." },
+  { nm: "Equans", logo: "assets/clients/equans.png", link: "https://www.equans.co.uk/", logoMode: "keep", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
+  { nm: "Mace", logo: null, link: "https://www.macegroup.com/", what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
+  { nm: "CBRE / FM partners", logo: null, link: null, what: "Managed-estate life-safety and planned maintenance across portfolios." },
+  { nm: "Local Authorities", logo: null, link: null, what: "Leisure-centre and public-building works delivered around live operation." },
+  { nm: "Kier", logo: "assets/clients/kier.svg", link: "https://www.kier.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial schemes." },
+  { nm: "ARC Group London", logo: "assets/clients/arc-group.svg", link: "https://arcgroupuk.com/", what: "Fire &amp; security packages on commercial refurbishment programmes." },
+  { nm: "Maze Engineering", logo: "assets/clients/maze-engineering.png", link: "https://maze-engineering.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on multi-trade projects." },
+  { nm: "Bancroft", logo: "assets/clients/bancroft.png", link: "https://bancroft.co.uk/", what: "Fire &amp; security packages on commercial schemes." },
+  { nm: "AIS Interiors", logo: "assets/clients/ais-interiors.svg", link: "https://ais-interiors.com/", logoMode: "keep", what: "Fire &amp; security packages on interior fit-out projects." },
+  { nm: "Guild Prime", logo: "assets/clients/guild-prime.png", link: "https://guildprime.com/", what: "Fire &amp; security packages on London projects." },
+  { nm: "Wates", logo: "assets/clients/wates.png", link: "https://www.wates.co.uk/", what: "Fire &amp; security packages on commercial schemes." },
+  { nm: "Mala", logo: "assets/clients/mala.svg", link: "https://www.mala.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial projects." },
+  { nm: "JBS Ltd", logo: "assets/clients/jbs.svg", link: "https://www.jbs-ltd.co.uk/", what: "Fire &amp; security packages alongside building-services delivery." },
+  { nm: "FirstPort", logo: "assets/clients/firstport.svg", link: "https://www.firstport.co.uk/", logoMode: "keep", what: "Fire safety packages on residential property portfolios." },
+  { nm: "NHS", logo: "assets/clients/nhs.svg", link: "https://www.nhs.uk/", logoMode: "keep", what: "Fire, ventilation &amp; gas suppression packages on NHS estates." },
+  { nm: "Kingston University", logo: "assets/clients/kingston-university.svg", link: "https://www.kingston.ac.uk/", logoMode: "keep", what: "Fire &amp; security packages on educational estate works." },
+  { nm: "Royal Borough of Kensington &amp; Chelsea", logo: "assets/clients/rbkc.svg", link: "https://www.rbkc.gov.uk/", logoMode: "keep", what: "Fire safety packages on social housing and public-building works." },
 ];
 
 // ——— News / insights (live posts; slugs preserved) ———

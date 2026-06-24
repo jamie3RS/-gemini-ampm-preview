@@ -142,15 +142,21 @@ const ClientsRow = () => (
     <GStamp time="04:30" shift="Trusted by" />
     <h2 className="gh2 reveal">The company<br /><span className="lt">we keep.</span></h2>
     <div className="gglass gclient-row reveal">
-      {CLIENTS.map((c, i) => (
-        <div className="gclient" key={i}>
-          {c.logo
-            ? <img className="gclient-logo" src={c.logo} alt={c.nm + " logo"} loading="lazy" />
-            : <span className="gclient-logo gclient-logo--text">{c.nm}</span>}
-          <span className="nm">{c.nm}</span>
-          <span className="what" dangerouslySetInnerHTML={{ __html: c.what }} />
-        </div>
-      ))}
+      {CLIENTS.map((c, i) => {
+        const logoClass = "gclient-logo" + (c.logoMode === "keep" ? " gclient-logo--keep" : "");
+        const inner = (
+          <>
+            {c.logo
+              ? <img className={logoClass} src={c.logo} alt={c.nm + " logo"} loading="lazy" />
+              : <span className="gclient-logo gclient-logo--text" dangerouslySetInnerHTML={{ __html: c.nm }} />}
+            <span className="nm" dangerouslySetInnerHTML={{ __html: c.nm }} />
+            <span className="what" dangerouslySetInnerHTML={{ __html: c.what }} />
+          </>
+        );
+        return c.link
+          ? <a className="gclient gclient--linked" key={i} href={c.link} target="_blank" rel="noopener noreferrer">{inner}</a>
+          : <div className="gclient" key={i}>{inner}</div>;
+      })}
     </div>
   </section>
 );
