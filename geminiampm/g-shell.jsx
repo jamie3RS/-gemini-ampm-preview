@@ -53,23 +53,15 @@ const Kicker = ({ children, dark }) => (
 );
 
 // ——— Day-arc colour palette — pre-dawn → first light, top→bottom.
-// Sky-realistic: ~4:30am deep night → 5:00 indigo → 5:30 violet → 6:00
-// rose/peach → 6:12 brand-orange sunrise. 52 stops, front-loaded with
-// near-identical cool tones so the early scroll feels almost still;
-// the warm dawn arrives in the bottom quarter. The final stop lands on
-// the Gemini brand orange (#E8742C). ———
+// 30 evenly-spaced stops with VISIBLE delta per step. Starts at a deep
+// blue-violet (not jet black) so the first scroll inch already shows
+// movement; warms steadily through indigo → purple → rose → peach;
+// lands on the Gemini brand orange (#E8742C) at the bottom of the page.
+// ~3.3% scroll per stop — each shift is small but perceptible. ———
 const SUN_COLOURS = [
-  // 0–25% scroll · 4:30–5:00 pre-dawn · deep night blue, near-imperceptible shifts
-  "#0a1130","#0c1334","#0e1538","#10173c","#121940","#141b44","#161d48","#181f4c","#1a2150","#1c2354",
-  "#1e2558","#20275c","#222960","#242b64","#262d68","#282f6c","#2a3170","#2c3374","#2e3578","#30377c",
-  // 25–50% scroll · 5:00–5:30 deep indigo → violet · the first felt warming
-  "#323980","#363984","#3a3988","#3e398c","#423990","#463994","#4a3998","#4e399c","#5239a0","#5639a4",
-  // 50–75% scroll · 5:30–6:00 violet → muted rose · visible turn toward dawn
-  "#5a3aa0","#603a98","#683b90","#703c87","#783c7c","#823c72","#8c3c68","#963c5e","#a03c54","#aa3c4a",
-  // 75–90% scroll · 6:00–6:10 rose → peach → soft orange
-  "#b44040","#bc4836","#c4502e","#cc5828","#d46024","#dc6822","#e07024","#e47828",
-  // 90–100% scroll · 6:10–6:12 first light · the brand orange sunrise
-  "#e87830","#e8762e","#e8742c","#E8742C"
+  "#131A4A","#181C50","#1C1E56","#20205C","#252263","#2A246A","#302671","#362878","#3C297F","#422B86",
+  "#482D8C","#4F2D90","#572D90","#5F2D8E","#67308C","#6F3489","#793886","#823C82","#8C407C","#964474",
+  "#A1486C","#AB4D62","#B45356","#BC5849","#C25E3C","#C76430","#CC6A2D","#D26F2C","#DC732B","#E8742C"
 ];
 
 // ——— Nav ———
