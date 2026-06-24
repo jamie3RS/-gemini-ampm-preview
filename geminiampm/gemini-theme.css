@@ -271,8 +271,8 @@ html[data-arc="subtle"] .gdaybreak {
    [data-nav-dark] section). On a light surface (day skin nav before
    it scrolls over a dark band), we flip to the charcoal version. */
 .glogo { display: inline-flex; align-items: center; line-height: 0; color: inherit; }
-.glogo .glogo-img { display: block; height: 26px; width: auto; max-width: none; }
-.glogo.lg .glogo-img { height: 64px; }
+.glogo .glogo-img { display: block; height: 34px; width: auto; max-width: none; }
+.glogo.lg .glogo-img { height: 80px; }
 
 /* Default surface = light — show charcoal artwork. The nav already toggles
    .dark when scrolled over a [data-nav-dark] section; we follow that, plus
