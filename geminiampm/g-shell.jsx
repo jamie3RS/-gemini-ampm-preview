@@ -52,14 +52,24 @@ const Kicker = ({ children, dark }) => (
   <div className={"kicker" + (dark ? " on-dark" : "")}>{children}</div>
 );
 
-// ——— Day-arc colour palette — the disc sweeps these in order as the
-// viewer scrolls the page. HSL-blended so mid-tones stay vivid:
-// orange (dawn) → green → purple → blue (night). Mirrors the AMPM
-// Building Services sunmark, but the destination is "night" not dusk. ———
+// ——— Day-arc colour palette — pre-dawn → first light, top→bottom.
+// Sky-realistic: ~4:30am deep night → 5:00 indigo → 5:30 violet → 6:00
+// rose/peach → 6:12 brand-orange sunrise. 52 stops, front-loaded with
+// near-identical cool tones so the early scroll feels almost still;
+// the warm dawn arrives in the bottom quarter. The final stop lands on
+// the Gemini brand orange (#E8742C). ———
 const SUN_COLOURS = [
-  "#E8742C","#E3892A","#DC9D27","#D2B125","#C5C223","#A7B925","#8AB027","#71A728","#5C9D29","#4A942A",
-  "#3D8E2E","#388C3E","#338A4F","#2E8961","#2E7E89","#2E6D8E","#2E5FAB","#3A4FA0","#46408F","#5C3A8F",
-  "#7A2E8F","#742E92","#6A2E95","#5F2E98","#532E9B","#472E9E","#3B2EA1","#2E32A3","#2E45A7","#2E5FAB"
+  // 0–25% scroll · 4:30–5:00 pre-dawn · deep night blue, near-imperceptible shifts
+  "#0a1130","#0c1334","#0e1538","#10173c","#121940","#141b44","#161d48","#181f4c","#1a2150","#1c2354",
+  "#1e2558","#20275c","#222960","#242b64","#262d68","#282f6c","#2a3170","#2c3374","#2e3578","#30377c",
+  // 25–50% scroll · 5:00–5:30 deep indigo → violet · the first felt warming
+  "#323980","#363984","#3a3988","#3e398c","#423990","#463994","#4a3998","#4e399c","#5239a0","#5639a4",
+  // 50–75% scroll · 5:30–6:00 violet → muted rose · visible turn toward dawn
+  "#5a3aa0","#603a98","#683b90","#703c87","#783c7c","#823c72","#8c3c68","#963c5e","#a03c54","#aa3c4a",
+  // 75–90% scroll · 6:00–6:10 rose → peach → soft orange
+  "#b44040","#bc4836","#c4502e","#cc5828","#d46024","#dc6822","#e07024","#e47828",
+  // 90–100% scroll · 6:10–6:12 first light · the brand orange sunrise
+  "#e87830","#e8762e","#e8742c","#E8742C"
 ];
 
 // ——— Nav ———
