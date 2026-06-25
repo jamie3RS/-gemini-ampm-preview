@@ -449,4 +449,79 @@ const ContactPage = ({ setRoute, skin, phone }) => {
   );
 };
 
-Object.assign(window, { ServicesPage, SectorsPage, WhyPage, AboutPage, NewsPage, CaseStudiesPage, ContactPage, AccreditationsIndexPage, AccreditationPage });
+// ——— Clients directory — full list at /clients/, grouped by sector ———
+const ClientsDirectoryPage = ({ setRoute, skin }) => {
+  useReveal("clients");
+  return (
+    <PageWrap skin={skin}>
+      <PageHero kicker="Clients" h1="Every client<br />we work with."
+        lede={"The 12 on our home page are the ones we lead with &mdash; but they aren&rsquo;t the whole story. " +
+              "What follows is the full set of named clients across the sectors we serve: Tier-1 main contractors, " +
+              "FM partners, the M&amp;E and building-services peer network, fit-out specialists, the NHS Trusts we " +
+              "work with on hospital and ambulance estates, higher-education campuses, public sector and housing " +
+              "associations, and the corporate occupiers who trust our compliance work."} />
+
+      {CLIENT_SECTORS.map((sector) => {
+        const inSector = CLIENTS.filter((c) => c.sector === sector.id);
+        if (inSector.length === 0) return null;
+        return (
+          <section className="sec tight" key={sector.id}>
+            <div className="reveal" style={{ marginBottom: 18 }}>
+              <Kicker>{inSector.length} {inSector.length === 1 ? "client" : "clients"}</Kicker>
+              <h2 className="dhead sm" dangerouslySetInnerHTML={{ __html: sector.name }} />
+            </div>
+            <div className="cdir-grid reveal">
+              {inSector.map((c) => {
+                const logoClass = "cdir-logo" + (c.logoMode === "keep" ? " cdir-logo--keep" : "");
+                const inner = (
+                  <>
+                    {c.logo
+                      ? <img className={logoClass} src={c.logo} alt={c.nm + " logo"} loading="lazy" />
+                      : <span className="cdir-logo cdir-logo--text" dangerouslySetInnerHTML={{ __html: c.nm }} />}
+                    <span className="cdir-nm" dangerouslySetInnerHTML={{ __html: c.nm }} />
+                    <span className="cdir-what" dangerouslySetInnerHTML={{ __html: c.what }} />
+                  </>
+                );
+                return c.link
+                  ? <a className="cdir-cell" key={c.nm} href={c.link} target="_blank" rel="noopener noreferrer">{inner}</a>
+                  : <div className="cdir-cell" key={c.nm}>{inner}</div>;
+              })}
+            </div>
+          </section>
+        );
+      })}
+
+      <section className="sec tight">
+        <div className="intro2 reveal">
+          <div>
+            <Kicker>Work with us</Kicker>
+            <h2 className="dhead sm">Looking for a contractor<br />who answers the night call?</h2>
+          </div>
+          <div>
+            <p className="body">If you&rsquo;re building, refurbishing, managing or occupying a commercial property and need fire, security, ventilation or gas suppression delivered by a team that gets compliance right, get in touch.</p>
+            <p className="body" style={{ marginTop: 16 }}>
+              <a className="btn line sm" href="#contact" onClick={(e) => { e.preventDefault(); setRoute("contact"); }}>Contact our team &rarr;</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* JSON-LD: ItemList for the clients directory */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Gemini AMPM clients",
+        "url": "https://geminiampm.co.uk/clients/",
+        "numberOfItems": CLIENTS.length,
+        "itemListElement": CLIENTS.map((c, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": c.nm.replace(/&[a-z]+;|&#\d+;/g, ""),
+          "url": c.link || undefined,
+        })),
+      }) }} />
+    </PageWrap>
+  );
+};
+
+Object.assign(window, { ServicesPage, SectorsPage, WhyPage, AboutPage, NewsPage, CaseStudiesPage, ContactPage, AccreditationsIndexPage, AccreditationPage, ClientsDirectoryPage });

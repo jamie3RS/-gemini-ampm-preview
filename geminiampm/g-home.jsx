@@ -137,29 +137,40 @@ const SectorsTeaser = ({ setRoute }) => (
   </section>
 );
 
-const ClientsRow = () => (
-  <section className="gwrap gclients" style={{ paddingTop: "clamp(70px,8vw,100px)" }}>
-    <GStamp time="04:30" shift="Trusted by" />
-    <h2 className="gh2 reveal">The company<br /><span className="lt">we keep.</span></h2>
-    <div className="gglass gclient-row reveal">
-      {CLIENTS.map((c, i) => {
-        const logoClass = "gclient-logo" + (c.logoMode === "keep" ? " gclient-logo--keep" : "");
-        const inner = (
-          <>
-            {c.logo
-              ? <img className={logoClass} src={c.logo} alt={c.nm + " logo"} loading="lazy" />
-              : <span className="gclient-logo gclient-logo--text" dangerouslySetInnerHTML={{ __html: c.nm }} />}
-            <span className="nm" dangerouslySetInnerHTML={{ __html: c.nm }} />
-            <span className="what" dangerouslySetInnerHTML={{ __html: c.what }} />
-          </>
-        );
-        return c.link
-          ? <a className="gclient gclient--linked" key={i} href={c.link} target="_blank" rel="noopener noreferrer">{inner}</a>
-          : <div className="gclient" key={i}>{inner}</div>;
-      })}
-    </div>
-  </section>
-);
+const ClientsRow = ({ setRoute }) => {
+  // Home grid shows the 12 featured tiles (curation in CLIENTS_CURATION.md).
+  // Full directory of all named clients lives at /clients/ (route id: "clients").
+  const featured = CLIENTS.filter((c) => c.featured);
+  return (
+    <section className="gwrap gclients" style={{ paddingTop: "clamp(70px,8vw,100px)" }}>
+      <GStamp time="04:30" shift="Trusted by" />
+      <h2 className="gh2 reveal">The company<br /><span className="lt">we keep.</span></h2>
+      <div className="gglass gclient-row reveal">
+        {featured.map((c, i) => {
+          const logoClass = "gclient-logo" + (c.logoMode === "keep" ? " gclient-logo--keep" : "");
+          const inner = (
+            <>
+              {c.logo
+                ? <img className={logoClass} src={c.logo} alt={c.nm + " logo"} loading="lazy" />
+                : <span className="gclient-logo gclient-logo--text" dangerouslySetInnerHTML={{ __html: c.nm }} />}
+              <span className="nm" dangerouslySetInnerHTML={{ __html: c.nm }} />
+              <span className="what" dangerouslySetInnerHTML={{ __html: c.what }} />
+            </>
+          );
+          return c.link
+            ? <a className="gclient gclient--linked" key={i} href={c.link} target="_blank" rel="noopener noreferrer">{inner}</a>
+            : <div className="gclient" key={i}>{inner}</div>;
+        })}
+      </div>
+      <div className="reveal" style={{ textAlign: "center", marginTop: "clamp(24px, 3vw, 36px)" }}>
+        <a className="gpill" href="#clients"
+           onClick={(e) => { if (setRoute) { e.preventDefault(); setRoute("clients"); } }}>
+          See every client we work with &rarr;
+        </a>
+      </div>
+    </section>
+  );
+};
 
 const NewsTeaser = ({ setRoute }) => (
   <section className="gwrap gclients" style={{ paddingTop: "clamp(70px,8vw,100px)" }}>
@@ -258,7 +269,7 @@ const GeminiHome = ({ setRoute, phone, concept }) => {
         <ServiceLedger setRoute={setRoute} />
         {watch ? <TheWatch /> : <WhoWeAre />}
         <SectorsTeaser setRoute={setRoute} />
-        {watch && <ClientsRow />}
+        {watch && <ClientsRow setRoute={setRoute} />}
         <AccredBand />
         <NewsTeaser setRoute={setRoute} />
       </div>

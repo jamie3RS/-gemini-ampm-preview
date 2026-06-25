@@ -208,33 +208,78 @@ const NIGHTLOG = [
 // Distinct from the manufacturer wall (Hitachi, Mitsubishi, Daikin etc. — the
 // products we install). Logos sourced from each contractor's own website for
 // the snag preview; live cutover should request brand-pack assets from each.
-//   · link:     outbound URL for the tile (opens new tab; helps verifiability + reciprocal-link asks)
-//   · logoMode: "invert" (default) forces a pure-white CSS silhouette — works
-//               for dark-on-light logos. "keep" preserves the original artwork
-//               — needed for logos that are already white, have built-in
-//               coloured backgrounds, or rely on brand colour to be readable. ———
+//   · link:     outbound URL (opens new tab; trust signal + reciprocal-link basis)
+//   · logoMode: "invert" (default) forces a pure-white CSS silhouette. "keep"
+//               preserves original artwork — needed for logos that are already
+//               white, have built-in coloured backgrounds, or rely on brand
+//               colour to be readable.
+//   · featured: true = appears on the home-page "Company we keep" 12-tile grid
+//   · sector:   drives grouping on the /clients/ directory page.
+//               One of: tier-1-contractors, facilities-management,
+//               me-building-services, fit-out, healthcare, education,
+//               public-housing, occupiers
+// Top-12 curation 2026-06-25 per CLIENTS_CURATION.md (8-agent workflow). ———
+const CLIENT_SECTORS = [
+  { id: "tier-1-contractors",   name: "Tier-1 main contractors" },
+  { id: "facilities-management", name: "Facilities management" },
+  { id: "me-building-services",  name: "M&amp;E and building services" },
+  { id: "fit-out",               name: "Fit-out and refurbishment" },
+  { id: "healthcare",            name: "Healthcare &mdash; NHS Trusts" },
+  { id: "education",             name: "Higher education" },
+  { id: "public-housing",        name: "Public sector &amp; housing" },
+  { id: "occupiers",             name: "End clients &amp; occupiers" },
+];
+
 const CLIENTS = [
-  { nm: "Equans", logo: "assets/clients/equans.png", link: "https://www.equans.co.uk/", logoMode: "keep", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
-  { nm: "Mace", logo: null, link: "https://www.macegroup.com/", what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
-  { nm: "CBRE", logo: "assets/clients/cbre.svg", link: "https://www.cbre.co.uk/", logoMode: "keep", what: "Long-term FM framework partner (via CBRE Managed Services Ltd) &mdash; life-safety, maintenance and compliance across CBRE-managed UK portfolios." },
-  { nm: "Kier", logo: "assets/clients/kier.svg", link: "https://www.kier.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial schemes." },
-  { nm: "ARC Group London", logo: "assets/clients/arc-group.svg", link: "https://arcgroupuk.com/", what: "Fire &amp; security packages on commercial refurbishment programmes." },
-  { nm: "Maze Engineering", logo: "assets/clients/maze-engineering.png", link: "https://maze-engineering.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on multi-trade projects." },
-  { nm: "Bancroft", logo: "assets/clients/bancroft.png", link: "https://bancroft.co.uk/", what: "Fire &amp; security packages on commercial schemes." },
-  { nm: "AIS Interiors", logo: "assets/clients/ais-interiors.svg", link: "https://ais-interiors.com/", logoMode: "keep", what: "Fire &amp; security packages on interior fit-out projects." },
-  { nm: "Guild Prime", logo: "assets/clients/guild-prime.png", link: "https://guildprime.com/", what: "Fire &amp; security packages on London projects." },
-  { nm: "Wates", logo: "assets/clients/wates.png", link: "https://www.wates.co.uk/", what: "Fire &amp; security packages on commercial schemes." },
-  { nm: "Mala", logo: "assets/clients/mala.svg", link: "https://www.mala.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial projects." },
-  { nm: "JBS Ltd", logo: "assets/clients/jbs.svg", link: "https://www.jbs-ltd.co.uk/", what: "Fire &amp; security packages alongside building-services delivery." },
-  { nm: "FirstPort", logo: "assets/clients/firstport.svg", link: "https://www.firstport.co.uk/", logoMode: "keep", what: "Fire safety packages on residential property portfolios." },
-  { nm: "NHS Medway", logo: "assets/clients/nhs-medway.svg", link: "https://www.medway.nhs.uk/", logoMode: "keep", what: "Fire, ventilation &amp; gas suppression packages on Medway NHS estates (Trust + ICB)." },
-  { nm: "Sussex Community NHS FT", logo: null, link: "https://www.sussexcommunity.nhs.uk/", what: "Fire safety packages across community-healthcare estates." },
-  { nm: "South East Coast Ambulance NHS FT", logo: "assets/clients/nhs-secamb.svg", link: "https://www.secamb.nhs.uk/", logoMode: "keep", what: "Fire &amp; security packages on ambulance-trust facilities." },
-  { nm: "Salisbury NHS FT", logo: "assets/clients/nhs-salisbury.png", link: "https://www.salisbury.nhs.uk/", logoMode: "keep", what: "Fire safety and ventilation packages on acute-hospital estates." },
-  { nm: "Chelsea &amp; Westminster Hospital NHS FT", logo: "assets/clients/nhs-chelwest.png", link: "https://www.chelwest.nhs.uk/", logoMode: "keep", what: "Fire, ventilation &amp; suppression packages on central-London teaching hospital estates." },
-  { nm: "Guy&rsquo;s and St Thomas&rsquo; NHS FT", logo: "assets/clients/nhs-gstt.svg", link: "https://www.guysandstthomas.nhs.uk/", logoMode: "keep", what: "Fire safety packages on major London teaching-hospital estates." },
-  { nm: "Kingston University", logo: "assets/clients/kingston-university.svg", link: "https://www.kingston.ac.uk/", logoMode: "keep", what: "Fire &amp; security packages on educational estate works." },
-  { nm: "Royal Borough of Kensington &amp; Chelsea", logo: "assets/clients/rbkc.svg", link: "https://www.rbkc.gov.uk/", logoMode: "keep", what: "Fire safety packages on social housing and public-building works." },
+  // Tier-1 main contractors
+  { nm: "Mace",                 logo: null,                                            link: "https://www.macegroup.com/",   featured: true,  sector: "tier-1-contractors", what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
+  { nm: "Wates",                logo: "assets/clients/wates.png",                      link: "https://www.wates.co.uk/",     featured: true,  sector: "tier-1-contractors", what: "Fire &amp; security packages on commercial schemes." },
+  { nm: "Kier",                 logo: "assets/clients/kier.svg",         logoMode: "keep", link: "https://www.kier.co.uk/",     featured: false, sector: "tier-1-contractors", what: "Fire &amp; security packages on commercial schemes." },
+  { nm: "Bancroft",             logo: "assets/clients/bancroft.png",                   link: "https://bancroft.co.uk/",      featured: false, sector: "tier-1-contractors", what: "Fire &amp; security packages on commercial schemes." },
+
+  // Facilities management
+  { nm: "Equans",               logo: "assets/clients/equans.png",       logoMode: "keep", link: "https://www.equans.co.uk/", featured: true,  sector: "facilities-management", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
+  { nm: "Apleona",              logo: null,                                            link: "https://www.apleona.com/",     featured: true,  sector: "facilities-management", what: "Fire &amp; security packages on FM-managed estates (UK + European portfolio reach)." },
+  { nm: "Integral UK",          logo: null,                                            link: "https://www.integral.co.uk/",  featured: true,  sector: "facilities-management", what: "Long-term FM framework partner (JLL-owned) &mdash; life-safety &amp; compliance across UK portfolios." },
+  { nm: "CBRE",                 logo: "assets/clients/cbre.svg",         logoMode: "keep", link: "https://www.cbre.co.uk/", featured: false, sector: "facilities-management", what: "Long-term FM framework partner (via CBRE Managed Services Ltd) &mdash; life-safety, maintenance and compliance across CBRE-managed UK portfolios." },
+
+  // M&E + building services peers
+  { nm: "TClarke",              logo: null,                                            link: "https://tclarke.co.uk/",       featured: true,  sector: "me-building-services", what: "Specialist fire &amp; security packages on M&amp;E-led commercial schemes." },
+  { nm: "Gratte Brothers",      logo: null,                                            link: "https://grattebrothers.com/",  featured: false, sector: "me-building-services", what: "Fire &amp; security packages on London M&amp;E projects." },
+  { nm: "JBS Ltd",              logo: "assets/clients/jbs.svg",                        link: "https://www.jbs-ltd.co.uk/",   featured: false, sector: "me-building-services", what: "Fire &amp; security packages alongside Jaguar building-services delivery." },
+  { nm: "Maze Engineering",     logo: "assets/clients/maze-engineering.png", logoMode: "keep", link: "https://maze-engineering.co.uk/", featured: false, sector: "me-building-services", what: "Fire &amp; security packages on multi-trade projects." },
+  { nm: "Sale Group",           logo: "assets/clients/sale-group.svg",   logoMode: "keep", link: "https://www.salegroup.co.uk/", featured: false, sector: "me-building-services", what: "Fire &amp; security packages alongside building-services delivery (family-owned, est. 2000)." },
+  { nm: "PIP Electrics",        logo: null,                                            link: null,                            featured: false, sector: "me-building-services", what: "Fire alarm &amp; safety packages alongside electrical delivery." },
+  { nm: "Borough Engineering Services", logo: null,                                    link: null,                            featured: false, sector: "me-building-services", what: "Fire &amp; security packages on engineering-services projects." },
+  { nm: "Select Plant Hire",    logo: null,                                            link: "https://www.selectplant.co.uk/", featured: false, sector: "me-building-services", what: "Site fire-safety packages on heavy-civils and plant programmes (Laing O'Rourke)." },
+
+  // Fit-out and refurbishment
+  { nm: "ARC Group London",     logo: "assets/clients/arc-group.svg",                  link: "https://arcgroupuk.com/",      featured: false, sector: "fit-out", what: "Fire &amp; security packages on commercial refurbishment programmes." },
+  { nm: "AIS Interiors",        logo: "assets/clients/ais-interiors.svg", logoMode: "keep", link: "https://ais-interiors.com/", featured: false, sector: "fit-out", what: "Fire &amp; security packages on interior fit-out projects." },
+  { nm: "Guild Prime",          logo: "assets/clients/guild-prime.png",                link: "https://guildprime.com/",      featured: false, sector: "fit-out", what: "Fire &amp; security packages on London projects." },
+  { nm: "Mala",                 logo: "assets/clients/mala.svg",         logoMode: "keep", link: "https://www.mala.co.uk/",   featured: false, sector: "fit-out", what: "Fire &amp; security packages on commercial projects." },
+
+  // Healthcare — NHS Trusts (6)
+  { nm: "Guy&rsquo;s and St Thomas&rsquo; NHS FT", logo: "assets/clients/nhs-gstt.svg", logoMode: "keep", link: "https://www.guysandstthomas.nhs.uk/", featured: false, sector: "healthcare", what: "Fire safety packages on major London teaching-hospital estates." },
+  { nm: "Chelsea &amp; Westminster Hospital NHS FT", logo: "assets/clients/nhs-chelwest.png", logoMode: "keep", link: "https://www.chelwest.nhs.uk/", featured: false, sector: "healthcare", what: "Fire, ventilation &amp; suppression packages on central-London teaching hospital estates." },
+  { nm: "NHS Medway",           logo: "assets/clients/nhs-medway.svg",   logoMode: "keep", link: "https://www.medway.nhs.uk/", featured: true,  sector: "healthcare", what: "Fire, ventilation &amp; gas suppression packages on Medway NHS estates (Trust + ICB)." },
+  { nm: "Sussex Community NHS FT", logo: null,                                          link: "https://www.sussexcommunity.nhs.uk/", featured: false, sector: "healthcare", what: "Fire safety packages across community-healthcare estates." },
+  { nm: "South East Coast Ambulance NHS FT", logo: "assets/clients/nhs-secamb.svg", logoMode: "keep", link: "https://www.secamb.nhs.uk/", featured: false, sector: "healthcare", what: "Fire &amp; security packages on ambulance-trust facilities." },
+  { nm: "Salisbury NHS FT",     logo: "assets/clients/nhs-salisbury.png", logoMode: "keep", link: "https://www.salisbury.nhs.uk/", featured: false, sector: "healthcare", what: "Fire safety and ventilation packages on acute-hospital estates." },
+
+  // Higher education
+  { nm: "Kingston University",  logo: "assets/clients/kingston-university.svg", logoMode: "keep", link: "https://www.kingston.ac.uk/", featured: true,  sector: "education", what: "Fire &amp; security packages on educational estate works." },
+  { nm: "University of Bath",   logo: "assets/clients/university-of-bath.svg",  logoMode: "keep", link: "https://www.bath.ac.uk/",     featured: false, sector: "education", what: "Fire &amp; security packages on higher-education campus estates." },
+
+  // Public sector + housing
+  { nm: "Royal Borough of Kensington &amp; Chelsea", logo: "assets/clients/rbkc.svg", logoMode: "keep", link: "https://www.rbkc.gov.uk/", featured: true,  sector: "public-housing", what: "Fire safety packages on social housing and public-building works." },
+  { nm: "FirstPort",            logo: "assets/clients/firstport.svg",    logoMode: "keep", link: "https://www.firstport.co.uk/", featured: true,  sector: "public-housing", what: "Fire safety packages on residential property portfolios (UK's largest residential property manager)." },
+  { nm: "Newlon Housing",       logo: null,                                            link: "https://www.newlon.org.uk/",   featured: true,  sector: "public-housing", what: "Fire safety packages on London housing-association estates." },
+  { nm: "Moat Homes",           logo: null,                                            link: "https://www.moat.co.uk/",      featured: false, sector: "public-housing", what: "Fire safety packages on London housing-association estates." },
+
+  // End clients + corporate occupiers
+  { nm: "Aviva",                logo: null,                                            link: "https://www.aviva.co.uk/",     featured: true,  sector: "occupiers", what: "Fire safety and compliance packages on FTSE-100 insurer office estates." },
+  { nm: "Richmond Pharmacology", logo: null,                                           link: "https://www.richmondpharmacology.com/", featured: false, sector: "occupiers", what: "Fire safety and ventilation packages on clinical-research facilities." },
 ];
 
 // ——— News / insights (live posts; slugs preserved) ———
@@ -513,5 +558,5 @@ const ACCRED_IDS = ACCREDS.map((a) => a.slug);
 const ACCRED_BY_SLUG = Object.fromEntries(ACCREDS.map((a) => [a.slug, a]));
 
 Object.assign(window, {
-  COL, PILLARS, heroPillars, SECTORS, PROOF, ACCREDS, ACCRED_IDS, ACCRED_BY_SLUG, WHY, NIGHTLOG, CLIENTS, NEWS, CASES, CONTACT,
+  COL, PILLARS, heroPillars, SECTORS, PROOF, ACCREDS, ACCRED_IDS, ACCRED_BY_SLUG, WHY, NIGHTLOG, CLIENTS, CLIENT_SECTORS, NEWS, CASES, CONTACT,
 });
