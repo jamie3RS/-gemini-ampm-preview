@@ -239,9 +239,9 @@ const CLIENTS = [
 
   // Facilities management
   { nm: "Equans",               logo: "assets/clients/equans.png",       logoMode: "keep", link: "https://www.equans.co.uk/", featured: true,  sector: "facilities-management", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
-  { nm: "Apleona",              logo: null,                                            link: "https://www.apleona.com/",     featured: true,  sector: "facilities-management", what: "Fire &amp; security packages on FM-managed estates (UK + European portfolio reach)." },
+  { nm: "Apleona",              logo: null,                                            link: "https://www.apleona.com/",     featured: false, sector: "facilities-management", what: "Fire &amp; security packages on FM-managed estates (UK + European portfolio reach)." },
   { nm: "Integral UK",          logo: null,                                            link: "https://www.integral.co.uk/",  featured: true,  sector: "facilities-management", what: "Long-term FM framework partner (JLL-owned) &mdash; life-safety &amp; compliance across UK portfolios." },
-  { nm: "CBRE",                 logo: "assets/clients/cbre.svg",         logoMode: "keep", link: "https://www.cbre.co.uk/", featured: false, sector: "facilities-management", what: "Long-term FM framework partner (via CBRE Managed Services Ltd) &mdash; life-safety, maintenance and compliance across CBRE-managed UK portfolios." },
+  { nm: "CBRE",                 logo: "assets/clients/cbre.svg",         logoMode: "keep", link: "https://www.cbre.co.uk/", featured: true,  sector: "facilities-management", what: "Long-term FM framework partner (via CBRE Managed Services Ltd) &mdash; life-safety, maintenance and compliance across CBRE-managed UK portfolios." },
 
   // M&E + building services peers
   { nm: "TClarke",              logo: null,                                            link: "https://tclarke.co.uk/",       featured: true,  sector: "me-building-services", what: "Specialist fire &amp; security packages on M&amp;E-led commercial schemes." },
