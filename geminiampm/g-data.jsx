@@ -226,6 +226,7 @@ const CLIENTS = [
   { nm: "Mala", logo: "assets/clients/mala.svg", link: "https://www.mala.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial projects." },
   { nm: "JBS Ltd", logo: "assets/clients/jbs.svg", link: "https://www.jbs-ltd.co.uk/", what: "Fire &amp; security packages alongside building-services delivery." },
   { nm: "FirstPort", logo: "assets/clients/firstport.svg", link: "https://www.firstport.co.uk/", logoMode: "keep", what: "Fire safety packages on residential property portfolios." },
+  { nm: "NHS Medway", logo: "assets/clients/nhs-medway.svg", link: "https://www.medway.nhs.uk/", logoMode: "keep", what: "Fire, ventilation &amp; gas suppression packages on Medway NHS estates (Trust + ICB)." },
   { nm: "Kingston University", logo: "assets/clients/kingston-university.svg", link: "https://www.kingston.ac.uk/", logoMode: "keep", what: "Fire &amp; security packages on educational estate works." },
   { nm: "Royal Borough of Kensington &amp; Chelsea", logo: "assets/clients/rbkc.svg", link: "https://www.rbkc.gov.uk/", logoMode: "keep", what: "Fire safety packages on social housing and public-building works." },
 ];
