@@ -216,8 +216,6 @@ const NIGHTLOG = [
 const CLIENTS = [
   { nm: "Equans", logo: "assets/clients/equans.png", link: "https://www.equans.co.uk/", logoMode: "keep", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
   { nm: "Mace", logo: null, link: "https://www.macegroup.com/", what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
-  { nm: "CBRE / FM partners", logo: null, link: null, what: "Managed-estate life-safety and planned maintenance across portfolios." },
-  { nm: "Local Authorities", logo: null, link: null, what: "Leisure-centre and public-building works delivered around live operation." },
   { nm: "Kier", logo: "assets/clients/kier.svg", link: "https://www.kier.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial schemes." },
   { nm: "ARC Group London", logo: "assets/clients/arc-group.svg", link: "https://arcgroupuk.com/", what: "Fire &amp; security packages on commercial refurbishment programmes." },
   { nm: "Maze Engineering", logo: "assets/clients/maze-engineering.png", link: "https://maze-engineering.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on multi-trade projects." },
@@ -228,7 +226,6 @@ const CLIENTS = [
   { nm: "Mala", logo: "assets/clients/mala.svg", link: "https://www.mala.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial projects." },
   { nm: "JBS Ltd", logo: "assets/clients/jbs.svg", link: "https://www.jbs-ltd.co.uk/", what: "Fire &amp; security packages alongside building-services delivery." },
   { nm: "FirstPort", logo: "assets/clients/firstport.svg", link: "https://www.firstport.co.uk/", logoMode: "keep", what: "Fire safety packages on residential property portfolios." },
-  { nm: "NHS", logo: "assets/clients/nhs.svg", link: "https://www.nhs.uk/", logoMode: "keep", what: "Fire, ventilation &amp; gas suppression packages on NHS estates." },
   { nm: "Kingston University", logo: "assets/clients/kingston-university.svg", link: "https://www.kingston.ac.uk/", logoMode: "keep", what: "Fire &amp; security packages on educational estate works." },
   { nm: "Royal Borough of Kensington &amp; Chelsea", logo: "assets/clients/rbkc.svg", link: "https://www.rbkc.gov.uk/", logoMode: "keep", what: "Fire safety packages on social housing and public-building works." },
 ];
