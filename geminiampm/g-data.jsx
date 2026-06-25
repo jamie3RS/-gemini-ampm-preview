@@ -216,6 +216,7 @@ const NIGHTLOG = [
 const CLIENTS = [
   { nm: "Equans", logo: "assets/clients/equans.png", link: "https://www.equans.co.uk/", logoMode: "keep", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
   { nm: "Mace", logo: null, link: "https://www.macegroup.com/", what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
+  { nm: "CBRE", logo: "assets/clients/cbre.svg", link: "https://www.cbre.co.uk/", logoMode: "keep", what: "Managed-estate life-safety and planned maintenance across UK portfolios." },
   { nm: "Kier", logo: "assets/clients/kier.svg", link: "https://www.kier.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial schemes." },
   { nm: "ARC Group London", logo: "assets/clients/arc-group.svg", link: "https://arcgroupuk.com/", what: "Fire &amp; security packages on commercial refurbishment programmes." },
   { nm: "Maze Engineering", logo: "assets/clients/maze-engineering.png", link: "https://maze-engineering.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on multi-trade projects." },
@@ -227,6 +228,11 @@ const CLIENTS = [
   { nm: "JBS Ltd", logo: "assets/clients/jbs.svg", link: "https://www.jbs-ltd.co.uk/", what: "Fire &amp; security packages alongside building-services delivery." },
   { nm: "FirstPort", logo: "assets/clients/firstport.svg", link: "https://www.firstport.co.uk/", logoMode: "keep", what: "Fire safety packages on residential property portfolios." },
   { nm: "NHS Medway", logo: "assets/clients/nhs-medway.svg", link: "https://www.medway.nhs.uk/", logoMode: "keep", what: "Fire, ventilation &amp; gas suppression packages on Medway NHS estates (Trust + ICB)." },
+  { nm: "Sussex Community NHS FT", logo: null, link: "https://www.sussexcommunity.nhs.uk/", what: "Fire safety packages across community-healthcare estates." },
+  { nm: "South East Coast Ambulance NHS FT", logo: "assets/clients/nhs-secamb.svg", link: "https://www.secamb.nhs.uk/", logoMode: "keep", what: "Fire &amp; security packages on ambulance-trust facilities." },
+  { nm: "Salisbury NHS FT", logo: "assets/clients/nhs-salisbury.png", link: "https://www.salisbury.nhs.uk/", logoMode: "keep", what: "Fire safety and ventilation packages on acute-hospital estates." },
+  { nm: "Chelsea &amp; Westminster Hospital NHS FT", logo: "assets/clients/nhs-chelwest.png", link: "https://www.chelwest.nhs.uk/", logoMode: "keep", what: "Fire, ventilation &amp; suppression packages on central-London teaching hospital estates." },
+  { nm: "Guy&rsquo;s and St Thomas&rsquo; NHS FT", logo: "assets/clients/nhs-gstt.svg", link: "https://www.guysandstthomas.nhs.uk/", logoMode: "keep", what: "Fire safety packages on major London teaching-hospital estates." },
   { nm: "Kingston University", logo: "assets/clients/kingston-university.svg", link: "https://www.kingston.ac.uk/", logoMode: "keep", what: "Fire &amp; security packages on educational estate works." },
   { nm: "Royal Borough of Kensington &amp; Chelsea", logo: "assets/clients/rbkc.svg", link: "https://www.rbkc.gov.uk/", logoMode: "keep", what: "Fire safety packages on social housing and public-building works." },
 ];
