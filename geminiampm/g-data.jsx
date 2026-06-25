@@ -216,7 +216,7 @@ const NIGHTLOG = [
 const CLIENTS = [
   { nm: "Equans", logo: "assets/clients/equans.png", link: "https://www.equans.co.uk/", logoMode: "keep", what: "Passive fire remedial works &mdash; AP-supervised, client-commended delivery." },
   { nm: "Mace", logo: null, link: "https://www.macegroup.com/", what: "Fire, gas suppression &amp; security packages on commercial fit-outs incl. Peterborough Court." },
-  { nm: "CBRE", logo: "assets/clients/cbre.svg", link: "https://www.cbre.co.uk/", logoMode: "keep", what: "Managed-estate life-safety and planned maintenance across UK portfolios." },
+  { nm: "CBRE", logo: "assets/clients/cbre.svg", link: "https://www.cbre.co.uk/", logoMode: "keep", what: "Long-term FM framework partner (via CBRE Managed Services Ltd) &mdash; life-safety, maintenance and compliance across CBRE-managed UK portfolios." },
   { nm: "Kier", logo: "assets/clients/kier.svg", link: "https://www.kier.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on commercial schemes." },
   { nm: "ARC Group London", logo: "assets/clients/arc-group.svg", link: "https://arcgroupuk.com/", what: "Fire &amp; security packages on commercial refurbishment programmes." },
   { nm: "Maze Engineering", logo: "assets/clients/maze-engineering.png", link: "https://maze-engineering.co.uk/", logoMode: "keep", what: "Fire &amp; security packages on multi-trade projects." },
